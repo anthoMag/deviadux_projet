@@ -4,4 +4,12 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
+    'app_about' => [[], ['_controller' => 'App\\Controller\\AboutController::index'], [], [['text', '/about']], [], [], []],
+    'app_actualites' => [[], ['_controller' => 'App\\Controller\\ActualitesController::index'], [], [['text', '/actualites']], [], [], []],
+    'app_cartes' => [[], ['_controller' => 'App\\Controller\\CartesController::index'], [], [['text', '/cartes']], [], [], []],
+    'app_episodes' => [[], ['_controller' => 'App\\Controller\\EpisodesController::index'], [], [['text', '/episodes']], [], [], []],
+    'app_first' => [[], ['_controller' => 'App\\Controller\\FirstController::index'], [], [['text', '/first']], [], [], []],
+    'app_hexago' => [[], ['_controller' => 'App\\Controller\\HexagoController::index'], [], [['text', '/hexago']], [], [], []],
+    'app_home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], [], []],
+    'app_pingo' => [[], ['_controller' => 'App\\Controller\\PingoController::index'], [], [['text', '/pingo']], [], [], []],
 ];
