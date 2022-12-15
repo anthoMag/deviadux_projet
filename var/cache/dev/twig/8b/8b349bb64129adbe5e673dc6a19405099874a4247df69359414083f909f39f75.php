@@ -60,7 +60,7 @@ class __TwigTemplate_c1045dbd84432584b47d98cd1617b701fea5f41e71a2e696fda8ff2ee4c
     </head>
     <body>
 
-    ";
+        ";
         // line 16
         $this->loadTemplate("navbar.html.twig", "base.html.twig", 16)->display($context);
         // line 17
@@ -172,7 +172,7 @@ class __TwigTemplate_c1045dbd84432584b47d98cd1617b701fea5f41e71a2e696fda8ff2ee4c
     </head>
     <body>
 
-    {% include \"navbar.html.twig\" %}
+        {% include \"navbar.html.twig\" %}
 
 
 
