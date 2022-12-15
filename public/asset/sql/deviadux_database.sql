@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : mer. 14 déc. 2022 à 15:28
+-- Généré le : mer. 14 déc. 2022 à 09:27
 -- Version du serveur :  5.7.34
 -- Version de PHP : 8.0.8
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `deviadux_databasee`
+-- Base de données : `deviadux_database`
 --
 
 -- --------------------------------------------------------
@@ -173,27 +173,31 @@ CREATE TABLE `evenements` (
   `lieu` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `coordonnee_x` float DEFAULT NULL,
   `coordonnee_y` float DEFAULT NULL,
-  `departement_id` int(11) DEFAULT NULL,
-  `image` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `departement_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `evenements`
 --
 
-INSERT INTO `evenements` (`id`, `title`,`periode`, `level_alert`, `pic_de_crue`, `lieu`, `coordonnee_x`, `coordonnee_y`, `departement_id`, `image`) VALUES
-(1, 'Crues de l’Adour moyen et de la Midouze', '1er au 5 janvier 2021', 'Orange', 7.45, 'Mont-de-Marsan', 43.8915, -0.498008, 100, NULL),
-(2, 'Crues de l’Arrats-Gimone-Save-Touch', '1er au 5 janvier 2021', 'Orange', 3.05, ' Beaumont-de-Lomagne', 43.8811, 0.992782, NULL, NULL),
-(3, 'Crues de la Liane', '14 et 15 janvier 2021', 'orange', 4.4, 'Isques', 50.6757, 1.64379, NULL, NULL),
-(4, 'Crues de la Garonne marmandaise', '28 janvier au 4 février 2021', 'rouge', 10.2, 'Marmande', 44.4989, 0.156086, NULL, NULL),
-(5, 'Crues de la Charentonne', '22 au 24 juin 2021', 'Orange', 2.43, 'Trinité-de-Réville', 48.9701, 0.5082, NULL, NULL),
-(6, 'Crues de l’Aisne Vaux', '14 au 24 juillet 2021', 'orange', 5.4, 'Rilly-sur-Aisne', 49.49, 4.63309, NULL, NULL),
-(7, 'Crues du Vistre', '14 et 15 septembre 2021', 'orange', 3.71, 'Bernis', 48.9701, 0.5082, NULL, NULL),
-(8, 'Crues de l’Ardèche amont', '2 au 4 octobre 2021', 'orange', 6.32, 'Gravières', 44.4252, 4.09502, NULL, NULL),
-(9, 'Crues de l’Ardèche amont', '29 et 30 octobre 2021', 'orange', 6.97, 'Vallon-Pont-d’Arc', 44.4031, 4.38266, NULL, NULL),
-(10, 'Crues de la Lys', '28 novembre au 2 décembre 2021', 'orange', 2.88, 'Merville', 50.6421, 2.64489, NULL, NULL),
-(11, 'Crues du Bec du Gave', '9 au 15 décembre', 'rouge', 5.78, 'Cambo-les-Bains', 43.3631, -1.3976, NULL, NULL);
-
+INSERT INTO `evenements` (`id`, `title`, `periode`, `level_alert`, `pic_de_crue`, `lieu`, `coordonnee_x`, `coordonnee_y`, `departement_id`, `image`) VALUES
+(1, 'Crues de l’Adour moyen et de la Midouze', '1er au 5 janvier 2021', 'orange', 7.45, 'Mont-de-Marsan', 43.8915, -0.498008, 137, 'mont_de_marsant.jpg'),
+(2, 'Crues de l’Arrats-Gimone-Save-Touch', '1er au 5 janvier 2021', 'orange', 3.05, ' Beaumont-de-Lomagne', 43.8811, 0.992782, 179, 'beaumont_de_lomagne.jpg'), 
+(3, 'Crues de la Liane', '14 et 15 janvier 2021', 'orange', 4.4, 'Isques', 50.6757, 1.64379, 159, 'isques.jpg'),
+(4, 'Crues de la Garonne marmandaise', '28 janvier au 4 février 2021', 'rouge', 10.2, 'Marmande', 44.4989, 0.156086, 144, 'marmande.jpg'),
+(5, 'Crues de la Charentonne', '22 au 24 juin 2021', 'orange', 2.43, 'Trinité-de-Réville', 48.9701, 0.5082, 124, 'trinite.jpg'),
+(6, 'Crues de l’Aisne Vaux', '14 au 24 juillet 2021', 'orange', 5.4, 'Rilly-sur-Aisne', 49.49, 4.63309, 144, 'rilly_sur_aisne.jpg'),
+(7, 'Crues du Vistre', '14 et 15 septembre 2021', 'orange', 3.71, 'Bernis', 48.9701, 0.5082, 127, 'bernis.jpg'),
+(8, 'Crues de l’Ardèche amont', '2 au 4 octobre 2021', 'orange', 6.32, 'Gravières', 44.4252, 4.09502, 103, 'gravieres.jpg'),
+(9, 'Crues de l’Ardèche amont', '29 et 30 octobre 2021', 'orange', 6.97, 'Vallon-Pont-d’Arc', 44.4031, 4.38266, 103, 'vallon_pont_darc.jpg'),
+(10, 'Crues de la Lys', '28 novembre au 2 décembre 2021', 'orange', 2.88, 'Merville', 50.6421, 2.64489, 156, 'merville.jpg'),
+(11, 'Crues du Bec du Gave', '9 au 15 décembre', 'rouge', 5.78, 'Cambo-les-Bains', 43.3631, -1.3976, 161, 'cambo_les_mains.jpg');
+(12, 'Crue de la saôme', '20 au 22 juillet', 'orange', 4.81, 'Macon', 46.302723, 4.834103, 168, 'macom_2018.jpg'),
+(13, 'Crue de la Sarthe', '29 au 30 decembre 2001', 'orange', 3.50, 'Cheffes', 47.622998, -0.503046, 146, 'cheffes.JPG'),
+(14, 'Crue de la Loire', '4 au 5 février 2021', 'orange', 4.79, 'Ponts-de-Cé', 47.426185, -0.526115, 146, 'angers_2019.jpg'),
+(15, 'Crue de la Maine', '2 au 5 février 2021', 'orange', 5.37, 'Angers', 47.478183, -0.555369, 146, 'angers.jpg'),
+(16,'Crue du Gardon', '2 au 5 ocobre 2021', 'orange', 3.85, 'Anduze', 44.055711, 3.987693, 127, 'anduze.jpg'),
+(17, 'Crue de la Garonne', '2 au 5 ocobre 2021' 'orange', 9.50, 'La Réole', 44.579336, -0.034024, 130, 'reole.jpg');
 -- --------------------------------------------------------
 
 --
