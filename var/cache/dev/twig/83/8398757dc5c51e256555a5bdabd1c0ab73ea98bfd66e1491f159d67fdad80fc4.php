@@ -176,6 +176,6 @@ class __TwigTemplate_fe021da86ae8071ee9d3ffd591c99b986cf05162f93883a9afa73df94db
 </nav>
 
 <!-- Fin de navBar -->
-", "navbar.html.twig", "/Applications/MAMP/htdocs/Github/deviadux_projet/templates/navbar.html.twig");
+", "navbar.html.twig", "/Users/moussaillon/Documents/GitHub/deviadux_projet/templates/navbar.html.twig");
     }
 }

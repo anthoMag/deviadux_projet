@@ -559,6 +559,6 @@ class __TwigTemplate_38d1a3cbc0967a0d77f90e303b6cfed93e71ec4c6dbae07c140e8e0fb2b
 {% endblock %}
    
 {% endblock %}
-", "home/index.html.twig", "/Applications/MAMP/htdocs/Github/deviadux_projet/templates/home/index.html.twig");
+", "home/index.html.twig", "/Users/moussaillon/Documents/GitHub/deviadux_projet/templates/home/index.html.twig");
     }
 }
