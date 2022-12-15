@@ -22,7 +22,7 @@ class Departements
     private ?string $code_dep = null;
 
     #[ORM\ManyToOne(inversedBy: 'departements')]
-    private ?regions $reg = null;
+    private ?Regions $reg = null;
 
     #[ORM\OneToMany(mappedBy: 'dep', targetEntity: Evenements::class)]
     private Collection $evenements;

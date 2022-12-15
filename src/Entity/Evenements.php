@@ -38,7 +38,7 @@ class Evenements
     private ?float $coordonnee_y = null;
 
     #[ORM\ManyToOne(inversedBy: 'evenements')]
-    private ?departements $dep = null;
+    private ?Departements $dep = null;
 
 
 
