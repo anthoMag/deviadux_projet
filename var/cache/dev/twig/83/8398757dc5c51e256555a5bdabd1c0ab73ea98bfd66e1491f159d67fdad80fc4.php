@@ -71,7 +71,7 @@ class __TwigTemplate_fe021da86ae8071ee9d3ffd591c99b986cf05162f93883a9afa73df94db
         <li class=\"nav-item\">
           <a class=\"nav-link\" href=\"";
         // line 27
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cartes");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_pingo");
         echo "\">Cartes</a>
         </li>
         <li class=\"nav-item\">
@@ -153,7 +153,7 @@ class __TwigTemplate_fe021da86ae8071ee9d3ffd591c99b986cf05162f93883a9afa73df94db
 
       <ul class=\"navbar-nav\">
         <li class=\"nav-item\">
-          <a class=\"nav-link\" href=\"{{ path('app_cartes') }}\">Cartes</a>
+          <a class=\"nav-link\" href=\"{{ path('app_pingo') }}\">Cartes</a>
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link\" href=\"{{ path('app_episodes') }}\">Episodes</a>
@@ -176,6 +176,6 @@ class __TwigTemplate_fe021da86ae8071ee9d3ffd591c99b986cf05162f93883a9afa73df94db
 </nav>
 
 <!-- Fin de navBar -->
-", "navbar.html.twig", "/Applications/MAMP/htdocs/Github/deviadux_projet/templates/navbar.html.twig");
+", "navbar.html.twig", "/Users/moussaillon/Documents/GitHub/deviadux_projet/templates/navbar.html.twig");
     }
 }

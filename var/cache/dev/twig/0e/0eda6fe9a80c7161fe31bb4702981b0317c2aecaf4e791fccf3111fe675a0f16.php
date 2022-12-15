@@ -165,6 +165,6 @@ class __TwigTemplate_4c12e180371a206a8fd50f00ada4e77df49f8cdfb21e2a11eb5f7bb8ae6
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "/Applications/MAMP/htdocs/Github/deviadux_projet/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "/Users/moussaillon/Documents/GitHub/deviadux_projet/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }
