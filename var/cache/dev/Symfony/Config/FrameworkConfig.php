@@ -477,19 +477,9 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
         return $this->request;
     }
 
-    /**
-     * @return \Symfony\Config\Framework\AssetsConfig|$this
-     */
-    public function assets(mixed $value = []): \Symfony\Config\Framework\AssetsConfig|static
+    public function assets(array $value = []): \Symfony\Config\Framework\AssetsConfig
     {
-        if (!\is_array($value)) {
-            $this->_usedProperties['assets'] = true;
-            $this->assets = $value;
-
-            return $this;
-        }
-
-        if (!$this->assets instanceof \Symfony\Config\Framework\AssetsConfig) {
+        if (null === $this->assets) {
             $this->_usedProperties['assets'] = true;
             $this->assets = new \Symfony\Config\Framework\AssetsConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -543,19 +533,9 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
         return $this->validation;
     }
 
-    /**
-     * @return \Symfony\Config\Framework\AnnotationsConfig|$this
-     */
-    public function annotations(mixed $value = []): \Symfony\Config\Framework\AnnotationsConfig|static
+    public function annotations(array $value = []): \Symfony\Config\Framework\AnnotationsConfig
     {
-        if (!\is_array($value)) {
-            $this->_usedProperties['annotations'] = true;
-            $this->annotations = $value;
-
-            return $this;
-        }
-
-        if (!$this->annotations instanceof \Symfony\Config\Framework\AnnotationsConfig) {
+        if (null === $this->annotations) {
             $this->_usedProperties['annotations'] = true;
             $this->annotations = new \Symfony\Config\Framework\AnnotationsConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -1019,7 +999,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
 
         if (array_key_exists('assets', $value)) {
             $this->_usedProperties['assets'] = true;
-            $this->assets = \is_array($value['assets']) ? new \Symfony\Config\Framework\AssetsConfig($value['assets']) : $value['assets'];
+            $this->assets = new \Symfony\Config\Framework\AssetsConfig($value['assets']);
             unset($value['assets']);
         }
 
@@ -1037,7 +1017,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
 
         if (array_key_exists('annotations', $value)) {
             $this->_usedProperties['annotations'] = true;
-            $this->annotations = \is_array($value['annotations']) ? new \Symfony\Config\Framework\AnnotationsConfig($value['annotations']) : $value['annotations'];
+            $this->annotations = new \Symfony\Config\Framework\AnnotationsConfig($value['annotations']);
             unset($value['annotations']);
         }
 
@@ -1215,7 +1195,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
             $output['request'] = $this->request instanceof \Symfony\Config\Framework\RequestConfig ? $this->request->toArray() : $this->request;
         }
         if (isset($this->_usedProperties['assets'])) {
-            $output['assets'] = $this->assets instanceof \Symfony\Config\Framework\AssetsConfig ? $this->assets->toArray() : $this->assets;
+            $output['assets'] = $this->assets->toArray();
         }
         if (isset($this->_usedProperties['translator'])) {
             $output['translator'] = $this->translator instanceof \Symfony\Config\Framework\TranslatorConfig ? $this->translator->toArray() : $this->translator;
@@ -1224,7 +1204,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
             $output['validation'] = $this->validation instanceof \Symfony\Config\Framework\ValidationConfig ? $this->validation->toArray() : $this->validation;
         }
         if (isset($this->_usedProperties['annotations'])) {
-            $output['annotations'] = $this->annotations instanceof \Symfony\Config\Framework\AnnotationsConfig ? $this->annotations->toArray() : $this->annotations;
+            $output['annotations'] = $this->annotations->toArray();
         }
         if (isset($this->_usedProperties['serializer'])) {
             $output['serializer'] = $this->serializer instanceof \Symfony\Config\Framework\SerializerConfig ? $this->serializer->toArray() : $this->serializer;
