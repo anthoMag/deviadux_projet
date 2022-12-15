@@ -63,18 +63,17 @@ class __TwigTemplate_c1045dbd84432584b47d98cd1617b701fea5f41e71a2e696fda8ff2ee4c
         echo "    </head>
     <body>
 
-    
     ";
+        // line 18
+        $this->loadTemplate("navbar.html.twig", "base.html.twig", 18)->display($context);
         // line 19
-        $this->loadTemplate("navbar.html.twig", "base.html.twig", 19)->display($context);
-        // line 20
         echo "
 
 
         ";
-        // line 23
+        // line 22
         $this->displayBlock('body', $context, $blocks);
-        // line 24
+        // line 23
         echo "    </body>
 </html>
 ";
@@ -130,7 +129,7 @@ class __TwigTemplate_c1045dbd84432584b47d98cd1617b701fea5f41e71a2e696fda8ff2ee4c
 
     }
 
-    // line 23
+    // line 22
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -154,7 +153,7 @@ class __TwigTemplate_c1045dbd84432584b47d98cd1617b701fea5f41e71a2e696fda8ff2ee4c
 
     public function getDebugInfo()
     {
-        return array (  134 => 23,  124 => 13,  117 => 12,  107 => 9,  100 => 8,  87 => 5,  78 => 24,  76 => 23,  71 => 20,  69 => 19,  63 => 15,  61 => 12,  58 => 11,  55 => 8,  50 => 5,  44 => 1,);
+        return array (  133 => 22,  123 => 13,  116 => 12,  106 => 9,  99 => 8,  86 => 5,  77 => 23,  75 => 22,  70 => 19,  68 => 18,  63 => 15,  61 => 12,  58 => 11,  55 => 8,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -176,7 +175,6 @@ class __TwigTemplate_c1045dbd84432584b47d98cd1617b701fea5f41e71a2e696fda8ff2ee4c
     </head>
     <body>
 
-    
     {% include \"navbar.html.twig\" %}
 
 

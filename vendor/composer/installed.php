@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '0933e02c15741a7186ad15fec1d599a5554d8363',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '0933e02c15741a7186ad15fec1d599a5554d8363',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -180,6 +180,15 @@
             'install_path' => __DIR__ . '/../laminas/laminas-code',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'nikic/php-parser' => array(
+            'pretty_version' => 'v4.15.2',
+            'version' => '4.15.2.0',
+            'reference' => 'f59bbe44bf7d96f24f3e2b4ddc21cd52c1d2adbc',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nikic/php-parser',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'ocramius/proxy-manager' => array(
             'dev_requirement' => false,
@@ -426,6 +435,15 @@
             'install_path' => __DIR__ . '/../symfony/http-kernel',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'symfony/maker-bundle' => array(
+            'pretty_version' => 'v1.48.0',
+            'version' => '1.48.0.0',
+            'reference' => '2e428e8432e9879187672fe08f1cc335e2a31dd6',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/maker-bundle',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'symfony/polyfill-ctype' => array(
             'dev_requirement' => false,

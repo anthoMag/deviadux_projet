@@ -14,7 +14,10 @@ class Evenements
     private ?int $id = null;
 
     #[ORM\Column(length: 50, nullable: true)]
-    private ?string $titlt = null;
+    private ?string $title = null;
+
+    #[ORM\Column(length: 50, nullable: true)]
+    private ?string $image = null;
 
     #[ORM\Column(length: 50, nullable: true)]
     private ?string $periode = null;
@@ -44,14 +47,26 @@ class Evenements
         return $this->id;
     }
 
-    public function getTitlt(): ?string
+    public function gettitle(): ?string
     {
-        return $this->titlt;
+        return $this->title;
     }
 
-    public function setTitlt(?string $titlt): self
+    public function settitle(?string $title): self
     {
-        $this->titlt = $titlt;
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getimage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setimage(?string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
