@@ -30,13 +30,13 @@ function launchMap(){
     L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
         attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         className: 'map-tiles',
-        minZoom: 6,
-        maxZoom: 6
+        /* minZoom: 6,
+        maxZoom: 6 */
     }).addTo(map);
      
 
     var warningRedIcon = L.icon({
-        iconUrl: './asset/img/IMG_PINGO/warningred.png',
+        iconUrl: './asset/img/IMG_PINGO/logoO.svg',
         shadowUrl: '',
     
         iconSize:     [30, 30], // size of the icon
@@ -47,7 +47,7 @@ function launchMap(){
     });
 
     var warningOrgIcon = L.icon({
-        iconUrl: './asset/img/IMG_PINGO/warningorange.png',
+        iconUrl: './asset/img/IMG_PINGO/logoO.svg',
         shadowUrl: '',
     
         iconSize:     [20, 20], // size of the icon
@@ -61,48 +61,9 @@ function launchMap(){
      tabData.forEach((v, k) => {
         console.log(v);
         window['marker' + k]  = L.marker([v[4], v[5]], {icon: warningOrgIcon}).addTo(map);
-        window['marker' + k].bindPopup("<h1>"+v[0]+"</h1><h2>"+v[1]+"</h2><h3>"+v[2]+"</h3> <img src='"+v[6]+"''/>");
+        window['marker' + k].bindPopup("<h1>"+v[0]+"</h1><h2>"+v[1]+"</h2><h3>"+v[2]+"</h3> <img src='../asset/img/IMG_PINGO/"+v[6]+"'/>");
      });
-
-    /*let i = 1;
-
-   
-    window['marker' + i]  = L.marker([43.891518, -0.498008], {icon: warningOrgIcon}).addTo(map);
-    window['marker' + i].bindPopup("<h1>Crues de l’Adour </h1><h2>Hauteur de crue</h2><h3>1er au 5 janvier 2021</h3> <img src='./img/crueadour2.jpg''/>");
-
-    var marker2 = L.marker([43.881060, 0.992782], {icon: warningOrgIcon}).addTo(map);
-    marker2.bindPopup("<h1>Crues de l’Arrats-Gimone</h1><h2>Hauteur de crue</h2><h3>1er au 5 janvier 2021</h3> <img src='./img/cruearrats.jpg''/>");
-    
-    var marker3 = L.marker([50.675702, 1.643790], {icon: warningOrgIcon}).addTo(map);
-    marker3.bindPopup("<h1>Crue de la liane</h1><h2>Hauteur de crue</h2><h3>14 au 15 janvier 2021</h3> <img src='./img/crueliane.jpg''/>");
-
-    var marker4 = L.marker([44.498920, 0.156086], {icon: warningRedIcon}).addTo(map);
-    marker4.bindPopup("<h1>Crues de la Garonne </h1><h2>Hauteur de crue</h2><h3>28 janvier au 4 février 2021</h3> <img src='./img/cruegaronne.jpg''/>");
-    
-    var marker5 = L.marker([48.970128, 0.508200], {icon: warningOrgIcon}).addTo(map);
-    marker5.bindPopup("<h1>Crues de la Charentonne </h1><h2>Hauteur de crue</h2><h3>22 juin au 24 juin 2021</h3> <img src='./img/cruechar.jpg''/>");
-
-    var marker6 = L.marker([49.490011, 4.633087], {icon: warningOrgIcon}).addTo(map);
-    marker6.bindPopup("<h1>Crues de l’Aisne Vaux</h1><h2>Hauteur de crue</h2><h3>14 au 24 juillet 2021</h3> <img src='./img/crueaisne.jpg''/>");
-    
-    var marker7 = L.marker([43.756659, 4.292887], {icon: warningOrgIcon}).addTo(map);
-    marker7.bindPopup("<h1>Crues du Vistre</h1><h2>Hauteur de crue</h2><h3>14 et 15 septembre 2021</h3> <img src='./img/cruevistre.jpg''/>");
-    
-    var marker8 = L.marker([44.425178, 4.095017], {icon: warningOrgIcon}).addTo(map);
-    marker8.bindPopup("<h1>Crues de l’Ardèche </h1><h2>Hauteur de crue</h2><h3>2 au 4 octobre 2021 </h3> <img src='./img/crueardeche.jpg' '/>");
-    
-    var marker9 = L.marker([50.642137, 2.644887], {icon: warningOrgIcon}).addTo(map);
-    marker9.bindPopup("<h1>Crues de la Lys</h1><h2>Hauteur de crue</h2><h3>28 novembre au 2 décembre 2021 </h3> <img src='./img/cruedulys.jpg' '/><button type='button'> En savoir plus</button>");
-*/
-
-
-}
-
-
-
-    /*  map.removeLayer(geojsonLayerDep); */
-    // On ajoute à la carte
-    
+    }
 
     
 
