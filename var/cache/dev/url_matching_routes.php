@@ -16,6 +16,7 @@ return [
         '/hexago' => [[['_route' => 'app_hexago', '_controller' => 'App\\Controller\\HexagoController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/pingo' => [[['_route' => 'app_pingo', '_controller' => 'App\\Controller\\PingoController::index'], null, null, null, false, false, null]],
+        '/profil' => [[['_route' => 'app_profil', '_controller' => 'App\\Controller\\ProfilController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

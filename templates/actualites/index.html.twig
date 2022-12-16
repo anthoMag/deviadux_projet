@@ -1,20 +1,179 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ActualitesController!{% endblock %}
+{% block title %}Hello ActualitesController!
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="./asset/css/actualites.css">
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+	<main>
+		<section id="solutions">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2>IL PARLENT DES SOLUTIONS</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<img class="img-fluid" src="./asset/img/img/actuarticle1.jpg" alt="photo dune du pila - article1">
+					</div>
+					<div class="col-6">
+						<h3>WE DEMAIN : le défi de la montée des eaux</h3>
+						<p>Face à l’inexorable montée des eaux, la journaliste de We Demain Emmanuelle Vibert revient sur les problématiques que connaîtront les communes du littoral français d’ici les prochaines décennies.<br>D’après une étude​, d’ici 2100, 10% des propriétés côtières seront potentiellement inondables, des biens achetables que l'on estime entre 10 et 50 milliards d’euros. D’ici à 2050, plus des 5% des transactions dans quelque 80 communes...</p>
+						<div class="d-flex">
+							<div>
+								<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+								<p class="partagerEnregistrerText">PARTAGER</p>
+							</div>
+							<div>
+								<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+								<p class="partagerEnregistrerText">ENREGISTRER</p>
+							</div>
+						</div>
+						<button>Être redirigé pour en lire plus</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+		<section id="avenir">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2>IL PARLENT DE L'AVENIR</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<h3>les 126 communes françaises prioritaires</h3>
+						<p>Le gouvernement a publié les noms des 126 communes françaises qui auront l'obligation de s'adapter en priorité à l'érosion du littoral, aggravée par le réchauffement climatique et la pression humaine. Une liste de nouvelles contraintes d'urbanisme qui ne font pas l'unanimité. Avec le recul du trait de côte sur environ un cinquième du littoral français (hors Guyane) selon l'indicateur national de l'érosion côtière, la loi Climat et Résilience de 2021 prévoit de nouvelles dispositions pour les communes en première ligne face à la montée du niveau de la mer et la multiplication des tempêtes et des submersions marines...</p>
+						<div class="d-flex">
+							<div>
+								<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+								<p class="partagerEnregistrerText">PARTAGER</p>
+							</div>
+							<div>
+								<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+								<p class="partagerEnregistrerText">ENREGISTRER</p>
+							</div>
+						</div>
+						<button>Être redirigé pour en lire plus</button>
+					</div>
+					<div class="col-6">
+						<img class="img-fluid" src="./asset/img/img/actuarticle3.jpg" alt="photo maison et arbre sous l'eau - article3">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<img class="img-fluid" src="./asset/img/img/actuarticle2.jpg" alt="photo enfant sur dos d'un sauveteur - article2">
+					</div>
+					<div class="col-6">
+						<h3>la montée des eaux sera bien plus elevée et rapide que prévu</h3>
+						<p>La Terre connaissant une alternance de périodes de glaciation et de réchauffement, les chercheurs ont examiné des données sur la dernière période interglaciaire, il y a 125.000 ans. Les températures moyennes étaient alors plus élevées qu'actuellement d'environ un degré, mais les changements climatiques des 200 dernières années sont plus rapides, en raison des émissions de gaz à effet de serre de la période industrielle.<br>En conséquence, l'étude de la dernière période interglaciaire « ne fournit que la fourchette basse des prédictions sur ce qui pourrait se passer », préviennent les auteurs de l'étude, initialement publiée dans la revue Nature Communications, dans un article paru, et mis en ligne mercredi sur le site The Conversation...</p>
+						<div class="d-flex">
+							<div>
+								<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+								<p class="partagerEnregistrerText">PARTAGER</p>
+							</div>
+							<div>
+								<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+								<p class="partagerEnregistrerText">ENREGISTRER</p>
+							</div>
+						</div>
+						<button>Être redirigé pour en lire plus</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/execu/Downloads/projet_deviadux_test/src/Controller/ActualitesController.php'|file_link(0) }}">src/Controller/ActualitesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/execu/Downloads/projet_deviadux_test/templates/actualites/index.html.twig'|file_link(0) }}">templates/actualites/index.html.twig</a></code></li>
-    </ul>
-</div>
+		<section id="plusArticle">
+
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-4">
+						<article class="cardArticleMiniature">
+							<img class="img-fluid" src="./asset/img/img/actueclair.jpg" alt="Eclair en ville">
+							<p>Lundi, 20 juin 2016 à 11h25</p>
+							<h4>Les solutions fondées sur la nature</h4>
+							<p>Dans un contexte de risques croissants liés au changement climatique, l’Agence régionale...</p>
+							<div class="d-flex text-center">
+								<button>LIRE PLUS</button>
+								<div>
+									<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+									<p class="partagerEnregistrerText">PARTAGER</p>
+								</div>
+								<div>
+									<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+									<p class="partagerEnregistrerText">ENREGISTRER</p>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col-4">
+						<article class="cardArticleMiniature">
+							<img class="img-fluid" src="./asset/img/img/actuvoiturepompier.jpg" alt="Véhicule de secours dans une zone inondée">
+							<p>Mardi, 22 novembre 2022 à 15H20</p>
+							<h4>La cour des comptes alertent</h4>
+							<p>La cour des comptes préconise plusieurs pistes de progrès pour améliorer la prévention des risques...</p>
+							<div class="d-flex text-center">
+								<button>LIRE PLUS</button>
+								<div>
+									<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+									<p class="partagerEnregistrerText">PARTAGER</p>
+								</div>
+								<div>
+									<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+									<p class="partagerEnregistrerText">ENREGISTRER</p>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col-4">
+						<article class="cardArticleMiniature">
+							<img class="img-fluid" src="./asset/img/img/actualitevoiturenoyee.jpg" alt="homme qui pousse sa voiture sur une route inondée">
+							<p>Mercredi, 3 février 2016  à 16H32</p>
+							<h4>Face aux inondations et pluies torentielles</h4>
+							<p>Dans un contexte de risques croissants liés au changement climatique et à l’érosion de la biodiversité, Natureparif...</p>
+							<div class="d-flex text-center">
+								<button>LIRE PLUS</button>
+								<div>
+									<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+									<p class="partagerEnregistrerText">PARTAGER</p>
+								</div>
+								<div>
+									<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+									<p class="partagerEnregistrerText">ENREGISTRER</p>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="video">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h2>Découvrir plus en vidéo</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div
+						class="col-4"><!-- Mettre apercu liens vidéo: https://www.youtube.com/watch?v=oM7SRcj_Utg -->
+					</div>
+					<div
+						class="col-4"><!-- Mettre apercu liens vidéo: https://www.youtube.com/watch?v=w9VUi4tTm6A -->
+					</div>
+					<div
+						class="col-4"><!-- Mettre apercu liens vidéo: https://www.youtube.com/watch?v=Gy6tmLZYa9w -->
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 {% endblock %}

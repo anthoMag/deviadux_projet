@@ -1,20 +1,96 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello EpisodesController!{% endblock %}
+{% block title %}Hello EpisodesController!
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+	<main>
+		<section id="aLaUne">
+			<div class="container">
+				<div class="row">
+					<div id="texte" class="col-6">
+						<h1>Des épisodes de crue en photo avant / après</h1>
+						<p>Crue - Paris - 2016</p>
+						<p>Paris n’est pas étrangère aux débordements de la Seine. La grande inondation de 1910 est la première qui a été documentée alors que l’on recense les incidents depuis 1658. Dans sa série intitulée
+							<a>When the Night Falls</a>, le photographe Benoît Lapray met en images la crue de juin 2016 et revisite les mêmes lieux un an plus tard quand la Seine retrouve un niveau normal.<br>Pour découvrir plus, explorez les images interactives avant-après.
+						</p>
+						<div class="d-flex flex-columm">
+							<div>
+								<img src="#" alt="Picto Partager">
+								<p class="partagerEnregistrerText">PARTAGER</p>
+							</div>
+							<div>
+								<img src="#" alt="Picto Enregistrer">
+								<p class="partagerEnregistrerText">ENREGISTRER</p>
+							</div>
+						</div>
+					</div>
+					<div id="imageBtn" class="col-6">
+						<img src="../IMG:Episode/Aperçu Invalides.jpg" alt="apercu avant/après crue invalides 2016">
+						<button>CLIQUEZ ICI</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+		<!-- <section id="flecheAnimation">
+				    Animation fléche de scroll à ne faire apparaître que quand l'utilisateur à actionner un apercu et donc le slider (cf page 3.1 episodeResultat) J'ai mis le code css dans episode.css mais pas réussi à caler au bon endroit
+				                <img id="flecheScroll" src="#" alt="picto flèche scroll bas">
+				                <div class="drop-container">
+				                <div class="drop"></div>
+				                </div>
+				            </section> -->
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/execu/Downloads/projet_deviadux_test/src/Controller/EpisodesController.php'|file_link(0) }}">src/Controller/EpisodesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/execu/Downloads/projet_deviadux_test/templates/episodes/index.html.twig'|file_link(0) }}">templates/episodes/index.html.twig</a></code></li>
-    </ul>
-</div>
+		<section id="slider">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2>Dans la même série</h2>
+						<!-- texte h1 à changer lorsqu'on actionne un apercu en: -->
+						<!-- <h2>visualiser avant / après</h2> -->
+					</div>
+					<!-- Mettre ici le carrousel de la page 3.0 episode Card 425px/450px-->
+					<div>
+						<img src="./asset/img/img/apercuarsenal.jpg" alt="apercu Arsenal">
+						<img src="./asset/img/img/apercucité.jpg" alt="aperçu crue Cité">
+						<img src="./asset/img/img/apercupeniche.jpg" alt="aperçu crue Péniche">
+						<img src="./asset/img/img/apercuquaibirhakeim.jpg" alt="aperçu crue Quai Bir Hakeim">
+						<img src="./asset/img/img/apercusolferino.jpg" alt="aperçu crue Solferino">
+						<img src="./asset/img/img/apercutoboggan.jpg" alt="aperçu crue Toboggan">
+						<img src="./asset/img/img/apercutournelle.jpg" alt="aperçu crue Tournelle">
+					</div>
+					<div
+						class="col-12">
+						<!-- Mettre ici slider généré de la page 3.1 episodeResultat - virer img ^^mise en attendant Taille slider: 1328 X 602-->
+						<img src="#" alt="testSLIDER">
+					</div>
+					<!-- Mettre ici Button d'action pour générer d'autres sliders de la page 3.1 episodeResultat, à faire apparaitre lorsqu'on actionne un 1er slider Taille 170/180-->
+					<div class="col-12" id="apercuBtn">
+						<img src="./asset/img/IMG_Episode/Aperçu Arsenal.jpg" alt="aperçu crue Arsenal">
+						<img src="./asset/img/IMG:Episode/Aperçu Cité.jpg" alt="aperçu crue Cité">
+						<img src="../IMG:Episode/Aperçu Péniche.jpg" alt="aperçu crue Péniche">
+						<img src="../IMG:Episode/Aperçu Quai Bir Hakeim.jpg" alt="aperçu crue Quai Bir Hakeim">
+						<img src="../IMG:Episode/Aperçu Solferino.jpg" alt="aperçu crue Solferino">
+						<img src="../IMG:Episode/Aperçu Toboggan.jpg" alt="aperçu crue Toboggan">
+						<img src="../IMG:Episode/Aperçu Tournelle.jpg" alt="aperçu crue Tournelle">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="mapsFrance">
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+						<img src="./img/map.svg" alt="carte région de France">
+					</div>
+					<div class="col-6">
+						<p>BIENTÔT DISPONIBLE
+							<br>l'exploration d'autres évenements à travers la France</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
 {% endblock %}

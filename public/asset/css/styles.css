@@ -1,80 +1,127 @@
-main{
-    backdrop-filter: blur(80px);
-
+/* 15/12 scrollX--------------------- */
+html,
+body {
+    overflow-x: hidden;
 }
 
-/* body{
-    background-color: black;
-}
- */
 /* Heroshot---------------- */
-header{
+header {
     height: auto;
-
 }
+
+#titreHeroshot {
+    position: absolute;
+    top: 25%;
+}
+
+#titreHeroshot h1 {
+    margin-bottom: revert;
+}
+
 #btn {
     color: #01131B;
-    background-color: white;
-    padding: 15px 80px;
-    margin: 10px;
+    background-color: #F9FBFF;
+    padding: 1rem 2rem;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-/* CookiesBar-------------------------------------- */
+#videoDiv {
+    object-fit: cover;
+}
 
-#cookiesText {
+/* CookiesBar-------------------------------------- */
+#cookiesBar {
+    position: absolute;
+    z-index: 2;
+    top: 615px;
+}
+
+#cookiesBar p {
+    text-align: center;
     color: #01131B;
     background-color: #F9FBFF;
+    padding: 1.5% 1.5% 1.5% 1.5%;
+}
+
+#cookiesBar a {
+    color: #01131B;
+}
+
+#cookiesBar button {
+    background-color: #01131B;
+    border: none;
+    padding: 1rem 1rem;
 }
 
 
 /* MAIN-------------------------------------------- */
 /* SECTION articleAlaUne--------------------------- */
 
-#articleAlaUne h1{
-    padding: 130px 0px 70px 0px;
+#articleAlaUne h1 {
+    margin: 8rem 0 5rem;
 }
 
 #carouselExampleCaptions h5 {
     text-transform: uppercase;
-    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.75) );
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.75));
 }
 
 #carouselExampleCaptions p {
     text-decoration: underline;
 }
 
-/* SECTION dataViz------------------------------------------ */
-#dataViz h1{
-    padding-top: 200px;
-    padding-bottom: 46px;
+#carouselExampleCaptions {
+    margin-bottom: 10rem;
 }
 
-#dataViz h4{
-    font-size: 18px;
-    font-family: 'Red Hat Display', sans-serif;
+/* SECTION dataViz------------------------------------------ */
+#dataViz h1 {
+    margin-bottom: 5rem;
+}
+
+#dataViz h4 {
+    /* font-size: 18px; */
+    font-family: 'Red+Hat+Display', sans-serif;
     font-weight: lighter;
     text-transform: initial;
-} 
+}
+
+.graphique {
+    position: relative;
+    padding: 4rem 4rem;
+    margin: 0 0 7rem 0;
+}
+
+.graphique::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(110.11deg, rgba(56, 210, 173, 0.47) -20.83%, #005664 25.71%, #142B33 63.59%);
+    z-index: -1;
+    filter: blur(7.5px);
+}
+
 
 
 /* SECTION pictoInfo--------------------------- */
-/* .picto{
-   filter: invert(100%) saturate(100%) brightness(100%) contrast(100%);
-   margin: 10px;
-} */
 
-.chiffrePicto{
-    font-size: 70px;
+
+.chiffrePicto {
+    font-size: 250%;
+    margin: 1rem 0;
 }
 
 #pictoInfo {
-    margin-top: 115px;
+    margin-top: 11rem;
 }
 
-#pictoInfo h3{
-    margin: 10px;
+.picto {
+    padding-top: 3rem;
 }
 
 /* SECTION citation---------------------------------- */
@@ -82,7 +129,8 @@ header{
 #citation {
     font-weight: bold;
     font-weight: normal;
-    font-style: italic ;
+    font-style: italic;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 10rem;
 }

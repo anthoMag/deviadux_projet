@@ -12,4 +12,5 @@ return [
     'app_hexago' => [[], ['_controller' => 'App\\Controller\\HexagoController::index'], [], [['text', '/hexago']], [], [], []],
     'app_home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], [], []],
     'app_pingo' => [[], ['_controller' => 'App\\Controller\\PingoController::index'], [], [['text', '/pingo']], [], [], []],
+    'app_profil' => [[], ['_controller' => 'App\\Controller\\ProfilController::index'], [], [['text', '/profil']], [], [], []],
 ];
