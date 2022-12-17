@@ -4,6 +4,10 @@
  https://github.com/mourner/simpleheat
 */
 
+let respHeight = document.querySelector('body').height;
+console.log(respHeight);
+
+
 /////// RANGE ////////
 
 let meter = document.getElementById('metre');
@@ -226,7 +230,7 @@ function launchMap(){
 
 
                 if (counter != 5) {
-                    setTimeout(getElevation(counter), 50);
+                    setTimeout(getElevation(counter), 100);
                 }
                 
             } catch(error) {
