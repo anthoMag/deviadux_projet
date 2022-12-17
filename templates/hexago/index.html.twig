@@ -22,12 +22,23 @@
 
 {% block body %}
 
-<div class="wrapper">
-  <div id="map"></div>
-  <div class="modale">
+<div id="margtop">
 
-    
-    </span>
+</div>
+
+<div class="wrapper">
+  <div id="map">
+  
+  <div class="logo">
+    <img src="./asset/img/logopictoicone/logoO.svg"></img>
+  </div>
+  
+  </div>
+
+  
+
+  <div class="modale ">
+
     <h3>
       ANNÉE
     </h3>
@@ -40,7 +51,7 @@
     <h2 id="metre">
       0
     </h2>
-    </span>
+ 
     <h3>
       MÈTRES
     </h3>
@@ -50,13 +61,9 @@
     
   </div>
   <div class="modale cta">
-    <h2>VOIR AUTRE CARTE</h2>
+    <a class="nav-link" href="{{path ('app_pingo')}}">VOIR AUTRE CARTE</a>
   </div>
 </div>
-  <div class="cta">
-    <a href=""></a>
-    
-  </div>
   <div class="range">
     <div class="sliderValue">
       <span>100</span>

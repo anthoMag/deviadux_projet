@@ -15,6 +15,7 @@
 
 html,
 body {
+  height: 100%;
   text-align: center;
   place-items: center;
   background-color: #01131B;
@@ -24,7 +25,7 @@ body {
 
 .range {
   width: 100%;
-  background: #fff;
+  background: #F9FBFF;
   border-radius: 10px;
   margin: auto;
   z-index: 3;
@@ -41,7 +42,7 @@ body {
   position: absolute;
   height: 45px;
   width: 380px;
-  color: white;
+  color: #F9FBFF;
   font-weight: 500;
   transform: translateX(-50%) scale(0);
   transform-origin: bottom;
@@ -77,7 +78,7 @@ body {
   justify-content: center;
   height: 100%;
   top: 30px;
-
+  box-shadow: #0000004f 5px 0px 5px;
 }
 
 .range .field .value {
@@ -90,7 +91,7 @@ body {
 .range .field input {
   -webkit-appearance: none;
   height: 3px;
-  background: rgb(255, 255, 255);
+  background: #F9FBFF;
   border-radius: 5px;
   outline: none;
   border: none;
@@ -110,12 +111,15 @@ body {
 }
 
 #fill div {
+  border-left: solid 3px #F9FBFF;
+  height: 27px;
+  margin: 15px 0;
+  position: relative;
+}
 
-  border-left: solid 2px white;
-  border-right: solid 2px white;
+#fill div:nth-child(1),#fill div:nth-child(6) {
   height: 40px;
   margin: 10px 0;
-
 }
 
 #fill {
@@ -124,9 +128,6 @@ body {
   background-color: #01131B;
 }
 
-#fill div {
-  position: relative;
-}
 
 #fill p {
   position: absolute;
@@ -148,10 +149,14 @@ body {
   margin: 0 auto;
 }
 
+#margtop {
+  height: 96px;
+  background-color: #01131B;
+}
+
 #map {
   height: 675px;
   width: 100%;
-  margin: auto;
 }
 
 .leaflet-control-attribution {
@@ -164,20 +169,110 @@ body {
 
 .modale {
   position: absolute;
-  top: 150px;
-  right: 200px;
+  bottom: 250px;
+  right: 100px;
   width: 250px;
   z-index: 999;
   background-color: #F9FBFF;
   color: #01131B;
+  box-shadow: #0000004f 5px 5px 5px ;
+}
+
+.modale hr{
+
+  background-color: #01131B;
+  border: #01131B 1px solid;
+  opacity: 1;
+}
+
+.modale h3{
+  margin-bottom: 0px;
+}
+
+.modale h3:nth-child(1){
+  margin-top: 15px;
+}
+
+.modale h2{
+
+  font-weight: 900;
+}
+
+.cta a{
+  display: inline-block;
+  font-family: 'Red+Hat+Display', sans-serif;
+  font-size: 25px;
+  margin: 10px 0;
 }
 
 .cta {
-  top: 450px;
-  right: 200px;
+  bottom: 150px;
 }
 
 .back-range {
   margin: 20px 0;
   background-color: #01131B;
 }
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+  border: 0px;
+  background-clip: padding-box;
+  box-shadow: #0000004f 1px 1px 1px;
+}
+
+.leaflet-touch .leaflet-bar a:last-child {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  
+}
+
+.leaflet-control-zoom a{
+  background-color: #01131B;
+  color: #F9FBFF;
+}
+
+.leaflet-control-zoom a:hover{
+  background-color: #005663;
+  color: white;
+}
+
+.leaflet-bar a.leaflet-disabled {
+  cursor: default;
+  background-color: #01131B3f;
+  color: #F9FBFF3f;
+}
+
+.leaflet-bar a{
+  border-bottom: 0px;
+}
+
+@keyframes logomove {
+
+  0% {
+    rotate: 0deg;
+    transform: scale(1);
+  }
+
+
+  100% {
+    rotate: 360deg;
+    transform: scale(1);
+  }
+}
+
+.logo {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: 25px;
+  left: 60px;
+
+  animation: logomove 1.3s infinite;
+}
+
+.display_block{
+  display: block;
+}
+
+
+  

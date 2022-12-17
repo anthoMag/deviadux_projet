@@ -4,9 +4,16 @@
  https://github.com/mourner/simpleheat
 */
 
-let respHeight = document.querySelector('body').height;
-console.log(respHeight);
+/////// TAILLE DE LA CARTE ///////
 
+// Récupère la hauteur de la balise html
+let htmlHeight = document.querySelector('html').offsetHeight;
+
+// DOM de la map
+let mappy = document.getElementById('map');
+
+// Modifie la hauteur de la map
+mappy.style.height = htmlHeight - 200 + 'px';
 
 /////// RANGE ////////
 
@@ -31,17 +38,13 @@ inputSlider.oninput = (() =>{
     reg = 0.26 * num;
     exp = Math.exp(num);
 
-    result = ((reg + exp));
+    result = ((reg + exp) - 1);
     elevation = result.toFixed(2); 
 
    meter.innerHTML=elevation; 
    old.innerHTML=year; 
 })
 
-/* inputSlider.onblur = (()=>{
-    sliderValue.classList.remove("show");
-    
-}); */
 
 /////// MAP ///////
 
@@ -54,7 +57,6 @@ let width = 1920;
 let height = 675;
 
 let divisionX =  120;
-/* let year = 2500; */
 
 let request = 5;
 let counterRequest = 0;
@@ -89,8 +91,6 @@ function launchMap(){
 
     // Déclaration de la fonction pour afficher la grille heatMap
     function gridAdd(){
-
-        console.log('gridAdd');
 
         if (counterRequest == 1) {
             if (controller != null) {
@@ -169,13 +169,37 @@ function launchMap(){
   
         let counter = 0;
 
-        getElevation(counter);
+        if (counterRequest == 0) {
+            getElevation(counter);
+        }
+
+        if (counterRequest >= 1) {
+            setTimeout(getElevation, 200, counter);
+        }
+        
+
+
+        logo = document.querySelector('.logo');
+        let move = 0;
+        logoMove(move);
+
+
+        function logoMove(move) {
+            if (move == 0) {
+                logo.classList.add('display_block');
+            }
+
+            if (move == 1) {
+                logo.classList.remove('display_block');
+            }
+        }
+
 
         async function getElevation(counter){
-     
+
             try {
-                    // ICI code la requete
-                
+
+                // ICI code la requete    
                 const rawResponse = await fetch('https://api.open-elevation.com/api/v1/lookup', {
                 method: 'POST',
                 signal: signal,
@@ -202,7 +226,7 @@ function launchMap(){
                     let group = L.featureGroup(); 
 
                     // Push toutes les points de la grille dans un groupe 'group'
-                    var heat = L.heatLayer(waterPoints, {radius: 12.5}).addTo(group);
+                    var heat = L.heatLayer(waterPoints, {radius: 15}).addTo(group);
 
                     gridRemove();
 
@@ -230,16 +254,11 @@ function launchMap(){
 
 
                 if (counter != 5) {
-                    setTimeout(getElevation(counter), 100);
+                    setTimeout(getElevation, 200, counter);
                 }
                 
             } catch(error) {
                 // EN CAS DE FAIL
-
-                console.log('error :');
-                console.log(error);
-                console.log(controller.signal);
-                console.log(counter);
            
                 counter = 0;
             
