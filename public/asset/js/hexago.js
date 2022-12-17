@@ -12,7 +12,7 @@ let old = document.getElementById('old');
 const sliderValue = document.querySelector("span");
 const inputSlider = document.querySelector("input");
 
-let elevation = 0.01;
+let elevation = 0;
 
 inputSlider.oninput = (() =>{
     let value = inputSlider.value;
@@ -27,7 +27,7 @@ inputSlider.oninput = (() =>{
     reg = 0.26 * num;
     exp = Math.exp(num);
 
-    result = ((reg + exp) - 0.99);
+    result = ((reg + exp));
     elevation = result.toFixed(2); 
 
    meter.innerHTML=elevation; 
@@ -185,7 +185,7 @@ function launchMap(){
 
                 for (let i = 0; i < responseApi.results.length; i++) {
                     
-                    if (responseApi.results[i].elevation < elevation) {
+                    if (responseApi.results[i].elevation <= elevation) {
                         waterPoints.push([responseApi.results[i].latitude, responseApi.results[i].longitude, 200]);
                     }  
                 }

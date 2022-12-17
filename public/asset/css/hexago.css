@@ -14,7 +14,6 @@
   }
   
   html, body{
-    height:100%;
     text-align:center;
     place-items:center;
     background-color: #01131B;
@@ -23,7 +22,6 @@
   }
   
   .range{
-    height: 80px;
     width: 100%;
     background:#fff;
     border-radius: 10px;
@@ -44,7 +42,7 @@
     font-weight: 500;
     transform: translateX(-50%) scale(0); 
     transform-origin: bottom;
-  /*   transition: transform 0.3s ease-in-out; */
+/*     transition: transform 0.3s ease-in-out; */
     line-height: 55px;
     z-index: 2; 
     top: -20px;
@@ -53,7 +51,7 @@
     transform: translateX(-50%) scale(1);
   }
   
-  /*  .range .sliderValue span:after{
+   .range .sliderValue span:after{
     position: absolute;
     content: "";
     height:45px;
@@ -66,7 +64,7 @@
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-left-radius: 50%;
-  }  */
+  } 
   
   .range .field{
     position:relative;
@@ -118,21 +116,37 @@
     display: flex;
     justify-content: space-between;
     background-color: #01131B;
-  
+  }
+
+  #fill div{
+    position: relative;
+  }
+
+  #fill p{
+    position: absolute;
+    margin: 6px 0;
+  }
+
+  #fill .p1{
+    right: 10px;
+  }
+
+  #fill .p2{
+    left: 10px;
   }
   
   .back{
   
-    background: black;
+    background-color: #01131B;
     padding: 0 10px;
     width: 90%;
     margin: 0 auto;
   }
   
-  #map {
-    height: 675px;
-    width: 100%;
-    margin: auto;
+    #map {
+      height: 675px;
+      width: 100%;
+      margin: auto;
     }
   
     .leaflet-control-attribution{
@@ -157,4 +171,10 @@
       top: 450px;
       right: 200px;
     }
-  
+
+    .back-range {
+      margin: 20px 0;
+      background-color: #01131B;
+    }
+
+    
