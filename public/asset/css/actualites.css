@@ -1,3 +1,7 @@
+.nav_actu {
+    text-decoration: underline;
+}
+
 header{
     background-image: url(../img/bgdheroshotactu.jpg);
     background-size: cover;

@@ -11,8 +11,11 @@ class EpisodesController extends AbstractController
     #[Route('/episodes', name: 'app_episodes')]
     public function index(): Response
     {
+        $id = $_GET['id'];
+
         return $this->render('episodes/index.html.twig', [
             'controller_name' => 'EpisodesController',
+            'id' => $id,
         ]);
     }
 }

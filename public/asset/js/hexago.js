@@ -183,6 +183,7 @@ function launchMap(){
         let move = 0;
         logoMove(move);
 
+        console.log(gridPoints[0]);
 
         function logoMove(move) {
             if (move == 0) {
@@ -209,7 +210,7 @@ function launchMap(){
                 },
                 body: JSON.stringify({'locations': gridPoints[counter]})
                 });
-                const responseApi = await rawResponse.json();        
+                const responseApi = await rawResponse.json();
 
                 for (let i = 0; i < responseApi.results.length; i++) {
                     
