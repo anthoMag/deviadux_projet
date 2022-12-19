@@ -1,4 +1,4 @@
-/* ---------Anim SVG----------- */
+/* ---------Anim svg----------- */
 document.addEventListener('DOMContentLoaded', (e) => {
 
     let prevTime = 0;
@@ -39,12 +39,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
 let closeBtn = document.getElementById('closeCookie');
 
 
-closeBtn.addEventListener('click', close);
-
 function close() {
-
-    let cookieBar = document.getElementById('barCookies');
-
+    
+    let cookieBar = document.getElementById('cookiesBar');
+    
     cookieBar.style.display = 'none';
-
+    
 }
+closeBtn.addEventListener('click', close);

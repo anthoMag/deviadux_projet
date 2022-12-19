@@ -2,15 +2,31 @@
     margin : 0;
     padding: 0;
   }
+
+  html,
+  body {
+    height: 100%;
+    text-align: center;
+    place-items: center;
+    background-color: #01131B;
+    color: #F9FBFF;
+  }
+  
+  
+
+
   h1, h2, h3{
     font-size: 1rem;
   }
   
-  #map {
-    height: 700px;
-    width: 100%;
-    margin: auto;
-    }
+#map {
+  height: 675px;
+  width: 100%;
+}
+#margtop {
+  height: 96px;
+  background-color: #01131B;
+}
   
     :root {
       --map-tiles-filter: brightness(0.65) invert(10) contrast(5) hue-rotate(0deg) saturate(0) brightness(0.6);
