@@ -111,7 +111,7 @@ INSERT INTO `departements` (`id`, `name`, `code_dep`, `reg_id`) VALUES
 (189, 'Hauts-de-Seine', '92', 8),
 (190, 'Seine-Saint-Denis', '93', 8),
 (191, 'Val-de-Marne', '94', 8),
-(192, 'Val-d\'oise', '95', 8);
+(192, 'Val-d oise', '95', 8);
 
 
 INSERT INTO `evenements` (`id`, `title`, `periode`, `level_alert`, `pic_de_crue`, `lieu`, `coordonnee_x`, `coordonnee_y`, `dep_id`, `image`) VALUES
@@ -126,7 +126,7 @@ INSERT INTO `evenements` (`id`, `title`, `periode`, `level_alert`, `pic_de_crue`
 (9, 'Crues de l’Ardèche amont', '29 et 30 octobre 2021', 'orange', 6.97, 'Vallon-Pont-d’Arc', 44.4031, 4.38266, 103, 'vallon_pont_darc.jpg'),
 (10, 'Crues de la Lys', '28 novembre au 2 décembre 2021', 'orange', 2.88, 'Merville', 50.6421, 2.64489, 156, 'merville.jpg'),
 (11, 'Crues du Bec du Gave', '9 au 15 décembre', 'rouge', 5.78, 'Cambo-les-Bains', 43.3631, -1.3976, 161, 'cambo_les_mains.jpg'),
-(12, 'Crue de la saôme', '20 au 22 juillet', 'orange', 4.81, 'Macon', 46.302723, 4.834103, 168, 'macom_2018.jpg'),
+(12, 'Crue de la saôme', '20 au 22 juillet', 'orange', 4.81, 'Macon', 46.302723, 4.834103, 168, 'macon.jpg'),
 (13, 'Crue de la Sarthe', '29 au 30 decembre 2001', 'orange', 3.50, 'Cheffes', 47.622998, -0.503046, 146, 'cheffes.JPG'),
 (14, 'Crue de la Loire', '4 au 5 février 2021', 'orange', 4.79, 'Ponts-de-Cé', 47.426185, -0.526115, 146, 'angers_2019.jpg'),
 (15, 'Crue de la Maine', '2 au 5 février 2021', 'orange', 5.37, 'Angers', 47.478183, -0.555369, 146, 'angers.jpg'),

@@ -39,35 +39,11 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 let closeBtn = document.getElementById('closeCookie');
 
 
-
-function close(){
+function close() {
     
     let cookieBar = document.getElementById('cookiesBar');
     
-    cookieBar.style.display='none';
+    cookieBar.style.display = 'none';
     
 }
-
-closeBtn.addEventListener('click',close);
-/* ---------------------------modal------------------------------------- */
-
-// var modal = document.querySelector(".modal");
-// var trigger = document.querySelector(".example");
-// var closeButton = document.querySelector(".close-button");
-
-// function toggleModal() {
-//   modal.classList.toggle("show-modal");
-//   el = document.getElementById("example");
-//   el.style.visibility = el.style.visibility == "visible" ? "hidden" : "visible";
-// }
-
-// function windowOnClick(event) {
-//   if (event.target === modal) {
-//     toggleModal();
-//   }
-// }
-
-
-// trigger.addEventListener("click", toggleModal);
-// closeButton.addEventListener("click", toggleModal);
-// window.addEventListener("click", windowOnClick);
+closeBtn.addEventListener('click', close);

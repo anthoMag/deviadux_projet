@@ -1,6 +1,10 @@
 let geojsonReg = null;
-console.log(tabData);
- fetch('./region.geoJSON')
+
+let htmlHeight = document.querySelector('html').offsetHeight;
+let mappy = document.getElementById('map');
+ mappy.style.height = htmlHeight - 250 + 'px';
+
+ fetch('./asset/js/region.geoJSON')
 .then((response) => {
     return response.json();
 })
@@ -10,8 +14,6 @@ console.log(tabData);
 })
 
 function launchMap(){
-
-    
 
     // On dessine le polygone
     let geojsonLayerReg = L.geoJSON(geojsonReg, {
@@ -31,12 +33,12 @@ function launchMap(){
     L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
         attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         className: 'map-tiles',
-        /* minZoom: 6,
-        maxZoom: 6 */
+         minZoom: 1,
+        maxZoom: 20
     }).addTo(map);
 
     var warningOrgIcon = L.icon({
-        iconUrl: '../img/IMG_PINGO/logoO.svg',
+        iconUrl: './asset/img/IMG_PINGO/logoO.svg',
         shadowUrl: '',
     
         iconSize:     [20, 20], // size of the icon
@@ -50,9 +52,11 @@ function launchMap(){
      tabData.forEach((v, k) => {
         console.log(v);
         window['marker' + k]  = L.marker([v[4], v[5]], {icon: warningOrgIcon}).addTo(map);
-        window['marker' + k].bindPopup("<h1>"+v[0]+"</h1><h2>"+v[1]+"</h2><h3>"+v[2]+"</h3> <img src='../img/IMG_PINGO/"+v[6]+"'/>");
+        window['marker' + k].bindPopup("<h1>"+v[0]+"</h1><h2>"+v[1]+"Mètres</h2><h3>"+v[3]+"</h3><h3>"+v[2]+"</h3> <img src='../asset/img/IMG_PINGO/"+v[6]+"'/>");
      });
     }
+
+    
 
     
 

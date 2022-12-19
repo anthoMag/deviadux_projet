@@ -12,32 +12,32 @@
 {% endblock %}
 
 {% block body %}
+<div id="margtop">
+
+</div>
 	<div>
 		<div id="map"></div>
 	</div>
 	<div class="bandemap">
 		<div class="bande"></div>
-		{# <div class="buttonmap">
-									<input type="button" class="buttonm" value="Retourner sur les projections">
-								</div> #}
+		<div class="buttonmap">
+		<input type="button" class="buttonm" value="VOIR CARTE HEXAGO">
+		</div> 
 
 	{% endblock %}
 
 	{% block footer %}{% endblock %}
 
 	{% block javascripts %}
-		<script>
-			let tabData = [];{% for evenement in list %}tabData.push([
-'{{ evenement.title }}',
-'{{ evenement.picDeCrue }}',
-'{{ evenement.periode }}',
-'{{ evenement.dep.name }}',
-'{{ evenement.coordonneeX }}',
-'{{ evenement.coordonneeY }}',
-'{{ evenement.image }}'
-]){% endfor %}
-		</script>
-		<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-		<script src="./asset/js/main.js"></script>
-		<script src="./asset/js/pingo.js"></script>
+		<script> 
+let tabData = [];
+{% for evenement in list %}
+tabData.push(['{{evenement.title}}', '{{evenement.picDeCrue}}','{{evenement.periode}}','{{evenement.dep.name}}','{{evenement.coordonneeX}}','{{evenement.coordonneeY}}','{{evenement.image}}'])
+{% endfor %}
+
+</script>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+  crossorigin=""></script>
+<script src="./asset/js/pingo.js"></script>
 	{% endblock %}
