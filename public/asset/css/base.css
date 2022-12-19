@@ -1,6 +1,9 @@
 /**************** IMPORTS ******************/
 /* *************** Grille *************** */
 /***************** Globales ************** */
+html, body{
+    overflow-x: hidden;
+}
 
 body{
     background-color: #01131B;
@@ -11,6 +14,9 @@ a {
     color: #F9FBFF;
 }
 
+a:hover {
+    color: #38D2AD;
+}
 
 /* **************** Typographie ********* */
 /* Syncopate */
@@ -42,8 +48,11 @@ h1,h2,h4 {
     font-family: 'Syncopate', 'Roboto', sans-serif;
     text-transform: uppercase;
     font-weight: 400;
-    line-height: 1,45;
+    line-height: 1.
+    45;
 }
+
+
 
 h3,p,button,ul{
     font-family: 'Red+Hat+Display', sans-serif;
@@ -56,18 +65,23 @@ h3,p,button,ul{
     font-family: 'Red+Hat+Display', sans-serif;
     font-weight: lighter;
     margin-bottom: 0rem;
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+
 }
 /* ************** Images & icones ****** */
 
 .icon {
-    margin: 1rem 1rem;
+    padding : 0rem 0rem 0.4rem 0rem;
 }
 
 .icon2 {
-    margin: 1rem 1rem;
+    padding :0rem 0rem 0.4rem 0rem;
 }
 
-
+.enregistrerIcon {
+    margin-left: 1.5rem;
+}
 /* **************** Nav-Bar *************/
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -77,7 +91,7 @@ h3,p,button,ul{
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover{
-    text-decoration: underline;
+    color: #38D2AD;
 }
 
 header nav ul li a{
@@ -98,14 +112,15 @@ ul{
     /* aspect de la nav-Bar au scroll */
 .nav-bg{
     background-color: #01131B;
+    /* border-bottom: 1px solid #F9FBFF; */
 }
 
 /***************** FOOTER ****************/
 
 footer{
     background-color: #01131B;
-    border-top: 2px solid #F9FBFF;
-    margin-top: 10rem;
+    border-top: 1px solid #F9FBFF;
+    margin-top: 12rem;
 }
 
 footer h3{
@@ -129,11 +144,6 @@ footer h3{
     margin-top: 2rem;
 }
 
-/* footer form[type="submit"]{
-    width: 100%;
-    border: none;
-    margin-bottom: 1rem;
-} */
 footer input[type=text]{
     width: 100%;
     border: none;
@@ -152,9 +162,13 @@ footer input[type=email]{
     color: #F9FBFF;
     margin: 1rem 0;
 } 
-/* footer input:last-child{
-    border-bottom: none;
-} */
+
+
+#newsletter form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
 footer input[type="submit"]{
     background-color: #F9FBFF;
@@ -163,6 +177,51 @@ footer input[type="submit"]{
     padding: 0.8rem 2rem;
     margin-top: 1rem;
     border: none;
-    margin-left: 18rem;
+    
+    
+
+   /*  float:right; */
+    
     /* border-radius: 0% 4% 4% 0% #011131B; */
 }
+
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #cccccc;
+
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  }
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eeeeee;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+  }
+  .close-button {
+    float: right;
+    width: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #eeeeee;
+  }
+  .close-button:hover {
+    background-color: #adadad;
+  }
+  .show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  }
