@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', (e)=>{
             let ecoule = now - prevTime;
 
             if (ecoule > (delay*1000)) {
-                image.src = "./logopictoicone/hexaanimate.svg";
+                image.src = "./asset/img/graphique/hexaanimate.svg";
                 prevTime = now;
             }
         }
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', (e)=>{
             let ecoule = now - prevTime2;
 
             if (ecoule > (delay*1000)) {
-                image.src = "./logopictoicone/pluieanimate.svg";
+                image.src = "./asset/img/graphique/pluieanimate.svg";
                 prevTime2 = now;
             }
         }

@@ -20,9 +20,16 @@ header{
 #btn {
     color: #01131B;
     background-color: #F9FBFF;
+    border: 1px solid #F9FBFF;
     padding: 1rem 2rem;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+#btn:hover {
+    color: #F9FBFF;
+    background-color: #01131B;
+    border: 1px solid #F9FBFF;
 }
 
 #videoDiv{
