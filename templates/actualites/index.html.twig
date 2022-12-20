@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ActualitesController!
+{% block title %}
+	{# {{controller_name}} #} Flovia - Les actualites 
 {% endblock %}
 
 {% block stylesheets %}
@@ -43,7 +44,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2>IL PARLENT DE L'AVENIR</h2>
+						<h2 id="art3">IL PARLENT DE L'AVENIR</h2>
 					</div>
 				</div>
 				<div class="row">
@@ -53,7 +54,7 @@
 						<div class="d-flex">
 							<div>
 								<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
-								<p class="partagerEnregistrerText">PARTAGER</p>
+								<p id="art2" class="partagerEnregistrerText">PARTAGER</p>
 							</div>
 							<div>
 								<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
