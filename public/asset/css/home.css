@@ -1,7 +1,7 @@
 /* 15/12 scrollX--------------------- */
-html, body{
+/* html, body{
     overflow-x: hidden;
-}
+} */
 
 /* Heroshot---------------- */
 header{
@@ -10,20 +10,21 @@ header{
 
 #titreHeroshot {
     position: absolute;
-    top: 25%;
+    top: 15%;
 }
 
 #titreHeroshot h1 {
     margin-bottom: revert;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #btn {
     color: #01131B;
     background-color: #F9FBFF;
-    border: 1px solid #F9FBFF;
     padding: 1rem 2rem;
     text-decoration: none;
     text-transform: uppercase;
+    border: 1px solid #F9FBFF;
 }
 
 #btn:hover {
@@ -40,14 +41,14 @@ header{
 #cookiesBar{
     position: absolute;
     z-index: 2;
-    top: 700px;
+    top: 600px;
     padding: 0;
 }
 #cookiesBar p {
     text-align: center;
     color:#01131B;
     background-color: #F9FBFF;
-    padding : 1% 1% 1% 1%;
+    padding : 0.5% 0.5% 0.5% 0.5%;
 }
 
 #cookiesBar a{
@@ -62,6 +63,14 @@ header{
 
 
 /* MAIN-------------------------------------------- */
+
+.boutoncarrousel {
+    border: none;
+    background-color: none;
+}
+
+
+
 /* SECTION articleAlaUne--------------------------- */
 
 #articleAlaUne h1{
@@ -165,8 +174,7 @@ main b{
     font-style: italic ;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 13rem;
-    padding-bottom: 6rem;
+    margin-top: 10rem;
 }
 
 #citation h2, #citation p {
@@ -180,8 +188,8 @@ main b{
 }
 
 .round {
-    height: 960px;
-    width: 980px;
+    height: 95%;
+    width: 60%;
     background: linear-gradient(110.11deg, rgba(56, 210, 173, 0.47) -20.83%, #006d7d 25.71%, #142B33 63.59%);
     position: absolute;
     filter: blur(40px);
@@ -192,18 +200,16 @@ main b{
 }
 
 .round2 {
-    height: 900px;
-    width: 960px;
+    height: 70%;
+    width: 90%;
     background:linear-gradient(254.54deg, rgba(56, 210, 192, 0.52) -31.41%, #005664 23.79%, #142B33 60.47%);
     position: absolute;
     filter: blur(40px);
     z-index: -1;
-    bottom: -3400px;
-    right:-400px;
+    bottom: -3000px;
+    right:0;
     border-radius: 50%;
 }
 
 
-
-    
-    
+/*------------------- Modale --------------------------- */

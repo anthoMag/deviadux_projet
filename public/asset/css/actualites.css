@@ -1,9 +1,30 @@
-.nav_actu {
-    text-decoration: underline;
+.lienactu {
+    color: #01131B;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    border: 1px solid #F9FBFF;
+    background-color: #F9FBFF;
+    margin-top: 1rem;
+    font-family: "Red+Hat+Display" , sans-serif ;
+    margin: 0 1rem 0 0;
 }
 
+.lienactu:hover {
+   color: #F9FBFF;
+   background-color: #01131B;
+}
+
+.iconarticle {
+    margin-bottom: 1rem;
+}
+
+.nav_actu {
+    text-decoration: underline;
+  }
+
 header{
-    background-image: url(../img/bgdheroshotactu.jpg);
+    background-image: url(../img/heroshotactu.jpg);
+    height: 650px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -11,8 +32,10 @@ header{
 }
 
 header h1{
-    padding-top: 225px;
+    padding-top: 210px;
     padding-bottom: 225px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 4rem;
 }
 
 .img-fluid{
@@ -23,21 +46,120 @@ main p {
 }
 
 main h2{
-    margin-top: 8rem;
-    margin-bottom: 4rem;
+    margin: 0rem 0 3.5rem 0;
  }
 
-main h3,main p,main button {
+/* main h3,main p,main button {
     margin: 2rem 0;
- }
-
+ } */
 
 .partagerEnregistrerText{
     margin: 0;
 }
 
 #plusArticle article {
-    border: 2px solid #F9FBFF;
+    border: 1px solid #F9FBFF;
+    margin-bottom: 5rem;
  }
 
+.actuarticle button {
+    border: none;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+}
+
+.actuarticle button:hover {
+    border: 0.1rem solid #F9FBFF;
+}
+
+.actuarticle {
+    margin-bottom: 9rem;
+}
+
+
+.iconactu {
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+.cardArticleMiniature button {
+    margin-right: 1rem;
+    padding: 0.2rem 2rem 0.2rem 2rem;
+    border: none;
+}
+
+.cardArticleMiniature h4 {
+    padding: 0rem 1.2rem 0rem 1.2rem ;
+    font-size: 1.2rem;
+}
+
+.cardArticleMiniature button:hover {
+    border: 0.1rem solid #F9FBFF;
+}
+
+.textcard {
+    padding : 1.5rem 1rem 0rem 1rem;
+}
+
+.textactu {
+    padding-left: 2.5rem;
+    align-items: center;
+}
+
+.textactu2 {
+    padding-right: 2.5rem;
+    align-items: center;
+}
+
+.textactu h3 {
+    margin-bottom: 1.5rem;
+}
+
+.textactu2 h3 {
+    margin-bottom: 1.5rem;
+}
+
+.textactu p {
+    padding-bottom: 0.5rem;
+}
+
+.textactu2 p {
+    padding-bottom: 0.5rem;
+}
+
+#solutions h2 {
+    margin-top: 8rem;
+}
+
+#plusArticle {
+    margin-bottom: 4rem;
+}
+
+.round {
+    height: 600px;
+    width: 650px;
+    background: linear-gradient(254.54deg, rgba(56, 210, 192, 0.52) -31.41%, #005664 23.79%, #142B33 60.47%);
+    position: absolute;
+    filter: blur(40px);
+    z-index: -1;
+    top: 65%;
+    right: -250px;
+    border-radius: 50%;
+  }
+  
+  .round2 {
+    height: 600px;
+    width: 850px;
+    background:linear-gradient(110.11deg, rgba(56, 210, 173, 0.47) -20.83%, #006d7d 25.71%, #142B33 63.59%);
+    position: absolute;
+    filter: blur(40px);
+    z-index: -1;
+    bottom: -3300px;
+    right: 1000px;
+    border-radius: 50%;
+  }
+
+#video img {
+    width: 400px;
+    height: 250px;
+}
 
