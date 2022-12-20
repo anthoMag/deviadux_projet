@@ -269,9 +269,9 @@ body {
   z-index: 1000;
   top: 25px;
   left: 60px;
-
   animation: logomove 1.3s infinite;
 }
+
 
 .display_block{
   display: block;

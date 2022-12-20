@@ -46,95 +46,6 @@
                 </div>
             </section>
 
-            <!-- <section id="flecheAnimation">
-    Animation fléche de scroll à ne faire apparaître que quand l'utilisateur à actionner un apercu et donc le slider (cf page 3.1 episodeResultat) J'ai mis le code css dans episode.css mais pas réussi à caler au bon endroit
-                <img id="flecheScroll" src="#" alt="picto flèche scroll bas">
-                <div class="drop-container">
-                <div class="drop"></div>
-                </div>
-            </section> -->
-
-				<div class="container"> 
-							<div class="slider slider--image">
-								<div class="slider__before">
-									<img src="./asset/img/img/apercuquaibirhakeim.jpg" alt="">                 {#  "./asset/img/img/avap/seine_0{{id}}_av.jpg" #}
-								</div> 
-								<div class="slider__separator"></div>
-								<div class="slider__after">
-									<img src="./asset/img/img/apercuarsenal.jpg" alt="">       {#  "./asset/img/img/avap/seine_0{{id}}_ap.jpg" #}
-								</div>
-								<input class="slider__range" type="range" min="0" max="100" value="50"/>
-							</div>
-						</div>
-
-            <section id="sliderminiature">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Dans la même série</h2>
-                        </div>
-                        <div class="containerblocslider">
-                            <div class="blocslider">
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercuquaibirhakeim.jpg" alt=""></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercuarsenal.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercucite.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercupeniche.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercusolferino.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercutoboggan.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercutournelle.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/appercubalancoire.jpg" alt="" href="#"></a>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                        </div>
-                </div>
-            </section>
-
-            <section id="mapsFrance">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="./asset/img/img/map.svg" alt="carte région de France">
-                        </div>
-                        <div class="col-6">
-                            <p>BIENTÔT DISPONIBLE <br>l'exploration d'autres évenements à travers la France</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-        
-		</main>
-
-
-	{# <main>
-		<section id="aLaUne">
-			<div class="container">
-				<div class="row">
-					<div id="texte" class="col-6">
-						<h1>Des épisodes de crue en photo avant / après</h1>
-						<p>Crue - Paris - 2016</p>
-						<p>Paris n’est pas étrangère aux débordements de la Seine. La grande inondation de 1910 est la première qui a été documentée alors que l’on recense les incidents depuis 1658. Dans sa série intitulée
-							<a>When the Night Falls</a>, le photographe Benoît Lapray met en images la crue de juin 2016 et revisite les mêmes lieux un an plus tard quand la Seine retrouve un niveau normal.<br>Pour découvrir plus, explorez les images interactives avant-après.
-						</p>
-						<div class="d-flex flex-columm">
-							<div>
-								<img class="icon" src="./asset/img/asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
-								<p class="partagerEnregistrerText">PARTAGER</p>
-							</div>
-							<div>
-								<img class="icon2" src="./asset/img/asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
-								<p class="partagerEnregistrerText">ENREGISTRER</p>
-							</div>
-						</div>
-					</div>
-					<div id="imageBtn" class="col-6">
-						<img src="./asset/img/asset/img/img/apercuinvalides.jpg" alt="apercu avant/après crue invalides 2016">
-						<button>CLIQUEZ ICI</button>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<section id="slider">
 			<div class="container">
 				<div class="row">
@@ -156,57 +67,44 @@
 							<input class="slider__range" type="range" min="0" max="100" value="50"/>
 						</div>
 					</div>
+		
 
-
-					<!-- Mettre ici le carrousel de la page 3.0 episode Card 425px/450px-->
-					<div class="img_apercu">
-						<div>
-							<a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/asset/img/img/apercuinvalides.jpg" alt="apercu Invalides"></a>
-						</div>
-						<div>
-							<a href="{{path ('app_episodes')}}?id=2"><img src="./asset/img/asset/img/img/apercuarsenal.jpg" alt="apercu Arsenal"></a>
-						</div>
-						<div>
-							<a href="{{path ('app_episodes')}}?id=3"><img src="./asset/img/asset/img/img/apercucite.jpg" alt="aperçu crue Cité"></a>
-						</div>
-						<div>
-							<a href="{{path ('app_episodes')}}?id=4"><img src="./asset/img/asset/img/img/apercupeniche.jpg" alt="aperçu crue Péniche"></a>
-						</div>
-						<div>
-							<a href="{{path ('app_episodes')}}?id=5"><img src="./asset/img/asset/img/img/apercuquaibirhakeim.jpg" alt="aperçu crue Quai Bir Hakeim"></a>
-						</div>
-						<div>
-							<a href="{{path ('app_episodes')}}?id=6"><img src="./asset/img/asset/img/img/apercusolferino.jpg" alt="aperçu crue Solferino"></a>
-						</div>
-						<div>
-							<a href="{{path ('app_episodes')}}?id=7"><img src="./asset/img/asset/img/img/apercutoboggan.jpg" alt="aperçu crue Toboggan"></a>
-						</div>
-						<div>
-							<a href="{{path ('app_episodes')}}?id=8"><img src="./asset/img/asset/img/img/apercutournelle.jpg" alt="aperçu crue Tournelle"></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-		<section id="mapsFrance">
-			<div class="container">
-				<div class="row">
-					<div class="col-6">
-						<img src="./asset/img/asset/img/img/map.svg" alt="carte région de France">
-					</div>
-					<div class="col-6">
-						<p>BIENTÔT DISPONIBLE
-							<br>l'exploration d'autres évenements à travers la France</p>
-					</div>
-				</div>
-			</div>
-		</section> #}
-
+             <section id="miniature">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Dans la même série</h2>
+                        </div>
+                        <div class="containerblocs">
+                            <div class="blocs">
+                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercuquaibirhakeim.jpg" alt=""></a>
+                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercuarsenal.jpg" alt="" href="#"></a>
+                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercucite.jpg" alt="" href="#"></a>
+                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercupeniche.jpg" alt="" href="#"></a>
+                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercusolferino.jpg" alt="" href="#"></a>
+                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercutoboggan.jpg" alt="" href="#"></a>
+                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercutournelle.jpg" alt="" href="#"></a>
+                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/appercubalancoire.jpg" alt="" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                        </div>
+                </div>
+            </section> 
+            <section id="mapsFrance">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="./asset/img/img/map.svg" alt="carte région de France">
+                        </div>
+                        <div class="col-6">
+                            <p>BIENTÔT DISPONIBLE <br>l'exploration d'autres évenements à travers la France</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 	</main>
 {% endblock %}
 {% block javascripts %}
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-	<script src="./asset/img/asset/js/episodes.js"></script>
+	<script src="./asset/js/episodes.js"></script>
 {% endblock %}
