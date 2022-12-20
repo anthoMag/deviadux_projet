@@ -369,7 +369,7 @@ margin: 0px;
 .slider--image2 .slider__after:before{
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,0,0,0.5);
+  background:#005663;
   padding: 8px;
   border-radius: 8px;
   margin-left: 8px;
