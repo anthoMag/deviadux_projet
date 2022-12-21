@@ -1,101 +1,84 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	{# {{controller_name}} #} Flovia - Carte Hexago 
+	{{controller_name}}
 {% endblock %}
 
 {% block javascripts2 %}
-
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-     crossorigin=""></script>
-
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 {% endblock %}
 
 {% block stylesheets %}
-
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-     crossorigin=""/>
-
-    <link rel="stylesheet" href="./asset/css/hexago.css">
-	{% endblock %}
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+	<link rel="stylesheet" href="./asset/css/hexago.css">
+{% endblock %}
 
 {% block body %}
 
-<div id="margtop">
+	<div id="margtop"></div>
+	<div class="wrapper">
+		<div id="map">
+			<div class="logo">
+				<img src="./asset/img/logopictoicone/logoO.svg"></img>
+		</div>
+	</div>
+	<div class="modale ">
+		<h3>
+			ANNÉE
+		</h3>
+		<h2 id="old">
+			2000
+		</h2>
 
+		<hr>
+
+		<h2 id="metre">
+			0
+		</h2>
+		<h3>
+			MÈTRES
+		</h3>
+		<p>
+			(estimations données)
+		</p>
+
+	</div>
+	<div class="modale cta">
+		<a class="nav-link" href="{{path ('app_pingo')}}">VOIR CARTE PINGO</a>
+	</div>
 </div>
+<div class="range">
+	<div class="sliderValue">
+		<span>100</span>
+	</div>
+	<div class="back-range">
+		<div class="back">
+			<div class="field">
+				<input type="range" min="0" max="100" value="0" steps="1">
+			</div>
+			<div id="fill">
+				<div>
+					<p class="p1">2000</p>
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div>
+					<p class="p2">2500</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>{% endblock %}
 
-<div class="wrapper">
-  <div id="map">
-  
-  <div class="logo">
-    <img src="./asset/img/logopictoicone/logoO.svg"></img>
-  </div>
-  
-  </div>
-
-  
-
-  <div class="modale ">
-
-    <h3>
-      ANNÉE
-    </h3>
-    <h2 id="old">
-      2000
-    </h2>
-
-    <hr>
-
-    <h2 id="metre">
-      0
-    </h2>
- 
-    <h3>
-      MÈTRES
-    </h3>
-    <p>
-      (estimations données)
-    </p>
-    
-  </div>
-  <div class="modale cta">
-    <a class="nav-link" href="{{path ('app_pingo')}}">VOIR CARTE PINGO</a>
-  </div>
-</div>
-  <div class="range">
-    <div class="sliderValue">
-      <span>100</span>
-    </div>
-    <div class="back-range">
-      <div class="back">
-        <div class="field">
-          <input type="range" min="0" max="100" value="0" steps="1">
-        </div>
-        <div id="fill">
-            <div><p class="p1">2000</p></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div><p class="p2">2500</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+{% block footer %}
 {% endblock %}
-
-{% block footer %}{% endblock %}
 
 {% block javascripts %}
-
-        <script src="./asset/js/src/HeatLayer.js"></script>
-        <script src="./asset/js/dist/leaflet-heat.js"></script>
-		<script src="./asset/js/hexago.js"></script>
-        
-
+<script src="./asset/js/src/HeatLayer.js"></script>
+<script src="./asset/js/dist/leaflet-heat.js"></script>
+<script src="./asset/js/hexago.js"></script>
 {% endblock %}
+

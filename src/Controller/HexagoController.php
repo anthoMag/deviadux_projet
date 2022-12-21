@@ -12,7 +12,7 @@ class HexagoController extends AbstractController
     public function index(): Response
     {
         return $this->render('hexago/index.html.twig', [
-            'controller_name' => 'HexagoController',
+            'controller_name' => 'Flovia - Hexago',
         ]);
     }
 }

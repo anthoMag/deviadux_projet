@@ -1,8 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	{# {{controller_name}} #}
-	Flovia - Episodes
+	{{controller_name}}
 {% endblock %}
 
 {% block stylesheets %}
@@ -11,97 +10,100 @@
 {% endblock %}
 
 {% block body %}
-<!-- Rond bg -->
-        <div class="round"> </div>
+	<!-- Rond bg -->
+	<div class="round"></div>
 
-        <div class="round2"> </div>
-        <!-- Fin Rond bg -->
+	<div class="round2"></div>
+	<!-- Fin Rond bg -->
 
-    
-        <main>
-            <section id="alaune">
-                <div class="container2">
-                    <div class="row">
-                        <div id="textealaune" class="col-8">
-                            <h1>Des épisodes de crue en photo avant / après</h1>
-                            <p>Crue - Paris - 2016</p>
-                            <p class="textalaune">Paris n’est pas étrangère aux débordements de la Seine. La grande inondation de 1910 est la première qui a été documentée alors que l’on recense les incidents depuis 1658. Dans sa série intitulée <a>When the Night Falls</a>, le photographe Benoît Lapray met en images la crue de juin 2016 et revisite les mêmes lieux un an plus tard quand la Seine retrouve un niveau normal.<br>Pour découvrir plus, explorez les images interactives avant-après.
-                            </p>
-                            <div class="d-flex flex-columm text-center">
-                                <div>
-                                    <img src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager" class="icon">
-                                    <p class="partagerEnregistrerText">PARTAGER</p>
-                                </div>
-                                <div class="enregistrerIcon">
-                                    <img src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer" class="icon2">
-                                    <p class="partagerEnregistrerText">ENREGISTRER</p>
-                                </div> 
-                            </div>
-                        </div>  
-                        <div id="imageBtn" class="col-4">
-                            <img src="./asset/img/img/apercuinvalides.jpg" alt="apercu avant/après crue invalides 2016">
-                            <button>CLIQUEZ ICI</button>
-                        </div>   
-                    </div>
-                </div>
-            </section>
+
+	<main>
+		<section id="alaune">
+			<div class="container2">
+				<div class="row">
+					<div id="textealaune" class="col-8">
+						<h1>Des épisodes de crue en photo avant / après</h1>
+						<p>Crue - Paris - 2016</p>
+						<p class="textalaune">Paris n’est pas étrangère aux débordements de la Seine. La grande inondation de 1910 est la première qui a été documentée alors que l’on recense les incidents depuis 1658. Dans sa série intitulée
+							<a>When the Night Falls</a>, le photographe Benoît Lapray met en images la crue de juin 2016 et revisite les mêmes lieux un an plus tard quand la Seine retrouve un niveau normal.<br>Pour découvrir plus, explorez les images interactives avant-après.
+						</p>
+						<div class="d-flex flex-columm text-center">
+							<div>
+								<img src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Pictogramme à Partager" class="icon">
+								<p class="partagerEnregistrerText">PARTAGER</p>
+							</div>
+							<div class="enregistrerIcon">
+								<img src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Pictogramme à Enregistrer" class="icon2">
+								<p class="partagerEnregistrerText">ENREGISTRER</p>
+							</div>
+						</div>
+					</div>
+					<div id="imageBtn" class="col-4">
+						<img src="./asset/img/img/apercuinvalides.jpg" alt="apercu avant/après crue invalides 2016">
+						<button>CLIQUEZ ICI</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<section id="slider">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
 						<!-- <h2>Dans la même série</h2> -->
-						<!-- texte h1 à changer lorsqu'on actionne un apercu en: --><h2>visualiser avant / après
+						<!-- texte h1 à changer lorsqu'on actionne un apercu en: -->
+							<h2>
+						visualiser avant / après
 					</h2>
 					</div>
-						<div class="container"> 
-						<div class="slider slider--image2">
+						<div class="container"> <div class="slider slider--image2">
 							<div class="slider__before">
-								<img src="./asset/img/asset/img/img/avap/seine_0{{id}}_av.jpg" alt="">
+								<img src="./asset/img/img/avap/seine_0{{id}}_av.jpg" alt="Image de la Seine avant">
 							</div>
 							<div class="slider__separator"></div>
 							<div class="slider__after">
-								<img src="./asset/img/asset/img/img/avap/seine_0{{id}}_ap.jpg" alt="">
+								<img src="./asset/img/img/avap/seine_0{{id}}_ap.jpg" alt="Image de la Seine après">
 							</div>
 							<input class="slider__range" type="range" min="0" max="100" value="50"/>
 						</div>
 					</div>
-             <section id="miniature">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Dans la même série</h2>
-                        </div>
-                        <div class="containerblocs">
-                            <div class="blocs">
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercuquaibirhakeim.jpg" alt=""></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercuarsenal.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercucite.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercupeniche.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercusolferino.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercutoboggan.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercutournelle.jpg" alt="" href="#"></a>
-                                <a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/appercubalancoire.jpg" alt="" href="#"></a>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                        </div>
-                </div>
-            </section> 
-            <section id="mapsFrance">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="./asset/img/img/map.svg" alt="carte région de France">
-                        </div>
-                        <div class="col-6">
-                            <p>BIENTÔT DISPONIBLE <br>l'exploration d'autres évenements à travers la France</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-	</main>
-{% endblock %}
-{% block javascripts %}
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-	<script src="./asset/js/episodes.js"></script>
-{% endblock %}
+					<section id="miniature">
+						<div class="row">
+							<div class="col-12">
+								<h2>Dans la même série</h2>
+							</div>
+							<div class="containerblocs">
+								<div class="blocs">
+									<a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercuquaibirhakeim.jpg" alt=""></a>
+									<a href="{{path ('app_episodes')}}?id=2"><img src="./asset/img/img/apercuarsenal.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?id=3"><img src="./asset/img/img/apercucite.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?id=4"><img src="./asset/img/img/apercupeniche.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?id=5"><img src="./asset/img/img/apercusolferino.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?id=6"><img src="./asset/img/img/apercutoboggan.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?id=7"><img src="./asset/img/img/apercutournelle.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?id=8"><img src="./asset/img/img/appercubalancoire.jpg" alt="" href="#"></a>
+								</div>
+							</div>
+							<div class="col-12"></div>
+						</div>
+					</section>
+					<section id="mapsFrance">
+						<div class="container">
+							<div class="row">
+								<div class="col-6">
+									<img src="./asset/img/img/map.svg" alt="carte région de France">
+								</div>
+								<div class="col-6">
+									<p>BIENTÔT DISPONIBLE
+										<br>l'exploration d'autres évenements à travers la France</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</main>
+			{% endblock %}
+			{% block javascripts %}
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+				<script src="./asset/js/episodes.js"></script>
+			{% endblock %}
+

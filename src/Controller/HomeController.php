@@ -13,7 +13,7 @@ class HomeController extends AbstractController
     {
 /*         die("Salut c'est moi ManbaSama");
  */        return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
+            'controller_name' => 'Flovia - Accueil',
         ]);
     }
 }

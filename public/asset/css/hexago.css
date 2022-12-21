@@ -46,7 +46,6 @@ body {
   font-weight: 500;
   transform: translateX(-50%) scale(0);
   transform-origin: bottom;
-  /*     transition: transform 0.3s ease-in-out; */
   line-height: 55px;
   z-index: 100;
   top: -20px;
@@ -55,21 +54,6 @@ body {
 .range .sliderValue span.show {
   transform: translateX(-50%) scale(1);
 }
-
- /* .range .sliderValue span:after {
-  position: absolute;
-  content: "";
-  height: 45px;
-  width: 45px;
-  background: red;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  border: solid 3px #fff;
-  z-index: 100;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-}  */
 
 .range .field {
   position: relative;
@@ -194,7 +178,6 @@ body {
 }
 
 .modale h2{
-
   font-weight: 900;
 }
 
@@ -271,7 +254,6 @@ body {
   left: 60px;
   animation: logomove 1.3s infinite;
 }
-
 
 .display_block{
   display: block;

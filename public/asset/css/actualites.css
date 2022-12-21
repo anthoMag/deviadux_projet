@@ -41,6 +41,7 @@ header h1{
 .img-fluid{
     width: 100%;
 } 
+
 main p {
     margin: 0 0 1rem 0;
 }
@@ -48,10 +49,6 @@ main p {
 main h2{
     margin: 0rem 0 3.5rem 0;
  }
-
-/* main h3,main p,main button {
-    margin: 2rem 0;
- } */
 
 .partagerEnregistrerText{
     margin: 0;
@@ -75,7 +72,6 @@ main h2{
 .actuarticle {
     margin-bottom: 9rem;
 }
-
 
 .iconactu {
     padding: 1rem 2rem 2rem 2rem;
@@ -153,7 +149,7 @@ main h2{
     position: absolute;
     filter: blur(40px);
     z-index: -1;
-    bottom: -3300px;
+    bottom: -2700px;
     right: 1000px;
     border-radius: 50%;
   }

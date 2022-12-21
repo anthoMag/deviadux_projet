@@ -14,7 +14,7 @@ class EpisodesController extends AbstractController
         $id = $_GET['id'];
 
         return $this->render('episodes/index.html.twig', [
-            'controller_name' => 'EpisodesController',
+            'controller_name' => 'Flovia - Épisodes',
             'id' => $id,
         ]);
     }

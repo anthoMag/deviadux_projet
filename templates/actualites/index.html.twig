@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	{# {{controller_name}} #} Flovia - Les actualites 
+	{{controller_name}}
 {% endblock %}
 
 {% block stylesheets %}
@@ -10,207 +10,39 @@
 
 {% block body %}
 
-<!-- Rond bg -->
-        <div class="round"> </div>
+	<!-- Rond bg -->
+	<div class="round"></div>
 
-        <div class="round2"> </div>
-        <!-- Fin Rond bg -->
+	<div class="round2"></div>
+	<!-- Fin Rond bg -->
 
-        <main>
-            <section id="solutions">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>IL PARLENT DES SOLUTIONS</h2>
-                        </div>
-                    </div>
-                    <div class="row actuarticle">
-                        <div class="col-6">
-                            <img class="img-fluid" src="./asset/img/img/actuarticle1.jpg" alt="photo dune du pila - article1">
-                        </div>
-                        <div class="col-6 textactu">
-                            <h3>WE DEMAIN : le défi de la montée des eaux</h3>
-                            <p>Face à l’inexorable montée des eaux, la journaliste de We Demain Emmanuelle Vibert revient sur les problématiques que connaîtront les communes du littoral français d’ici les prochaines décennies. D'après une étude, d’ici 2100, 10% des propriétés côtières seront potentiellement inondables, des biens achetables que l'on estime entre 10 et 50 milliards d’euros. D’ici à 2050, plus des 5% des transactions dans quelque 80 communes correspondront à des biens qui seront inondables. Entre les années 2016 et 2021, 15 000 habitations vendues seront inondables d’ici 2050 et leurs propriétaires n’en ont peut-être pas conscience. La journaliste prend également en exemple le Quartier Matra, situé dans le Loir-et-Cher, où la commune a effectué un travail d'urbanisme important (système de drainage, systèmes d’alerte, des habitations surélevées…) qui permet aux habitants de vivre jusqu’à une certaine montée du niveau de l’eau de la rivière...
-                            </p>
-                            <div class="d-flex text-center iconarticle"> 
-                                <div>
-                                    <img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
-                                    <p class="partagerEnregistrerText">PARTAGER</p>
-                                </div>
-                                <div class="enregistrerIcon">
-                                    <img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
-                                    <p class="partagerEnregistrerText">ENREGISTRER</p>
-                                </div>
-                            </div>
-                            <a class="lienactu" target="_blank" href="https://www.francetvinfo.fr/monde/environnement/montee-des-eaux/we-demain-le-defi-de-la-montee-des-eaux-pour-les-communes-du-littoral-francais_5186992.html">Être redirigé pour en lire plus</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="avenir">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>IL PARLENT DE L'AVENIR</h2>
-                        </div>
-                    </div>
-                    <div class="row actuarticle">
-                        <div class="col-6 textactu2">
-                            <h3>Les 126 communes françaises prioritaires</h3>
-                            <p>Le gouvernement a publié les noms des 126 communes françaises qui auront l'obligation de s'adapter en priorité à l'érosion du littoral, aggravée par le réchauffement climatique et la pression humaine. Une liste de nouvelles contraintes d'urbanisme qui ne font pas l'unanimité. Avec le recul du trait de côte sur environ un cinquième du littoral français (hors Guyane) selon l'indicateur national de l'érosion côtière, la loi Climat et Résilience de 2021 prévoit de nouvelles dispositions pour les communes en première ligne face à la montée du niveau de la mer et la multiplication des tempêtes et des submersions marines. Avec le recul du trait de côte sur environ un cinquième du littoral français (hors Guyane) selon l’indicateur national de l’érosion côtière, la loi Climat et Résilience de 2021 prévoit de nouvelles dispositions pour les communes en première ligne face à la montée du niveau de la mer et la multiplication des tempêtes et des submersions marines....</p>
-                            <div class="d-flex text-center iconarticle"> 
-                                <div>
-                                    <img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
-                                    <p class="partagerEnregistrerText">PARTAGER</p>
-                                </div>
-                                <div class="enregistrerIcon">
-                                    <img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
-                                    <p class="partagerEnregistrerText">ENREGISTRER</p>
-                                </div>
-                            </div>
-                            <a class="lienactu"  target="_blank" href="https://www.ouest-france.fr/environnement/rechauffement-climatique/carte-quelles-sont-les-126-communes-classees-prioritaires-face-a-l-erosion-cotiere-36d3930e-cba4-11ec-af12-5edd1098f51b">Être redirigé pour en lire plus</a>
-                            </div>
-                        <div class="col-6">
-                            <img class="img-fluid" src="./asset/img/img/actuarticle2.jpg" alt="photo maison et arbre sous l'eau - article3">
-                        </div>
-                    </div>
-                    <div class="row actuarticle">
-                        <div class="col-6">
-                            <img class="img-fluid" src="./asset/img/img/actuarticle3.jpg" alt="photo enfant sur dos d'un sauveteur - article2">
-                        </div>  
-                        <div class="col-6 textactu">
-                            <h3>La montée des eaux sera bien plus elevée et rapide que prévu</h3>
-                            <p>La Terre connaissant une alternance de périodes de glaciation et de réchauffement, les chercheurs ont examiné des données sur la dernière période interglaciaire, il y a 125.000 ans. Les températures moyennes étaient alors plus élevées qu'actuellement d'environ un degré, mais les changements climatiques des 200 dernières années sont plus rapides, en raison des émissions de gaz à effet de serre de la période industrielle. <br>
-                            En conséquence, l'étude de la dernière période interglaciaire « ne fournit que la fourchette basse des prédictions sur ce qui pourrait se passer », préviennent les auteurs de l'étude, initialement publiée dans la revue Nature Communications, dans un article paru, et mis en ligne mercredi sur le site The Conversation...
-                            </p>
-                            <div class="d-flex text-center iconarticle"> 
-                                <div>
-                                    <img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
-                                    <p class="partagerEnregistrerText">PARTAGER</p>
-                                </div>
-                                <div class="enregistrerIcon">
-                                    <img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
-                                    <p class="partagerEnregistrerText">ENREGISTRER</p>
-                                </div>
-                            </div>
-                            <a class="lienactu" target="_blank" href="https://www.futura-sciences.com/planete/actualites/ocean-rechauffement-climatique-montee-eaux-sera-bien-plus-elevee-rapide-prevu-78203/">Être redirigé pour en lire plus</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="plusArticle">
-                <div class="container">
-                    <div class="row text-center">
-                        <div class="col-4">
-                            <article class="cardArticleMiniature">
-                                <img class="img-fluid" src="./asset/img/img/actuarticlepoubelle.jpg" alt="Véhicule de secours dans une zone inondée">
-                                <p class="textcard">Mardi, 22 novembre 2022 à 15H20</p>
-                                <h4>La cour des comptes alertent sur les risques</h4>
-                                <p class="textcard">La cour des comptes préconise plusieurs pistes de progrès pour améliorer la prévention des risques...</p>
-                                <div class="d-flex iconactu"> 
-                                    <a class="lienactu" target="_blank" href="https://www.futura-sciences.com/planete/actualites/ocean-rechauffement-climatique-montee-eaux-sera-bien-plus-elevee-rapide-prevu-78203/">LIRE PLUS</a>
-                                    <div>
-                                        <img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
-                                        <p class="partagerEnregistrerText">PARTAGER</p>
-                                    </div>
-                                    <div class="enregistrerIcon">
-                                        <img class="icon" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
-                                        <p class="partagerEnregistrerText">ENREGISTRER</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-4">
-                            <article class="cardArticleMiniature">
-                                <img class="img-fluid" src="./asset/img/img/actuarticlepanneau.jpg" alt="Eclair en ville">
-                                <p class="textcard">Lundi, 20 juin 2016 à 11h25</p>
-                                <h4>Les solutions fondées sur la nature</h4>
-                                <p class="textcard">Dans un contexte de risques croissants liés au changement climatique, l’Agence régionale...</p>
-                                <div class="d-flex iconactu"> 
-                                    <a class="lienactu" target="_blank" href="https://uicn.fr/les-solutions-fondees-sur-la-nature-risques-eau/">LIRE PLUS</a>
-                                    <div class="text-center">
-                                        <img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
-                                        <p class="partagerEnregistrerText">PARTAGER</p>
-                                    </div>
-                                    <div class="enregistrerIcon">
-                                        <img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
-                                        <p class="partagerEnregistrerText">ENREGISTRER</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-4">
-                            <article class="cardArticleMiniature">
-                                <img class="img-fluid" src="./asset/img/img/actuarticleinnonde.jpg" alt="homme qui pousse sa voiture sur une route inondée">
-                                <p class="textcard">Mercredi, 3 février 2016  à 16H32</p>
-                                <h4>Face aux inondations et pluies torentielles</h4>
-                                <p class="textcard">Dans un contexte de risques croissants liés au changement climatique et à l’érosion de la biodiversité...</p>
-                                <div class="d-flex iconactu"> 
-                                    <a class="lienactu" target="_blank" href="https://www.oxfamfrance.org/climat-et-energie/inondations-pluies-torrentielles-la-lutte-contre-les-changements-climatiques-est-essentielle/">LIRE PLUS</a>
-                                    <div>
-                                        <img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
-                                        <p class="partagerEnregistrerText">PARTAGER</p>
-                                    </div>
-                                    <div class="enregistrerIcon">
-                                        <img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
-                                        <p class="partagerEnregistrerText">ENREGISTRER</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="video">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h2>Découvrir plus en vidéo</h2>
-                        </div>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-4">
-                            <a target="_blank" href="https://www.youtube.com/watch?v=Gy6tmLZYa9w"><img src="./asset/img/img/videominiature1.jpg"></a>
-                        </div>
-                        <div class="col-4">
-                            <a target="_blank" href="https://www.youtube.com/watch?v=oM7SRcj_Utg"><img src="./asset/img/img/videominiature2.jpg"></a>
-                        </div>
-                        <div class="col-4">
-                            <a target="_blank" href="https://www.youtube.com/watch?v=w9VUi4tTm6A"><img src="./asset/img/img/videominiature3.jpg"></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-	{# <main>
+	<main>
 		<section id="solutions">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2>IL PARLENT DES SOLUTIONS</h2>
+						<h2>ILS PARLENT DES SOLUTIONS</h2>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row actuarticle">
 					<div class="col-6">
-						<img class="img-fluid" src="./asset/img/asset/img/asset/img/img/actuarticle1.jpg" alt="photo dune du pila - article1">
+						<img class="img-fluid" src="./asset/img/img/actuarticle1.jpg" alt="photo dune du pila - article1">
 					</div>
-					<div class="col-6">
+					<div class="col-6 textactu">
 						<h3>WE DEMAIN : le défi de la montée des eaux</h3>
-						<p>Face à l’inexorable montée des eaux, la journaliste de We Demain Emmanuelle Vibert revient sur les problématiques que connaîtront les communes du littoral français d’ici les prochaines décennies.<br>D’après une étude​, d’ici 2100, 10% des propriétés côtières seront potentiellement inondables, des biens achetables que l'on estime entre 10 et 50 milliards d’euros. D’ici à 2050, plus des 5% des transactions dans quelque 80 communes...</p>
-						<div class="d-flex">
+						<p>Face à l’inexorable montée des eaux, la journaliste de We Demain Emmanuelle Vibert revient sur les problématiques que connaîtront les communes du littoral français d’ici les prochaines décennies. D'après une étude, d’ici 2100, 10% des propriétés côtières seront potentiellement inondables, des biens achetables que l'on estime entre 10 et 50 milliards d’euros. D’ici à 2050, plus des 5% des transactions dans quelque 80 communes correspondront à des biens qui seront inondables. Entre les années 2016 et 2021, 15 000 habitations vendues seront inondables d’ici 2050 et leurs propriétaires n’en ont peut-être pas conscience. La journaliste prend également en exemple le Quartier Matra, situé dans le Loir-et-Cher, où la commune a effectué un travail d'urbanisme important (système de drainage, systèmes d’alerte, des habitations surélevées…) qui permet aux habitants de vivre jusqu’à une certaine montée du niveau de l’eau de la rivière...
+						</p>
+						<div class="d-flex text-center iconarticle">
 							<div>
-								<img class="icon" src="./asset/img/asset/img/asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+								<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
 								<p class="partagerEnregistrerText">PARTAGER</p>
 							</div>
-							<div>
-								<img class="icon2" src="./asset/img/asset/img/asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+							<div class="enregistrerIcon">
+								<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
 								<p class="partagerEnregistrerText">ENREGISTRER</p>
 							</div>
 						</div>
-						<button>Être redirigé pour en lire plus</button>
+						<a class="lienactu" target="_blank" href="https://www.francetvinfo.fr/monde/environnement/montee-des-eaux/we-demain-le-defi-de-la-montee-des-eaux-pour-les-communes-du-littoral-francais_5186992.html">Être redirigé pour en lire plus</a>
 					</div>
 				</div>
 			</div>
@@ -220,90 +52,91 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2 id="art3">IL PARLENT DE L'AVENIR</h2>
+						<h2>ILS PARLENT DE L'AVENIR</h2>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-6">
-						<h3>les 126 communes françaises prioritaires</h3>
-						<p>Le gouvernement a publié les noms des 126 communes françaises qui auront l'obligation de s'adapter en priorité à l'érosion du littoral, aggravée par le réchauffement climatique et la pression humaine. Une liste de nouvelles contraintes d'urbanisme qui ne font pas l'unanimité. Avec le recul du trait de côte sur environ un cinquième du littoral français (hors Guyane) selon l'indicateur national de l'érosion côtière, la loi Climat et Résilience de 2021 prévoit de nouvelles dispositions pour les communes en première ligne face à la montée du niveau de la mer et la multiplication des tempêtes et des submersions marines...</p>
-						<div class="d-flex">
+				<div class="row actuarticle">
+					<div class="col-6 textactu2">
+						<h3>Les 126 communes françaises prioritaires</h3>
+						<p>Le gouvernement a publié les noms des 126 communes françaises qui auront l'obligation de s'adapter en priorité à l'érosion du littoral, aggravée par le réchauffement climatique et la pression humaine. Une liste de nouvelles contraintes d'urbanisme qui ne font pas l'unanimité. Avec le recul du trait de côte sur environ un cinquième du littoral français (hors Guyane) selon l'indicateur national de l'érosion côtière, la loi Climat et Résilience de 2021 prévoit de nouvelles dispositions pour les communes en première ligne face à la montée du niveau de la mer et la multiplication des tempêtes et des submersions marines. Avec le recul du trait de côte sur environ un cinquième du littoral français (hors Guyane) selon l’indicateur national de l’érosion côtière, la loi Climat et Résilience de 2021 prévoit de nouvelles dispositions pour les communes en première ligne face à la montée du niveau de la mer et la multiplication des tempêtes et des submersions marines....</p>
+						<div class="d-flex text-center iconarticle">
 							<div>
-								<img class="icon" src="./asset/img/asset/img/asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
-								<p id="art2" class="partagerEnregistrerText">PARTAGER</p>
-							</div>
-							<div>
-								<img class="icon2" src="./asset/img/asset/img/asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
-								<p class="partagerEnregistrerText">ENREGISTRER</p>
-							</div>
-						</div>
-						<button>Être redirigé pour en lire plus</button>
-					</div>
-					<div class="col-6">
-						<img class="img-fluid" src="./asset/img/asset/img/asset/img/img/actuarticle3.jpg" alt="photo maison et arbre sous l'eau - article3">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-6">
-						<img class="img-fluid" src="./asset/img/asset/img/asset/img/img/actuarticle2.jpg" alt="photo enfant sur dos d'un sauveteur - article2">
-					</div>
-					<div class="col-6">
-						<h3>la montée des eaux sera bien plus elevée et rapide que prévu</h3>
-						<p>La Terre connaissant une alternance de périodes de glaciation et de réchauffement, les chercheurs ont examiné des données sur la dernière période interglaciaire, il y a 125.000 ans. Les températures moyennes étaient alors plus élevées qu'actuellement d'environ un degré, mais les changements climatiques des 200 dernières années sont plus rapides, en raison des émissions de gaz à effet de serre de la période industrielle.<br>En conséquence, l'étude de la dernière période interglaciaire « ne fournit que la fourchette basse des prédictions sur ce qui pourrait se passer », préviennent les auteurs de l'étude, initialement publiée dans la revue Nature Communications, dans un article paru, et mis en ligne mercredi sur le site The Conversation...</p>
-						<div class="d-flex">
-							<div>
-								<img class="icon" src="./asset/img/asset/img/asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+								<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
 								<p class="partagerEnregistrerText">PARTAGER</p>
 							</div>
-							<div>
-								<img class="icon2" src="./asset/img/asset/img/asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+							<div class="enregistrerIcon">
+								<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
 								<p class="partagerEnregistrerText">ENREGISTRER</p>
 							</div>
 						</div>
-						<button>Être redirigé pour en lire plus</button>
+						<a class="lienactu" target="_blank" href="https://www.ouest-france.fr/environnement/rechauffement-climatique/carte-quelles-sont-les-126-communes-classees-prioritaires-face-a-l-erosion-cotiere-36d3930e-cba4-11ec-af12-5edd1098f51b">Être redirigé pour en lire plus</a>
+					</div>
+					<div class="col-6">
+						<img class="img-fluid" src="./asset/img/img/actuarticle2.jpg" alt="photo maison et arbre sous l'eau - article3">
+					</div>
+				</div>
+				<div class="row actuarticle">
+					<div class="col-6">
+						<img class="img-fluid" src="./asset/img/img/actuarticle3.jpg" alt="photo enfant sur dos d'un sauveteur - article2">
+					</div>
+					<div class="col-6 textactu">
+						<h3>La montée des eaux sera bien plus elevée et rapide que prévu</h3>
+						<p>La Terre connaissant une alternance de périodes de glaciation et de réchauffement, les chercheurs ont examiné des données sur la dernière période interglaciaire, il y a 125.000 ans. Les températures moyennes étaient alors plus élevées qu'actuellement d'environ un degré, mais les changements climatiques des 200 dernières années sont plus rapides, en raison des émissions de gaz à effet de serre de la période industrielle.
+							<br>
+							En conséquence, l'étude de la dernière période interglaciaire « ne fournit que la fourchette basse des prédictions sur ce qui pourrait se passer », préviennent les auteurs de l'étude, initialement publiée dans la revue Nature Communications, dans un article paru, et mis en ligne mercredi sur le site The Conversation...
+						</p>
+						<div class="d-flex text-center iconarticle">
+							<div>
+								<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+								<p class="partagerEnregistrerText">PARTAGER</p>
+							</div>
+							<div class="enregistrerIcon">
+								<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+								<p class="partagerEnregistrerText">ENREGISTRER</p>
+							</div>
+						</div>
+						<a class="lienactu" target="_blank" href="https://www.futura-sciences.com/planete/actualites/ocean-rechauffement-climatique-montee-eaux-sera-bien-plus-elevee-rapide-prevu-78203/">Être redirigé pour en lire plus</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<section id="plusArticle">
-
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-4">
 						<article class="cardArticleMiniature">
-							<img class="img-fluid" src="./asset/img/asset/img/asset/img/img/actueclair.jpg" alt="Eclair en ville">
-							<p>Lundi, 20 juin 2016 à 11h25</p>
+							<img class="img-fluid" src="./asset/img/img/actuarticlepoubelle.jpg" alt="Véhicule de secours dans une zone inondée">
+							<p class="textcard">Mardi, 22 novembre 2022 à 15H20</p>
+							<h4>La cour des comptes alertent sur les risques</h4>
+							<p class="textcard">La cour des comptes préconise plusieurs pistes de progrès pour améliorer la prévention des risques...</p>
+							<div class="d-flex iconactu">
+								<a class="lienactu" target="_blank" href="https://www.futura-sciences.com/planete/actualites/ocean-rechauffement-climatique-montee-eaux-sera-bien-plus-elevee-rapide-prevu-78203/">LIRE PLUS</a>
+								<div>
+									<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+									<p class="partagerEnregistrerText">PARTAGER</p>
+								</div>
+								<div class="enregistrerIcon">
+									<img class="icon" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+									<p class="partagerEnregistrerText">ENREGISTRER</p>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col-4">
+						<article class="cardArticleMiniature">
+							<img class="img-fluid" src="./asset/img/img/actuarticlepanneau.jpg" alt="Eclair en ville">
+							<p class="textcard">Lundi, 20 juin 2016 à 11h25</p>
 							<h4>Les solutions fondées sur la nature</h4>
-							<p>Dans un contexte de risques croissants liés au changement climatique, l’Agence régionale...</p>
-							<div class="d-flex text-center">
-								<button>LIRE PLUS</button>
-								<div>
-									<img class="icon" src="./asset/img/asset/img/asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+							<p class="textcard">Dans un contexte de risques croissants liés au changement climatique, l’Agence régionale...</p>
+							<div class="d-flex iconactu">
+								<a class="lienactu" target="_blank" href="https://uicn.fr/les-solutions-fondees-sur-la-nature-risques-eau/">LIRE PLUS</a>
+								<div class="text-center">
+									<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
 									<p class="partagerEnregistrerText">PARTAGER</p>
 								</div>
-								<div>
-									<img class="icon2" src="./asset/img/asset/img/asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
-									<p class="partagerEnregistrerText">ENREGISTRER</p>
-								</div>
-							</div>
-						</article>
-					</div>
-
-					<div class="col-4">
-						<article class="cardArticleMiniature">
-							<img class="img-fluid" src="./asset/img/asset/img/asset/img/img/actuvoiturepompier.jpg" alt="Véhicule de secours dans une zone inondée">
-							<p>Mardi, 22 novembre 2022 à 15H20</p>
-							<h4>La cour des comptes alertent</h4>
-							<p>La cour des comptes préconise plusieurs pistes de progrès pour améliorer la prévention des risques...</p>
-							<div class="d-flex text-center">
-								<button>LIRE PLUS</button>
-								<div>
-									<img class="icon" src="./asset/img/asset/img/asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
-									<p class="partagerEnregistrerText">PARTAGER</p>
-								</div>
-								<div>
-									<img class="icon2" src="./asset/img/asset/img/asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+								<div class="enregistrerIcon">
+									<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
 									<p class="partagerEnregistrerText">ENREGISTRER</p>
 								</div>
 							</div>
@@ -311,18 +144,18 @@
 					</div>
 					<div class="col-4">
 						<article class="cardArticleMiniature">
-							<img class="img-fluid" src="./asset/img/asset/img/asset/img/img/actualitevoiturenoyee.jpg" alt="homme qui pousse sa voiture sur une route inondée">
-							<p>Mercredi, 3 février 2016  à 16H32</p>
+							<img class="img-fluid" src="./asset/img/img/actuarticleinnonde.jpg" alt="homme qui pousse sa voiture sur une route inondée">
+							<p class="textcard">Mercredi, 3 février 2016  à 16H32</p>
 							<h4>Face aux inondations et pluies torentielles</h4>
-							<p>Dans un contexte de risques croissants liés au changement climatique et à l’érosion de la biodiversité, Natureparif...</p>
-							<div class="d-flex text-center">
-								<button>LIRE PLUS</button>
+							<p class="textcard">Dans un contexte de risques croissants liés au changement climatique et à l’érosion de la biodiversité...</p>
+							<div class="d-flex iconactu">
+								<a class="lienactu" target="_blank" href="https://www.oxfamfrance.org/climat-et-energie/inondations-pluies-torrentielles-la-lutte-contre-les-changements-climatiques-est-essentielle/">LIRE PLUS</a>
 								<div>
-									<img class="icon" src="./asset/img/asset/img/asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
+									<img class="icon" src="./asset/img/logopictoicone/iconpartageblanc.svg" alt="Picto Partager">
 									<p class="partagerEnregistrerText">PARTAGER</p>
 								</div>
-								<div>
-									<img class="icon2" src="./asset/img/asset/img/asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
+								<div class="enregistrerIcon">
+									<img class="icon2" src="./asset/img/logopictoicone/Iconenregistrementblanc.svg" alt="Picto Enregistrer">
 									<p class="partagerEnregistrerText">ENREGISTRER</p>
 								</div>
 							</div>
@@ -339,18 +172,19 @@
 						<h2>Découvrir plus en vidéo</h2>
 					</div>
 				</div>
-				<div class="row">
-					<div
-						class="col-4"><!-- Mettre apercu liens vidéo: https://www.youtube.com/watch?v=oM7SRcj_Utg -->
+				<div class="row text-center">
+					<div class="col-4">
+						<a target="_blank" href="https://www.youtube.com/watch?v=Gy6tmLZYa9w"><img src="./asset/img/img/videominiature1.jpg"></a>
 					</div>
-					<div
-						class="col-4"><!-- Mettre apercu liens vidéo: https://www.youtube.com/watch?v=w9VUi4tTm6A -->
+					<div class="col-4">
+						<a target="_blank" href="https://www.youtube.com/watch?v=oM7SRcj_Utg"><img src="./asset/img/img/videominiature2.jpg"></a>
 					</div>
-					<div
-						class="col-4"><!-- Mettre apercu liens vidéo: https://www.youtube.com/watch?v=Gy6tmLZYa9w -->
+					<div class="col-4">
+						<a target="_blank" href="https://www.youtube.com/watch?v=w9VUi4tTm6A"><img src="./asset/img/img/videominiature3.jpg"></a>
 					</div>
 				</div>
 			</div>
 		</section>
-	</main> #}
+	</main>
 {% endblock %}
+

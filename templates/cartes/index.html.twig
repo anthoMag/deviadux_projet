@@ -1,65 +1,66 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	{# {{controller_name}} #} Flovia - Selection des cartes
+	{{controller_name}}
 {% endblock %}
 
 {% block stylesheets %}
-		<link rel="stylesheet" href="./asset/css/cartes.css">
-	{% endblock %}
+	<link rel="stylesheet" href="./asset/css/cartes.css">
+{% endblock %}
 
 {% block body %}
-    <main>
-        <section id="choixCarte">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Découvrez nos cartes interactives</h1>
-                    </div>
-                </div>
-
-    
-                <div class="row text-center">
-                    <div class="col-6 cardCarte">
-                    <div class="col-2"><span></span></div>
-                        <!-- Visuel à changer -->
-                        <div class="hover" class="col-6">
-                            <h2>CARTE HEXAGO</h2>
-                            <p>La carte Hexago, version 1.0, permet de simuler la montée des eaux sur le territoire
+	<main>
+		<section id="choixCarte">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h1>Découvrez nos cartes interactives</h1>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-6 cardCarte">
+						<div class="col-2">
+							<span></span>
+						</div>
+						<!-- Visuel à changer -->
+						<div class="hover" class="col-6">
+							<h2>CARTE HEXAGO</h2>
+							<p>La carte Hexago, version 1.0, permet de simuler la montée des eaux sur le territoire
                                 français. Son nom vient de la réunion des mots hexagone, le surnom de la France, et go,
                                 anglais pour aller.<br>L’algorithme a été élaboré par notre équipe de développeurs,
                                 suite à des recherches et études approfondies. Toutefois, les paramètres actuels ne
                                 permettent pas de définir une prédiction vraisemblable. L’évolution du climat appelle
-                                donc à l’évolution de notre carte.</p>
-                            <a href="{{path ("app_hexago")}}">VOIR LA CARTE</a>
-                        </div>
-                        <div class="imgcartes">
-                        <img class="img-fluid" src="./asset/img/cartes/hexago.jpg" alt="visuel carte Hexago">
-                        </div>
-                        <h2>CARTE HEXAGO</h2>
-                    </div>
-                    <div class="col-6 cardCarte">
-                        <!-- Visuel à changer -->
-                        <div class="hover" class="col-6">
-                            <h2>CARTE PINGO</h2>
-                            <p>La volonté de combiner information et interactivité est un facteur clé dans la création
-                                de la
-                                carte Pingo : en cliquant sur une épingle (pin), l’utilisateur est amené à découvrir
+                                donc à l’évolution de notre carte.  
+                                </p>
+							<a href="{{path ("app_hexago")}}">VOIR LA CARTE</a>
+						</div>
+						<div class="imgcartes">
+							<img class="img-fluid" src="./asset/img/cartes/hexago.jpg" alt="visuel carte Hexago">
+						</div>
+						<h2>CARTE HEXAGO</h2>
+					</div>
+					<div
+						class="col-6 cardCarte">
+						<!-- Visuel à changer -->
+						<div class="hover" class="col-6">
+							<h2>CARTE PINGO</h2>
+							<p>La volonté de combiner information et interactivité est un facteur clé dans la création
+                                de la carte Pingo : en cliquant sur une épingle (pin), l’utilisateur est amené à découvrir
                                 l’évènement climatique associé (go). Les faits démontrés sur la carte actuelle sont
-                                issus du
-                                bilan 2021 élaboré par Vigicrues, le service public d’information géré par le Ministère
-                                de
-                                l’écologie. Elle est appelée à évoluer selon l’actualité de la montée des eaux.</p>
-                                <a href="{{path ("app_pingo")}}">VOIR LA CARTE</a>
-                        </div>
-                    <div class="imgcartes">
-                        <img class="img-fluid" src="./asset/img/cartes/pingo.jpg" alt="visuel carte Hexago">
-                    </div>
-                        <h2>CARTE PINGO</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Etat hover des card -->
-    </main>
+                                issus du bilan 2021 élaboré par Vigicrues, le service public d’information géré par le Ministère
+                                de l’écologie. Elle est appelée à évoluer selon l’actualité de la montée des eaux.
+							</p>
+							<a href="{{path ("app_pingo")}}">VOIR LA CARTE</a>
+						</div>
+						<div class="imgcartes">
+							<img class="img-fluid" src="./asset/img/cartes/pingo.jpg" alt="visuel carte Hexago">
+						</div>
+						<h2>CARTE PINGO</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Etat hover des card -->
+	</main>
 {% endblock %}
+

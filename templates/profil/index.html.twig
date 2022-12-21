@@ -1,8 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	{# {{controller_name}} #}
-	Flovia - Page de connexion
+	{{controller_name}}
 {% endblock %}
 
 {% block stylesheets %}
@@ -12,12 +11,11 @@
 {% block body %}
 
 	<main>
-		<section id="connexion" class="login-box">
+		<section id="connexion">
 			<div class="container">
 				<div class="row text-center">
 					<div class="col">
 						<h1>CONNEXION</h1>
-
 						<form action="#">
 							<div>
 								<input type="email" name="usermail" placeholder="Email">
@@ -30,14 +28,10 @@
 								<input type="submit" value="Se connecter">
 							</div>
 							<div>
-							<a href="#">Créer un compte</a>
-								<span></span>
-								<span></span>
-								<span></span>
-								<span></span>
+								<a href="#">Créer un compte</a>
 							</div>
-						</form>
 
+						</form>
 					</div>
 				</div>
 			</div>

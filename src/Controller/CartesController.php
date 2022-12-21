@@ -12,7 +12,7 @@ class CartesController extends AbstractController
     public function index(): Response
     {
         return $this->render('cartes/index.html.twig', [
-            'controller_name' => 'CartesController',
+            'controller_name' => 'Flovia - Cartes',
         ]);
     }
 }

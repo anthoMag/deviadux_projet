@@ -15,7 +15,7 @@ class PingoController extends AbstractController
         $list = $evenementsRepository->findAll();
 
         return $this->render('pingo/index.html.twig', [
-            'controller_name' => 'PingoController',
+            'controller_name' => 'Flovia - PinGo',
             'list' => $list,
         ]);
     }
