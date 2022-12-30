@@ -252,7 +252,7 @@ body {
   z-index: 1000;
   top: 25px;
   left: 60px;
-  animation: logomove 1.3s infinite;
+  animation: logomove 1.5s infinite;
 }
 
 .display_block{
