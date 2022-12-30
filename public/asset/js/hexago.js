@@ -1,3 +1,9 @@
+/*
+ (c) 2014, Vladimir Agafonkin
+ simpleheat, a tiny JavaScript library for drawing heatmaps with Canvas
+ https://github.com/mourner/simpleheat
+*/
+
 /////// TAILLE DE LA CARTE ///////
 
 // Récupère la hauteur de la balise html
@@ -19,12 +25,12 @@ const inputSlider = document.querySelector("input");
 
 let elevation = 0;
 
-inputSlider.oninput = (() => {
+inputSlider.oninput = (() =>{
     let value = inputSlider.value;
+    
+    year = 2000 + parseInt(value * 5); 
 
-    year = 2000 + parseInt(value * 5);
-
-    sliderValue.textContent = year;
+    sliderValue.textContent = year; 
     sliderValue.style.left = value + "%";
     sliderValue.classList.add("show");
 
@@ -33,11 +39,12 @@ inputSlider.oninput = (() => {
     exp = Math.exp(num);
 
     result = ((reg + exp) - 1);
-    elevation = result.toFixed(2);
+    elevation = result.toFixed(2); 
 
-    meter.innerHTML = elevation;
-    old.innerHTML = year;
+   meter.innerHTML=elevation; 
+   old.innerHTML=year; 
 })
+
 
 /////// MAP ///////
 
@@ -49,7 +56,7 @@ let geojsonDep = null;
 let width = 1920;
 let height = 675;
 
-let divisionX = 120;
+let divisionX =  120;
 
 let request = 5;
 let counterRequest = 0;
@@ -57,7 +64,7 @@ let counterRequest = 0;
 launchMap();
 
 // Déclaration de la fonction qui lance la map
-function launchMap() {
+function launchMap(){
 
     // Point de spawn de la map au lancement de la page
     var map = L.map('map').setView([46, 3.161405], 5);
@@ -68,8 +75,8 @@ function launchMap() {
         className: 'map-tiles',
         minZoom: 5,
         maxZoom: 15
-
-        // Affiche la map
+    
+    // Affiche la map
     }).addTo(map);
 
     // Appel de la fonction gridAdd
@@ -83,26 +90,26 @@ function launchMap() {
     var signal = null;
 
     // Déclaration de la fonction pour afficher la grille heatMap
-    function gridAdd() {
+    function gridAdd(){
 
         if (counterRequest == 1) {
             if (controller != null) {
                 controller.abort();
-            }
+            }         
         }
 
         controller = new AbortController();
         signal = controller.signal;
 
         counterRequest = 1;
-
+        
         // Récupère les coordonnées nord-est et sud-ouest de la carte visible
         let boundsMap = map.getBounds();
 
         // Récupère les coordonnées nord-est
-        let x1 = boundsMap['_northEast']['lng'];
+        let x1 = boundsMap['_northEast']['lng']; 
         let y1 = boundsMap['_northEast']['lat'];
-
+        
         // Récupère les coordonnées sud-ouest
         let x2 = boundsMap['_southWest']['lng'];
         let y2 = boundsMap['_southWest']['lat'];
@@ -123,15 +130,15 @@ function launchMap() {
         let lat = [];
 
         // Push toutes les longitudes
-        for (let i = 0; i <= divisionX; i++) {
+        for (let i = 0; i <= divisionX; i++){
             lng.push(x2 + (x4 * i));
         }
 
         // Push toutes les latitudes
-        for (let i = 0; i <= divisionY; i++) {
+        for (let i = 0; i <= divisionY; i++){
             lat.push(y2 + (y4 * i));
         }
-
+ 
         let pointsPreShot = (divisionX * divisionY) + divisionX + divisionY + 1;
 
         let gridPointsDivision = Math.ceil(pointsPreShot / request);
@@ -141,10 +148,10 @@ function launchMap() {
         let points = [];
 
         // Push toutes les longitudes et latitudes dans le tableau 'gridPoints
-        for (let j = 0; j < lat.length; j++) {
+        for (let j = 0; j < lat.length; j++) {      
             for (let i = 0; i < lng.length; i++) {
 
-                if (points.length == gridPointsDivision) {
+                if (points.length == gridPointsDivision){
                     gridPoints.push(points);
                     points = [];
                 }
@@ -153,13 +160,13 @@ function launchMap() {
                     latitude: lat[j],
                     longitude: lng[i]
                 });
-            }
+            }   
         }
 
         gridPoints.push(points);
 
         let waterPoints = [];
-
+  
         let counter = 0;
 
         if (counterRequest == 0) {
@@ -169,10 +176,13 @@ function launchMap() {
         if (counterRequest >= 1) {
             setTimeout(getElevation, 200, counter);
         }
+        
+
 
         logo = document.querySelector('.logo');
         let move = 0;
         logoMove(move);
+
 
         function logoMove(move) {
             if (move == 0) {
@@ -184,37 +194,39 @@ function launchMap() {
             }
         }
 
-        async function getElevation(counter) {
+
+        async function getElevation(counter){
 
             try {
 
                 // ICI code la requete    
-                const rawResponse = await fetch('https://api.open-elevation.com/api/v1/lookup', {
-                    method: 'POST',
-                    signal: signal,
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ 'locations': gridPoints[counter] })
+                const rawResponse = await fetch('http://51.210.126.117/api/v1/lookup', {
+                method: 'POST',
+                signal: signal,
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({'locations': gridPoints[counter]})
                 });
-                const responseApi = await rawResponse.json();
+                const responseApi = await rawResponse.json();        
 
                 for (let i = 0; i < responseApi.results.length; i++) {
-
+                    
                     if (responseApi.results[i].elevation <= elevation) {
                         waterPoints.push([responseApi.results[i].latitude, responseApi.results[i].longitude, 200]);
-                    }
+                    }  
                 }
 
+                console.log(waterPoints);
 
                 if (counter == 4) {
 
                     // Créer un groupe 'Layer' leaflet
-                    let group = L.featureGroup();
+                    let group = L.featureGroup(); 
 
                     // Push toutes les points de la grille dans un groupe 'group'
-                    var heat = L.heatLayer(waterPoints, { radius: 15 }).addTo(group);
+                    var heat = L.heatLayer(waterPoints, {radius: 15}).addTo(group);
 
                     gridRemove();
 
@@ -228,31 +240,31 @@ function launchMap() {
                     inputSlider.addEventListener('mousedown', gridRemove);
 
                     // Déclaration de la fonction pour retirer les points de la grille
-                    function gridRemove() {
+                    function gridRemove(){
 
-                        // Retire les points de la grille
-                        map.removeLayer(group);
+                    // Retire les points de la grille
+                    map.removeLayer(group);
 
-                        return;
+                    return;
 
                     }
                 }
 
-                counter++;
+                counter ++;
 
 
                 if (counter != 5) {
                     setTimeout(getElevation, 200, counter);
                 }
-
-            } catch (error) {
+                
+            } catch(error) {
                 // EN CAS DE FAIL
-
+           
                 counter = 0;
-
+            
                 return;
 
             }
         }
-    }
+    } 
 }
