@@ -59,6 +59,7 @@ let height = 675;
 let divisionX =  120;
 
 let request = 5;
+let requesting = 0;
 let counterRequest = 0;
 
 launchMap();
@@ -89,20 +90,29 @@ function launchMap(){
     var controller = null;
     var signal = null;
 
+    function stopRequest() {
+        controller.abort();
+    }
+
     // Déclaration de la fonction pour afficher la grille heatMap
     function gridAdd(){
+        
+        console.log('counterRequest: ' + counterRequest);
 
         if (counterRequest == 1) {
             if (controller != null) {
-                controller.abort();
-            }         
+                stopRequest();
+            }     
+            
+            map.on('mousedown', stopRequest);
+            map.on('movestart', stopRequest);
         }
 
         controller = new AbortController();
         signal = controller.signal;
 
         counterRequest = 1;
-        
+
         // Récupère les coordonnées nord-est et sud-ouest de la carte visible
         let boundsMap = map.getBounds();
 
@@ -181,7 +191,7 @@ function launchMap(){
 
         logo = document.querySelector('.logo');
         let move = 0;
-        logoMove(move);
+        /* logoMove(move); */
 
 
         function logoMove(move) {
@@ -199,8 +209,12 @@ function launchMap(){
 
             try {
 
-                // ICI code la requete    
-                const rawResponse = await fetch('http://51.210.126.117/api/v1/lookup', {
+                // ICI code la requete   
+                
+                // https://api.open-elevation.com/api/v1/lookup
+                // http://51.210.126.117/api/v1/lookup
+
+                const rawResponse = await fetch('https://api.open-elevation.com/api/v1/lookup', {
                 method: 'POST',
                 signal: signal,
                 headers: {
@@ -218,7 +232,8 @@ function launchMap(){
                     }  
                 }
 
-                console.log(waterPoints);
+                requesting ++;
+                console.log('requesting: ' + requesting);
 
                 if (counter == 4) {
 
@@ -232,6 +247,7 @@ function launchMap(){
 
                     // Affiche tout les points de la grille
                     map.addLayer(group);
+                    
 
                     counterRequest = 0;
 
@@ -260,11 +276,26 @@ function launchMap(){
             } catch(error) {
                 // EN CAS DE FAIL
            
+                console.log('error');
+                console.log(error.code);
+
                 counter = 0;
+
+                if (error.code != 20){
+                    console.log('error to fetch');
+
+                    setTimeout(gridAdd, 200);
+                }
+
+
+
+                
             
                 return;
 
             }
+            
+            requesting = 0;
         }
     } 
 }
