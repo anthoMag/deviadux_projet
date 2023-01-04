@@ -13,6 +13,7 @@ let mappy = document.getElementById('map');
     launchMap();
 })
 
+
 function launchMap(){
 
     // On dessine le polygone
@@ -26,15 +27,16 @@ function launchMap(){
         }
     });
     
-    var map = L.map('map').setView([46, 3.161405], 5);
+    var map = L.map('map').setView([46, 3.161405], 6);
+    
 
     geojsonLayerReg.addTo(map); 
     
     L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
         attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         className: 'map-tiles',
-         minZoom: 5,
-        maxZoom: 15,
+         minZoom: 6,
+        maxZoom: 12,
     }).addTo(map);
 
     var warningOrgIcon = L.icon({
@@ -48,13 +50,43 @@ function launchMap(){
         popupAnchor:  [-5, -5] // point from which the popup should open relative to the iconAnchor
     });
 
-      // MARKER --------->>>>
-     tabData.forEach((v, k) => {
-        console.log(v);
+    // MARKER --------->>>>
+    tabData.forEach((v, k) => {
         window['marker' + k]  = L.marker([v[5], v[6]], {icon: warningOrgIcon}).addTo(map);
-        window['marker' + k].bindPopup("<h1>"+v[0]+" ("+v[2]+")</h1><h3>"+v[3]+"</h3><h2>"+v[1]+" Mètres</h2><h3>"+v[4]+"</h3> <img src='../asset/img/IMG_PINGO/"+v[7]+"'/>");
-     });
+        window['marker' + k].bindPopup("<h1>"+v[0]+" ("+v[2]+")</h1><h3>"+v[3]+"</h3><h2>"+v[1]+" Mètres</h2><h3>"+v[4]+"</h3> <img  id='imgPop'  src='../asset/img/IMG_PINGO/"+v[7]+"'/><button type='button' id='rskBtn' onclick='change()'>Risques</button>");
+     
     }
+    );
+
+    console.log(tabData);
+}
+
+
+function change(){
+    
+    let img= document.getElementById('imgPop');
+
+  console.log(img.src.substr(img.src.lastIndexOf('/')));
+   if (img.src.substr(img.src.lastIndexOf('/'))=='/angers_2019.jpg')  { 
+    img.src ='../asset/img/IMG_PINGO/crueAngers.png';
+    
+   }else if (img.src.substr(img.src.lastIndexOf('/')) == '/anduze.jpg') {
+    img.src ='/asset/img/IMG_PINGO/crueAnduze.png';
+    }
+    else if (img.src.substr(img.src.lastIndexOf('/')) == '/cambo_les_bains.jpg'){
+        img.src ='/asset/img/IMG_PINGO/crueCambo.png';
+    }  
+  /*     else if{
+  
+      
+
+    }   */
+
+    console.log(img);
+}
+ 
+   
+    
 
     
 
