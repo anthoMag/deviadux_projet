@@ -1,5 +1,7 @@
+//On Sélectionen les sliders
 let sliders = document.querySelectorAll('.slider');
 
+//Pour chaque Sliders on modifie les photos avec le curseur
 sliders.forEach(function (slider) {
     let sliderRange = slider.querySelector('.slider__range');
     let sliderBefore = slider.querySelector('.slider__before');
@@ -11,8 +13,7 @@ sliders.forEach(function (slider) {
         sliderSeparator.style = `left:${sliderRange.value}%`;
 
     }
-
-
+  
     sliderRange.addEventListener('input', updapteSliderPosition);
 
     let isDragging = false;
@@ -21,12 +22,10 @@ sliders.forEach(function (slider) {
         isDragging = true;
 
     });
-
     document.addEventListener('mouseup', function () {
         isDragging = false;
 
     });
-
     document.addEventListener('mousemove', function (e) {
         if (isDragging) {
             let sliderRect = slider.getBoundingClientRect()
@@ -35,6 +34,5 @@ sliders.forEach(function (slider) {
             sliderRange.value = newWidth;
             updapteSliderPosition();
         }
-
     });
 });
