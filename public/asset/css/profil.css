@@ -29,3 +29,8 @@ main input[type="submit"]{
     margin: 5%;
     text-align: center;
 }
+
+input {
+    -webkit-appearance: none;
+    appearance: none;
+  }

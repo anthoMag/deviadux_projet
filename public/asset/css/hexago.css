@@ -259,5 +259,8 @@ body {
   display: block;
 }
 
+.cta:hover {
+  color: #38D2AD;
+}
 
   
