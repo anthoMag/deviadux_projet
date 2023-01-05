@@ -20,28 +20,42 @@ let meter = document.getElementById('metre');
 // Récupère la balise h2 qui affiche l'année actuelle
 let old = document.getElementById('old');
 
+// Récupère la balise span qui contient la valeur du curseur
 const sliderValue = document.querySelector("span");
+
+// Récupère la balise input du curseur
 const inputSlider = document.querySelector("input");
 
-let elevation = 0;
-
+// Lance le code ci-dessous si il y a une interaction en cours avec le curseur
 inputSlider.oninput = (() => {
+
+    // Récupère la valeur du curseur
     let value = inputSlider.value;
 
+    // Permet de calculer l'année choisie
     year = 2000 + parseInt(value * 5);
 
+    // Permet de mettre à jour l'année choisie au dessus du curseur
     sliderValue.textContent = year;
+
+    // Permet de déplacer l'année au dessus du curseur
     sliderValue.style.left = value + "%";
+
+    // Permet d'afficher l'année au dessus du curseur
     sliderValue.classList.add("show");
 
+    // Algorithme pour calculer la hauteur de l'océan en fonction de l'année
+    // Algorithme créé à partir des recherches effectuées sur internet
     num = (year - 2000) * 0.0055;
     reg = 0.26 * num;
     exp = Math.exp(num);
-
     result = ((reg + exp) - 1);
     elevation = result.toFixed(2);
 
+    // Permet de mettre à jour l'affichage de la hauteur de l'océan
     meter.innerHTML = elevation;
+
+    // Permet de mettre à jour l'affichage de l'année choisie
     old.innerHTML = year;
 })
 
@@ -84,7 +98,7 @@ function launchMap() {
     // Déclaration de la fonction qui va stopper les appels vers l'API
     function stopAppel() {
 
-        // Stoppe les appel vers l'API
+        // Stoppe les appels vers l'API
         controller.abort();
 
         // Fait disparaître le logo de chargement
@@ -116,6 +130,7 @@ function launchMap() {
             map.on('movestart', stopAppel);
         }
 
+        // Permet d'identifier l'appel actuel pour pouvoir la stopper
         controller = new AbortController();
         signal = controller.signal;
 
@@ -174,15 +189,19 @@ function launchMap() {
             lat.push(y2 + (y4 * i));
         }
 
+        // Permet de prévoir à l'avance le nombre de points à envoyer à l'API
         let pointsPreShot = (divX * divY) + divX + divY + 1;
 
+        // Permet de calculer le nombre de points pour chaque tableau de tableau
         let gridPointsDivision = Math.ceil(pointsPreShot / requestNeed);
 
         // Déclare un tableau qui rangera toutes les coordonnées de la grille
         let gridPoints = [];
+
+        // Déclare un tableau qui permettra d'alimenter le tableau 'gridPoints'
         let points = [];
 
-        // Push toutes les longitudes et latitudes dans le tableau 'gridPoints
+        // Push toutes les longitudes et latitudes dans le tableau 'gridPoints'
         for (let j = 0; j < lat.length; j++) {
             for (let i = 0; i < lng.length; i++) {
 
@@ -200,22 +219,28 @@ function launchMap() {
 
         gridPoints.push(points);
 
-        console.log(gridPoints);
-
+        // Déclare un tableau qui va acceuillir touts les coordonnés des points d'eaux
         let waterPoints = [];
 
+        // Déclare une variable qui va servir de compteur
+        // et qui va cibler un index de tableau dans le tableau 'gridPoints'
         let counter = 0;
 
+        // Lance la fonction getElevation sans délai si aucun appel est actuellement en cours
         if (counterAppel == 0) {
             getElevation(counter);
         }
 
+        // Lance la fonction getElevation avec un délai de 200ms si un appel est en cours
+        // (l'ajout d'un délai permet d'éviter le bug 'too many request' avec l'API)
         if (counterAppel >= 1) {
             setTimeout(getElevation, 200, counter);
         }
 
+        // Déclaration de la fonction asynchrone qui va intéroger l'API
         async function getElevation(counter) {
 
+            // Try permet d'exécuter le code sous la réponse (si il y a une réponse)
             try {
                 // API Open Elevation:
                 // https://api.open-elevation.com/api/v1/lookup
@@ -223,7 +248,7 @@ function launchMap() {
                 // API Open Elevation hebergé par le serveur de Benoît:
                 // http://51.210.126.117/api/v1/lookup
 
-                const rawResponse = await fetch('http://51.210.126.117/api/v1/lookup', {
+                const rawResponse = await fetch('https://api.open-elevation.com/api/v1/lookup', {
                     method: 'POST',
                     signal: signal,
                     headers: {
@@ -234,6 +259,8 @@ function launchMap() {
                 });
                 const responseApi = await rawResponse.json();
 
+                // Boucle qui va permettre de push dans le tableau 'waterPoints'
+                // les coordonnées qui sont inférieures ou égales à l'élévation demandée par l'utilisateur
                 for (let i = 0; i < responseApi.results.length; i++) {
 
                     if (responseApi.results[i].elevation <= elevation) {
@@ -241,26 +268,28 @@ function launchMap() {
                     }
                 }
 
+                // Si tout les appels sont terminés, lance le code ci-dessous
                 if (counter == requestNeed - 1) {
 
                     // Créer un groupe 'Layer' leaflet
                     let group = L.featureGroup();
 
-                    // Push toutes les points de la grille dans un groupe 'group'
+                    // Push toutes les points d'eau du tableau 'waterPoints' dans un groupe nommé 'group'
                     var heat = L.heatLayer(waterPoints, { radius: 15 }).addTo(group);
 
-                    gridRemove();
-
-                    // Affiche tout les points de la grille
+                    // Affiche tout les points d'eau sur la carte
                     map.addLayer(group);
 
-                    loading = 0;
+                    // Supprime le logo de chargement
                     logo.classList.remove('display_block');
 
+                    // défini qu'il n'y a aucun appel vers l'API en cours
                     counterAppel = 0;
 
                     // Lance la fonction lors de l'évênement 'movestart'
                     map.on('movestart', gridRemove);
+
+                    // Lance la fonction lors de l'évênement 'mousedown' sur le curseur
                     inputSlider.addEventListener('mousedown', gridRemove);
 
                     // Déclaration de la fonction pour retirer les points de la grille
@@ -269,34 +298,40 @@ function launchMap() {
                         // Retire les points de la grille
                         map.removeLayer(group);
 
+                        // Permet de sortir de la fonction
                         return;
-
                     }
                 }
 
+                // Ajouter +1 au compteur
                 counter++;
 
-
+                // Si le compteur n'est pas égal au nombre de requête nécessaire, lance la fonction getElevation
                 if (counter != requestNeed) {
                     setTimeout(getElevation, 200, counter);
                 }
 
+                // Si le compteur est égal à 1, affiche le logo de chargement
                 if (counter == 1) {
                     logo.classList.add('display_block');
                 }
 
+            // catch permet d'exécuter le code ci-dessous (si il n'y a pas de réponse, ou s'il y a intérruption volontaire de la réponse)
             } catch (error) {
-                // EN CAS DE FAIL
 
+                // Redéfini le compteur à 0 pour relancer les requêtes depuis le premier tableau de coordonnées
                 counter = 0;
 
+                // Permet de relancer la fonction gridAdd si l'API renvoie une erreur suite à l'appel 
+                // Lorsque que l'on stoppe volontairement une requête, le code d'erreur est 20.
+                // (ce qui permet de ne pas relancer la fonction gridAdd si c'est le cas)
                 if (error.code != 20) {
 
                     setTimeout(gridAdd, 200);
                 }
 
+                // Permet de sortir de 'catch'
                 return;
-
             }
         }
     }
