@@ -37,6 +37,9 @@ class Evenements
     #[ORM\Column(nullable: true)]
     private ?float $coordonnee_y = null;
 
+    #[ORM\Column(length: 1000, nullable: true)]
+    private ?string $polygones = null;
+
     #[ORM\ManyToOne(inversedBy: 'evenements')]
     private ?Departements $dep = null;
 
@@ -139,6 +142,18 @@ class Evenements
     public function setCoordonneeY(?float $coordonnee_y): self
     {
         $this->coordonnee_y = $coordonnee_y;
+
+        return $this;
+    }
+
+    public function getPolygones(): ?string
+    {
+        return $this->polygones;
+    }
+
+    public function setPolygones(?string $polygones): self
+    {
+        $this->polygones = $polygones;
 
         return $this;
     }
