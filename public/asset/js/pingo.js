@@ -70,7 +70,7 @@ function launchMap(){
 }
 
 function change(){
-    
+
 //Longitude et latitude du polygon de crue secteur Angers.
 let latlngs = [[47.396019, -0.647586],[47.421956, -0.615330],[47.426834, -0.625243],[47.428692, -0.620995],[47.425295, -0.606446],[47.448886, -0.596345],[47.492077, -0.610913],[47.482152, -0.558840],[47.508970,-0.568915],[47.546755, -0.530072],[47.538643, -0.492808],[47.523035, -0.478838],[47.494905, -0.532527],[47.422443, -0.597240],[47.441500, -0.488433],[47.459445, -0.514767],[47.444399, -0.459037],[47.431710, -0.313384],[47.390682, -0.305300],[47.404361, -0.495264],[47.375043, -0.621714]];
 /* let poly = L.polygon(latlngs, {color:  'rgba(56, 210, 173, 0.47)' }).addTo(map); */
@@ -106,6 +106,8 @@ else if (img.src.substr(img.src.lastIndexOf('/'))=='/crueAngers.png'){
         //Switch photo cambo
 }else if (img.src.substr(img.src.lastIndexOf('/'))=='/crueCambo.png'){
     img.src ='/asset/img/IMG_PINGO/cambo_les_bains.jpg';
+}else{
+    
 }
 
 }

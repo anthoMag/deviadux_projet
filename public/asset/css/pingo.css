@@ -8,6 +8,8 @@
   }
 
 
+
+
   h1, h2, h3 {
     font-size: 1rem;
   }
@@ -56,12 +58,13 @@
   .leaflet-popup-content {
     margin: 0px;
     padding: 2px 20px 11px 20px;
-    color: black;
+    color: white;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 500;
     text-align: center;
     max-width: 300px;
     max-height: 350px;
+    background: linear-gradient(110.11deg, rgba(56, 210, 173, 0.47) -20.83%, #005664 25.71%, #142B33 63.59%);
   }
 
   .leaflet-popup-content h1 {
@@ -130,11 +133,9 @@
   }
 
   .leaflet-container a.leaflet-popup-close-button {
-    color: black;
+    color: white;
     font-size: 1.5rem;
     margin-left: -10px;
   }
 
-  header a{
-    padding: 0px 32px;
-  }
+  
