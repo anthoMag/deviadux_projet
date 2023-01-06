@@ -106,8 +106,15 @@ else if (img.src.substr(img.src.lastIndexOf('/'))=='/crueAngers.png'){
 }else if (img.src.substr(img.src.lastIndexOf('/'))=='/crueCambo.png'){
     img.src ='/asset/img/IMG_PINGO/cambo_les_bains.jpg';
 }
+map.on('click', removePoly);
+}
+
+function removePoly(){
+
+    map.removeLayer(poly) ;
 
 }
+
 
 
     /* map.fitBounds(poly.getBounds());  */
