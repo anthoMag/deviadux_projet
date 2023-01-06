@@ -1,0 +1,40 @@
+body , header{
+    background-color:#005663;
+    margin: auto;
+    width: 100%;
+   text-align: center;
+   font-family: 'Syncopate';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 29px;
+    text-transform: uppercase;
+    }
+
+h1{
+color:#e9f0e9;
+}
+
+p{
+    text-align: center;
+    color:antiquewhite;
+}
+.graphique{
+   
+     display: inline-block;
+  
+    
+}
+
+#date{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.date2{
+    padding-right: 100px;
+}    
+
+canvas#bar-chart{
+    display: none;
+}
