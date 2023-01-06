@@ -7,6 +7,9 @@
     color: #F9FBFF;
   }
 
+
+
+
   h1, h2, h3 {
     font-size: 1rem;
   }
@@ -30,7 +33,6 @@
       filter: var(--map-tiles-filter, none);
     }
   }
-
 
   .leaflet-control-attribution {
     display: none;
@@ -136,8 +138,4 @@
     margin-left: -10px;
   }
 
-  .leaflet-marker-icon:hover{
-    transition: 0.5ms;
-    transform: scale(1.5);
-
-  }
+  
