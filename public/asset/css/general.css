@@ -176,15 +176,16 @@ footer input[type="submit"]{
     font-weight: lighter;
     padding: 0.8rem 2rem;
     margin-top: 1rem;
-    border: none;
-    
-    
-
-   /*  float:right; */
-    
+    border: none;   
+   /*  float:righ   
     /* border-radius: 0% 4% 4% 0% #011131B; */
 }
 
+footer a:hover {
+    color:#F9FBFF;
+    background-color: #01131B;  
+  border: 1px solid #F9FBFF;
+}
 
 .modal {
     position: fixed;

@@ -36,10 +36,10 @@ header{
 #cookiesBar{
     position: absolute;
     z-index: 2;
-    top: 750px;
+    top: 600px;
     padding: 0;
-
 }
+
 #cookiesBar p {
     text-align: center;
     color:#01131B;

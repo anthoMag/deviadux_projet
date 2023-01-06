@@ -34,9 +34,7 @@ function launchMap(){
             "fillOpacity": 0.3
         }
     });
-    
      map ;
-    
     geojsonLayerReg.addTo(map); 
     
     //Style de la map et calibrage des zoom
@@ -51,7 +49,7 @@ function launchMap(){
     var warningOrgIcon = L.icon({
         iconUrl: './asset/img/IMG_PINGO/logoO.svg',
         shadowUrl: '',
-        iconSize:     [20, 20], 
+        iconSize:     [48, 48], 
         shadowSize:   [50, 64], 
         iconAnchor:   [15, 15], 
         shadowAnchor: [4, 62],  
@@ -114,7 +112,6 @@ function removePoly(){
     map.removeLayer(poly) ;
 
 }
-
 
 
     /* map.fitBounds(poly.getBounds());  */
