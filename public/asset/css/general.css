@@ -204,7 +204,8 @@ footer h3 {
 
 .pictologo:hover {
   background-color:#38d2ad;
-  background-clip: padding-box; /* Annulation du débordement du background */
+  background-size: auto;
+  background-clip: content-box /* Annulation du débordement du background */
 }
 
 .copyright {
