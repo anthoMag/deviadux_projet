@@ -17,6 +17,34 @@ a {
 
 a:hover {
   color: #38d2ad;
+  font-weight: bold;
+}
+
+#link{
+color: #f9fbff;
+font-size: 20px;
+text-decoration: none;
+position: relative;
+}
+
+#link:after{
+  bottom: -4px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  color: #f9fbff;
+  background-color: #38d2ad;
+  opacity: 0.6;
+  transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+  width: 0;
+}
+
+#link:hover:after{
+  width: 100%;
+  opacity: 0.9;
+  color: #38d2ad;
 }
 
 /* **************** Typographie ********* */
@@ -122,6 +150,30 @@ ul {
   /* border-bottom: 1px solid #F9FBFF; */
 }
 
+#navlink{
+  color: #f9fbff;
+  font-size: 20px;
+  position: relative;
+  }
+  
+  #navlink:after{
+    bottom: -1px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    color: #38d2ad;
+    background: #38d2ad;
+    opacity: 0.6;
+    transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+    width: 0;
+  }
+  
+  #navlink:hover:after{
+    width: 100%;
+    opacity: 0.9;
+  }
 /***************** FOOTER ****************/
 
 footer {
@@ -141,19 +193,18 @@ footer h3 {
 
 .liensContact a {
   padding-right: 1rem;
+  background-clip: border-box;
+  text-decoration: none;
 }
 
 .RS img {
   padding-top: 1.5rem;
   padding-right: 1rem;
-/*   padding-top: 10px;
-  margin-left: -10px; */
 }
 
 .pictologo:hover {
   background-color:#38d2ad;
-  white-space: normal;
-  background-size: auto;
+  background-clip: padding-box; /* Annulation du débordement du background */
 }
 
 .copyright {
