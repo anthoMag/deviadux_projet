@@ -18,6 +18,7 @@ let mappy = document.getElementById('map');
     launchMap();
 })
 
+ let newTab =  [];
 //Déclaration de la map
 var map =  L.map('map').setView([46, 3.161405], 6);
 
@@ -46,10 +47,10 @@ function launchMap(){
     }).addTo(map);
 
     //Icone sur la map
-    var warningOrgIcon = L.icon({
+    var floviaIcon = L.icon({
         iconUrl: './asset/img/IMG_PINGO/logoO.svg',
         shadowUrl: '',
-        iconSize:     [48, 48], 
+        iconSize:     [43, 43], 
         shadowSize:   [50, 64], 
         iconAnchor:   [15, 15], 
         shadowAnchor: [4, 62],  
@@ -57,20 +58,27 @@ function launchMap(){
 
     // Affichage des marqueurs sur la map, avec les longitudes et latitudes provenant de la base de données ainsi que le texte et img.
     tabData.forEach((v, k) => {
-        window['marker' + k]  = L.marker([v[5], v[6]], {icon: warningOrgIcon}).addTo(map);
+        window['marker' + k]  = L.marker([v[5], v[6]], {icon: floviaIcon}).addTo(map);
         window['marker' + k].bindPopup("<h1>"+v[0]+" ("+v[2]+")</h1><h3>"+v[3]+"</h3><h2>"+v[1]+" Mètres</h2><h3>"+v[4]+"</h3> <img  id='imgPop'  src='../asset/img/IMG_PINGO/"+v[7]+"'/><button type='button' id='rskBtn' onclick='change()'>Risques</button>");
-     
         //Zoom quand on clique sur le marqueur.
         window['marker' + k].on('click', function(){
             map.setView([v[5],v[6]], 11);
+            
         });
     });
 }
 
+
 function change(){
 
+ let latlngs =[];
+
+    tabData.forEach((v, k) => {
 //Longitude et latitude du polygon de crue secteur Angers.
-let latlngs = [[47.396019, -0.647586],[47.421956, -0.615330],[47.426834, -0.625243],[47.428692, -0.620995],[47.425295, -0.606446],[47.448886, -0.596345],[47.492077, -0.610913],[47.482152, -0.558840],[47.508970,-0.568915],[47.546755, -0.530072],[47.538643, -0.492808],[47.523035, -0.478838],[47.494905, -0.532527],[47.422443, -0.597240],[47.441500, -0.488433],[47.459445, -0.514767],[47.444399, -0.459037],[47.431710, -0.313384],[47.390682, -0.305300],[47.404361, -0.495264],[47.375043, -0.621714]];
+ latlngs.push(v[8]);
+    });
+    console.log(latlngs);
+/* [[47.396019, -0.647586],[47.421956, -0.615330],[47.426834, -0.625243],[47.428692, -0.620995],[47.425295, -0.606446],[47.448886, -0.596345],[47.492077, -0.610913],[47.482152, -0.558840],[47.508970,-0.568915],[47.546755, -0.530072],[47.538643, -0.492808],[47.523035, -0.478838],[47.494905, -0.532527],[47.422443, -0.597240],[47.441500, -0.488433],[47.459445, -0.514767],[47.444399, -0.459037],[47.431710, -0.313384],[47.390682, -0.305300],[47.404361, -0.495264],[47.375043, -0.621714]]; */
 
 //On Récupère l'image
 let img= document.getElementById('imgPop');
@@ -80,7 +88,7 @@ if (img.src.substr(img.src.lastIndexOf('/'))=='/angers_2019.jpg')  {
     img.src ='../asset/img/IMG_PINGO/crueAngers.png';
         
 //affichage de la zone de risque maximum de crue d'Angers.
-    poly= L.polygon(latlngs, {color:  'rgba(56, 210, 173, 0.47)' }).addTo(map); 
+    poly= L.polygon(latlngs[8], {color:  'rgba(56, 210, 173, 0.47)' }).addTo(map); 
 
 //Switch photo anduze quand on clique sur le boutton"risques" sur les zones innondable répertoriés par l'état.
 }else if (img.src.substr(img.src.lastIndexOf('/')) == '/anduze.jpg') {
