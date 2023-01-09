@@ -1,78 +1,124 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	{{controller_name}}
+  {{ controller_name }}
 {% endblock %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" href="./asset/css/Apropos.css">
+  <link rel="stylesheet" href="./asset/css/Apropos.css" />
 {% endblock %}
 
 {% block body %}
-	<main>
-		<article id="quoi">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-md-12">
-						<h2>FLOVIA, C'EST QUOI ?</h2>
-						<p>Tout est parti d’une idée simple, celle de repérer les bornes de crue comme celles que l’on rencontre en se baladant dans Paris. Au cours de la discussion, on se rend compte que l’inondation de 1910 n’est plus un phénomène unique et que les épisodes de crue sont de plus en plus fréquents, non seulement à Paris mais à travers la France. Cette idée simple s’est transformée en une réflexion sur le besoin de sensibiliser nos concitoyens sur le sujet de la montée des eaux en France, sans tomber dans le filet institutionnel des sites traitant ce sujet. Notre envie : partager des données claires et accessibles pour informer et parler d’un sujet plus qu’au coeur de l’actualité. Dans le futur, nous souhaiterions pouvoir offrir à l’utilisateur la possibilité de contribuer à ces informations, par exemple, en implémentant des évènements locaux.
-							<br>"Le véritable esprit est comme l’eau, il s’étend partout…” Paul Ohl,
-							<cite>Katana</cite>
-							(1997)
-						</p>
-					</div>
-					<div class="col-lg-6 col-md-12">
-						<img class="img-fluid" src="./asset/img/Apropos/1910Barque.jpg" alt="1910 barque">
-					</div>
-				</div>
-			</div>
-		</article>
+  <!-- Rond bg -->
+  <div class="round"></div>
 
-		<article id="qui">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-md-12">
-						<img class="img-fluid" src="./asset/img/Apropos/1910Chaise.jpg" alt="1910 traversée sur des chaises">
-					</div>
-					<div class="col-lg-6 col-md-12">
-						<h2>DÉVIADUX, C'EST QUI ?</h2>
-						<p>
-						L’équipe de Deviadux est composée de développeurs et designers UX/UI en devenir, tous venus d’horizons différents et curieux de nouvelles technologies. Notre nom est un amalgame de nos métiers, le mot « via » faisant le pont entre les deux, symbolisant ainsi la réunion des deux domaines.
-						</p>
-					</div>
-				</div>
-			</div>
-		</article>
+  <div class="round2"></div>
+  <!-- Fin Rond bg -->
+  <main>
+    <article id="quoi">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <h2>
+              FLOVIA, C'EST QUOI ?
+            </h2>
+            <p>
+              Tout est parti d’une idée simple, celle de repérer les bornes de
+              crue comme celles que l’on rencontre en se baladant dans Paris. Au
+              cours de la discussion, on se rend compte que l’inondation de 1910
+              n’est plus un phénomène unique et que les épisodes de crue sont de
+              plus en plus fréquents, non seulement à Paris mais à travers la
+              France. Cette idée simple s’est transformée en une réflexion sur
+              le besoin de sensibiliser nos concitoyens sur le sujet de la
+              montée des eaux en France, sans tomber dans le filet
+              institutionnel des sites traitant ce sujet. Notre envie : partager
+              des données claires et accessibles pour informer et parler d’un
+              sujet plus qu’au coeur de l’actualité. Dans le futur, nous
+              souhaiterions pouvoir offrir à l’utilisateur la possibilité de
+              contribuer à ces informations, par exemple, en implémentant des
+              évènements locaux.
+              <br />"Le véritable esprit est comme l’eau, il s’étend partout…”
+              Paul Ohl,
+              <cite>Katana</cite>
+              (1997)
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <img class="img-fluid"
+              src="./asset/img/Apropos/1910Barque.jpg"
+              alt="1910 barque" />
+          </div>
+        </div>
+      </div>
+    </article>
 
-		<!-- section à compléter -->
-		<article id="references">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<h2>nos références</h2>
-					</div>
-				</div>
-				<div class="row text-center">
-					<div class="col-lg-4 col-md-12">
-						<img class="img-fluid" src="./asset/img/logopictoicone/logoclimat.png" alt="logo climat">
-						<p>
-						La carte Hexago (prévision montée des eaux) est le produit d’un algorithme élaboré à partir de diverses sources, dont le GIEC (rapport de juin 2022), Océan et climat et Climate Central.
-						</p>
-					</div>
-					<div class="col-lg-4 col-md-12">
-						<img class="img-fluid" src="./asset/img/logopictoicone/logogiec.png" alt="logo GIEC">
-						<p>
-							La carte Pingo (localisation des épisodes) a été
-							<br>créée à partir des données du bilan Vigicrues 2021 et rapport du Giec
-						</p>
-					</div>
-					<div class="col-lg-4 col-md-12">
-						<img class="img-fluid" src="./asset/img/img/citecrue.jpg" alt="photo crue ile de la cité 2016">
-						<p>Photographies extraites de la série<br><a href="https://benoitlapray.com/personal-works/when-the-night-falls">When the night falls</a><br>de Benoît Lapray © 2016-2017</p>
-					</div>
-				</div>
-			</div>
-		</article>
-	</main>
+    <article id="qui">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <img class="img-fluid"
+              src="./asset/img/Apropos/1910Chaise.jpg"
+              alt="1910 traversée sur des chaises" />
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <h2>
+              DÉVIADUX, C'EST QUI ?
+            </h2>
+            <p>
+              L’équipe de Deviadux est composée de développeurs et designers
+              UX/UI en devenir, tous venus d’horizons différents et curieux de
+              nouvelles technologies. Notre nom est un amalgame de nos métiers,
+              le mot « via » faisant le pont entre les deux, symbolisant ainsi
+              la réunion des deux domaines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- section à compléter -->
+    <article id="references">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>
+              nos références
+            </h2>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-12">
+            <img class="img-fluid"
+              src="./asset/img/logopictoicone/logoclimat.png"
+              alt="logo climat" />
+            <p>
+              La carte Hexago (prévision montée des eaux) est le produit d’un
+              algorithme élaboré à partir de diverses sources, dont le GIEC
+              (rapport de juin 2022), Océan et climat et Climate Central.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <img class="img-fluid"
+              src="./asset/img/logopictoicone/logogiec.png"
+              alt="logo GIEC" />
+            <p>
+              La carte Pingo (localisation des épisodes) a été
+              <br />créée à partir des données du bilan Vigicrues 2021 et
+              rapport du Giec
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <img class="img-fluid"
+              src="./asset/img/img/citecrue.jpg"
+              alt="photo crue ile de la cité 2016" />
+            <p>
+              Photographies extraites de la série<br /><a href="https://benoitlapray.com/personal-works/when-the-night-falls" target="_blank">
+                When the night falls
+              </a><br />de Benoît Lapray © 2016-2017 
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
 {% endblock %}
-
