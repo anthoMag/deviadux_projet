@@ -71,3 +71,28 @@ a {
   width: 100%;
   opacity: 0.9;
 }
+
+.round {
+    height: 600px;
+    width: 650px;
+    background: linear-gradient(110.11deg, rgba(56, 210, 173, 0.47) -20.83%, #006d7d 25.71%, #142B33 63.59%);
+    position: absolute;
+    filter: blur(40px);
+    z-index: -6;
+    top: 18%;
+    left: -150px;
+    border-radius: 50%;
+  }
+  
+  .round2 {
+    height: 600px;
+    width: 650px;
+    background: linear-gradient(254.54deg, rgba(56, 210, 192, 0.52) -31.41%, #005664 23.79%, #142B33 60.47%);
+    position: absolute;
+    filter: blur(40px);
+    z-index: -6;
+    bottom: -1350px;
+    left: 750px;
+    border-radius: 50%;
+  }
+
