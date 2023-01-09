@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : dim. 08 jan. 2023 à 17:35
+-- Généré le : lun. 09 jan. 2023 à 12:50
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -42,15 +42,15 @@ CREATE TABLE IF NOT EXISTS `departements` (
 --
 
 INSERT INTO `departements` (`id`, `name`, `code_dep`, `reg_id`) VALUES
-(97, 'Ain', '1', 1),
-(98, 'Aisne', '2', 7),
-(99, 'Allier', '3', 1),
-(100, 'Alpes-de-Haute-Provence', '4', 13),
-(101, 'Hautes-Alpes', '5', 13),
-(102, 'Alpes-Maritimes', '6', 13),
-(103, 'Ardèche', '7', 1),
-(104, 'Ardennes', '8', 6),
-(105, 'Ariège', '9', 11),
+(97, 'Ain', '01', 1),
+(98, 'Aisne', '02', 7),
+(99, 'Allier', '03', 1),
+(100, 'Alpes-de-Haute-Provence', '04', 13),
+(101, 'Hautes-Alpes', '05', 13),
+(102, 'Alpes-Maritimes', '06', 13),
+(103, 'Ardèche', '07', 1),
+(104, 'Ardennes', '08', 6),
+(105, 'Ariège', '09', 11),
 (106, 'Aube', '10', 6),
 (107, 'Aude', '11', 11),
 (108, 'Aveyron', '12', 11),
