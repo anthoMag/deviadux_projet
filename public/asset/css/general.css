@@ -256,7 +256,7 @@ footer input[type='submit']:hover {
 }
 
 /***************** MODALS *****************/
-.modal {
+/* .modal {
   position: fixed;
   left: 0;
   top: 0;
@@ -294,4 +294,4 @@ footer input[type='submit']:hover {
   visibility: visible;
   transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-}
+} */
