@@ -168,6 +168,7 @@ ul {
     opacity: 0.6;
     transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
     width: 0;
+    background-clip:content-box;
   }
   
   #navlink:hover:after{
