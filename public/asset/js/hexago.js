@@ -8,7 +8,7 @@ let mappy = document.getElementById('map');
 logo = document.querySelector('.logo');
 
 // Modifie la hauteur de la div qui contient la carte
-mappy.style.height = htmlHeight - 200 + 'px';
+mappy.style.height = htmlHeight - 200 + 'px'; 
 
 
 
@@ -149,13 +149,6 @@ function launchMap() {
         // Calcul pour connaître le nombre de points en hauteur sur la grille (chacun séparé d'environ 15px)
         divY = Math.floor(mappyHeight / 15);
 
-        // Calcul pour connaître le nombre de points dans la grille
-        let resultXY = divX * divY;
-
-        // Calcul pour connaître le nombre d'appels nécessaires en fonction du nombre de points dans la grille
-        // (Erreur si je dépasse les 1000 requêtes par appel, donc je choisi 900 max pour ne pas créer d'erreur)
-        let requestNeed = Math.ceil(resultXY / 900);
-
         // Récupère les coordonnées nord-est et sud-ouest de la carte visible
         let boundsMap = map.getBounds();
 
@@ -170,7 +163,7 @@ function launchMap() {
         // Récupère la différence entre les 2 coordonnées
         let x3 = x1 - x2;
         let y3 = y1 - y2;
-
+ 
         // Calcule la distance entre 2 points de la grille
         let x4 = x3 / divX;
         let y4 = y3 / divY;
@@ -191,6 +184,10 @@ function launchMap() {
 
         // Permet de prévoir à l'avance le nombre de points à envoyer à l'API
         let pointsPreShot = (divX * divY) + divX + divY + 1;
+
+        // Calcul pour connaître le nombre d'appels nécessaires en fonction du nombre de points dans la grille
+        // (Erreur si je dépasse les 1000 requêtes par appel, donc je choisi 900 max pour ne pas créer d'erreur)
+        let requestNeed = Math.ceil(pointsPreShot / 900);
 
         // Permet de calculer le nombre de points pour chaque tableau de tableau
         let gridPointsDivision = Math.ceil(pointsPreShot / requestNeed);
