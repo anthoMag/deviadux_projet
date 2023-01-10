@@ -9,9 +9,7 @@
     </title>
     <link rel="icon" href="./asset/img/logopictoicone/logoO.svg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous" />
+      rel="stylesheet"  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ asset('asset/css/normalize.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset/css/general.css') }}" />
 
@@ -26,8 +24,8 @@
 
   <body>
     {% block nav %}
-      <nav id="nav-general"
-        class="navbar navbar-expand-lg navbar-dark fixed-top nav-bg">
+
+      <nav id="nav-general" class="navbar navbar-expand-lg navbar-dark fixed-top nav-bg">
         <div class="container-fluid">
           <a class="navbar-brand d-lg-none" href="{{ path('app_home') }}">
             <img src="./asset/img/logopictoicone/logoflovia.svg"
@@ -82,7 +80,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navbar-brand d-lg-none"
+                <a class="nav-link  d-lg-none"
                   href="{{ path('app_profil') }}">
                   PROFIL
                 </a>
@@ -97,7 +95,8 @@
             </div>
           </div>
         </div>
-      </nav>
+      </nav> 
+      
     {% endblock %}
 
     {% block body %}
@@ -219,7 +218,8 @@
     {% endblock %}
   </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> 
+<script src="./asset/js/navbar.js"></script>
 {% block javascripts %}
   {{ encore_entry_script_tags('app') }}
-  <script src="./asset/js/navbar.js"></script>
 {% endblock %}

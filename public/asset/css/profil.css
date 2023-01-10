@@ -30,12 +30,13 @@ main input[type='submit'] {
 }
 
 main input[type='submit']:hover {
-  background: #38d2ad;
+  background: #01131b;
   color: #f9fbff;
   text-decoration: none;
   background-clip: padding-box;
   box-shadow: none;
   border-bottom: none;
+  border: solid 1px #f9fbff;
 
 }
 input {
@@ -51,7 +52,7 @@ a {
   text-decoration: none;
 }
 
-#navlink {
+/* #navlink {
   color: #f9fbff;
   font-size: 20px;
   position: relative;
@@ -67,14 +68,14 @@ a {
   color: #38d2ad;
   background: #38d2ad;
   opacity: 0.6;
-  transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+
   width: 0;
 }
 
 #navlink:hover:after {
   width: 100%;
   opacity: 0.9;
-}
+} */
 
 .round {
     height: 600px;

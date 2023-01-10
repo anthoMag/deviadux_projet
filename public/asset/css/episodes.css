@@ -19,24 +19,24 @@
   height: 400px;
 }
 
-#imageBtn button {
+/* #imageBtn button {
   position: absolute;
   right: 24%;
   border: none;
   padding: 0.5rem 2rem;
   top: 84%;
-}
+} */
 
-#imageBtn button:hover {
+/* #imageBtn button:hover {
   background-color: #01131B;
   color: #F9FBFF;
-}
+} */
 
 #textealaune {
   padding-right: 7rem;
 }
 
-*/ .icon {
+ .icon {
   padding: 0.8rem 0rem 0.4rem 0rem;
 }
 
@@ -44,7 +44,7 @@
   padding: 0.8rem 0rem 0.4rem 0rem;
 }
 
-/* section Slider------------------------------------------- */
+/*--------------------------- section Caroussel---------------------- */
 .visualiser {
   margin: 6rem 0 4rem 0;
 }
@@ -55,13 +55,13 @@
 .blocs {
   display: flex;
   justify-content: space-between;
-  width: 185%;
   margin-top: 3rem;
 }
 
 .blocs img {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
+  padding: 10px;
 }
 
 .containerblocs {
@@ -223,12 +223,13 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: solid 2px white;
+  border: solid 2px #F9FBFF;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 .slider--image2 .slider__range {
   display: none;
@@ -238,7 +239,7 @@
 .slider--image2 .slider__after:before {
   top: 50%;
   transform: translateY(-50%);
-  background: #005663;
+  background: #01131B;
   padding: 8px;
   border-radius: 8px;
   margin-left: 8px;

@@ -70,62 +70,37 @@ function launchMap(){
 }
 
 function change(key){
-
+    
     index = key;
+    console.log(tabData[index]);
 
 //On envoie un tableau de tableau à leaflet pour afficher les polygones
 let ltlg = JSON.parse(tabData[index][8]);
 
-let imgSwicth1 = tabData[index][9];
-let imgSwicth2 = tabData[index][10];
+
+let imgSwicth2 = tabData[index][9];
+let link = tabData[index][10];
 
 
 //On Récupère l'image
 let img= document.getElementById('imgPop');
 let imgR = document.getElementById('imgRsk');
-poly= L.polygon(ltlg, {color:  'rgba(56, 210, 173, 0.47)' }).addTo(map); 
+
+
 //Affichage des photos d'nnondations et switch 
-if (img.src.substr(img.src.lastIndexOf('/'))=='/angers_2019.jpg')  { 
-    img.src ='../asset/img/IMG_PINGO/crueAngers.png';
-    imgR.href="https://files.geo.data.gouv.fr/link-proxy/catalogue.sigloire.fr/2020-11-13/5faddb6a6a9fcb45c5f4c0c4/file.zip/telechargement-1604748779-7263/2981eead-479f-4b73-9139-68618c3776dd-1604748779-9408/pdf-complet-n-tri-ange2013-inondable-s-049.zip/territoires-a-risques-important-dinondation-tri-de-angers-val-dauthion-saumur-surfaces-inondables/template-de-catalogue-dattributs.pdf";
-        
-//affichage de la zone de risque maximum de crue d'Angers.
+let rButton = document.getElementById('rskBtn');
 
-//Switch photo anduze quand on clique sur le boutton"risques" sur les zones innondable répertoriés par l'état.
-}else if (img.src.substr(img.src.lastIndexOf('/')) == '/anduze.jpg') {
-    img.src ='/asset/img/IMG_PINGO/crueAnduze.png';
-    imgR.href= "https://docplayer.fr/59002652-Zonage-du-risque-inondation-a.html";
-}  
 
-//Switch photo cambo quand on clique sur le boutton"risques" sur les zones innondable répertoriés par l'état.
-else if (img.src.substr(img.src.lastIndexOf('/')) == '/cambo_les_bains.jpg'){
-    img.src ='/asset/img/IMG_PINGO/crueCambo.png';
-   imgR.href= "https://www.nouvelle-aquitaine.developpement-durable.gouv.fr/IMG/pdf/atlas_cambo_6140_reduit.pdf";
-}  
-
-//switch photo Angers et on enlève le polygon 
-else if (img.src.substr(img.src.lastIndexOf('/'))=='/crueAngers.png'){
-    img.src ='../asset/img/IMG_PINGO/angers_2019.jpg'
+img.src ='../asset/img/IMG_PINGO/'+imgSwicth2;
+imgR.href=  link;
+/* map.removeLayer(poly) ; */
+poly= L.polygon(ltlg, {color:  'rgba(56, 210, 173, 0.47)' }).addTo(map); 
     
-        map.removeLayer(poly) ;
+    //affichage de la zone de risque maximum de crue d'Angers.
     
-    //Switch photo anduze
-}    else if (img.src.substr(img.src.lastIndexOf('/'))=='/crueAnduze.png'){
-    img.src ='/asset/img/IMG_PINGO/anduze.jpg';
-
-    
-
-
-    map.removeLayer(poly) ;
-
-        //Switch photo cambo
-}else if (img.src.substr(img.src.lastIndexOf('/'))=='/crueCambo.png'){
-    img.src ='/asset/img/IMG_PINGO/cambo_les_bains.jpg';
-
-    map.removeLayer(poly) ;
+    //Switch photo anduze quand on clique sur le boutton"risques" sur les zones innondable répertoriés par l'état.
 }
 map.on('click', removePoly);
-}
 
 
 function removePoly(){

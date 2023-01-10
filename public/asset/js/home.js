@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 /* ----------------------COOKIE BAR--------------------- */
 let closeBtn = document.getElementById('closeCookie');
 
-
 function close() {
     
     let cookieBar = document.getElementById('cookiesBar');
@@ -46,4 +45,4 @@ function close() {
     cookieBar.style.display = 'none';
     
 }
-closeBtn.addEventListener('click', close);
+closeBtn.addEventListener('click', close); 
