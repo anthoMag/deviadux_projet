@@ -43,6 +43,12 @@ class Evenements
     #[ORM\ManyToOne(inversedBy: 'evenements')]
     private ?Departements $dep = null;
 
+    #[ORM\Column(length: 50)]
+    private ?string $image_2 = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $link = null;
+
 
 
     public function getId(): ?int
@@ -166,6 +172,30 @@ class Evenements
     public function setDep(?departements $dep): self
     {
         $this->dep = $dep;
+
+        return $this;
+    }
+
+    public function getImage2(): ?string
+    {
+        return $this->image_2;
+    }
+
+    public function setImage2(string $image_2): self
+    {
+        $this->image_2 = $image_2;
+
+        return $this;
+    }
+
+    public function getLink(): ?string
+    {
+        return $this->link;
+    }
+
+    public function setLink(string $link): self
+    {
+        $this->link = $link;
 
         return $this;
     }
