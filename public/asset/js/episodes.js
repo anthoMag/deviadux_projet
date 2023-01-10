@@ -27,11 +27,12 @@ sliders.forEach(function (slider) {
         isDragging = false;
     });
 
+    // Si on est en clique on peux glisser le slider
     document.addEventListener('mousemove', function (e) {
         if (isDragging) {
             let sliderRect = slider.getBoundingClientRect()
-            let newWidth = (e.clientX - sliderRect.left) /
-                sliderRect.width * 100;
+            //Récupère la postion x de la souris et je soustrait la largeur du rectangle
+            let newWidth = (e.clientX - sliderRect.left) / sliderRect.width * 100;
             sliderRange.value = newWidth;
             updapteSliderPosition();
         }

@@ -207,11 +207,15 @@
   top: -77px;
   object-position: left;
   height: 124.5%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 .slider__after img {
   object-position: center;
   top: -50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 .slider--image2 .slider__separator:before {

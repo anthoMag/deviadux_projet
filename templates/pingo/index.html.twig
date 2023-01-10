@@ -32,7 +32,7 @@
 	{% block footer %}{% endblock %}
 
 	{% block javascripts %}
-		<script> 
+	<script>
 let tabData = [];
 {% for evenement in list %}
 tabData.push(['{{evenement.lieu}}','{{evenement.picDeCrue}}','{{evenement.dep.codeDep}}','{{evenement.dep.reg.name}}','{{evenement.periode}}','{{evenement.coordonneeX}}','{{evenement.coordonneeY}}','{{evenement.image}}','{{evenement.polygones}}']);
@@ -40,7 +40,6 @@ tabData.push(['{{evenement.lieu}}','{{evenement.picDeCrue}}','{{evenement.dep.co
 
 </script>
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-  crossorigin=""></script>
+  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="crossorigin=""></script>
 <script src="./asset/js/pingo.js"></script>
-	{% endblock %}
+{% endblock %}
