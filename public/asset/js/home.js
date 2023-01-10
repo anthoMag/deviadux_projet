@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', (e)=>{
                 prevTime = now;
             }
         }
-
+        
         image = document.getElementById('img-anim-pluie');
         rect = image.getBoundingClientRect();
 

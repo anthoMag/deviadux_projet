@@ -1,5 +1,7 @@
+//On Sélectionne les sliders
 let sliders = document.querySelectorAll('.slider');
 
+//Pour chaque Sliders on modifie l'effet avant/après avec le curseur
 sliders.forEach(function (slider) {
     let sliderRange = slider.querySelector('.slider__range');
     let sliderBefore = slider.querySelector('.slider__before');
@@ -12,19 +14,17 @@ sliders.forEach(function (slider) {
 
     }
 
-
+   //Quand on clique sur l'input on déplace le curseur
     sliderRange.addEventListener('input', updapteSliderPosition);
 
     let isDragging = false;
 
     sliderSeparator.addEventListener('mousedown', function () {
         isDragging = true;
-
     });
 
     document.addEventListener('mouseup', function () {
         isDragging = false;
-
     });
 
     document.addEventListener('mousemove', function (e) {
@@ -35,6 +35,5 @@ sliders.forEach(function (slider) {
             sliderRange.value = newWidth;
             updapteSliderPosition();
         }
-
     });
 });

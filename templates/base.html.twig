@@ -1,138 +1,225 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>
-			{% block title %}
-			Welcome!
-			{% endblock %}
-		</title>
-		<link rel="icon" href="./asset/img/logopictoicone/logoO.svg">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-		<link rel="stylesheet" href="{{ asset('asset/css/normalize.css') }}">
-		<link rel="stylesheet" href="{{ asset('asset/css/general.css') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      {% block title %}
+        Welcome!
+      {% endblock %}
+    </title>
+    <link rel="icon" href="./asset/img/logopictoicone/logoO.svg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ asset('asset/css/normalize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('asset/css/general.css') }}" />
 
-		{% block javascripts2 %}
-			{{ encore_entry_script_tags('app') }}
-		{% endblock %}
+    {% block javascripts2 %}
+      {{ encore_entry_script_tags('app') }}
+    {% endblock %}
 
-		{% block stylesheets %}
+    {% block stylesheets %}
+      {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+  </head>
 
-			{{ encore_entry_link_tags('app') }}
-		{% endblock %}
-	</head>
+  <body>
+    {% block nav %}
+      <nav id="nav-general"
+        class="navbar navbar-expand-lg navbar-dark fixed-top nav-bg">
+        <div class="container-fluid">
+          <a class="navbar-brand d-lg-none" href="{{ path('app_home') }}">
+            <img src="./asset/img/logopictoicone/logoflovia.svg"
+              alt="logo Flovia 2" />
+          </a>
 
-	<body>
-		{% block nav %}
-			<nav id="nav-general" class="navbar navbar-expand-lg navbar-dark fixed-top nav-bg">
-				<div class="container-fluid">
+          <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-					<a class="navbar-brand d-lg-none" href="{{path ('app_home')}}"><img src="./asset/img/logopictoicone/logoflovia.svg" alt="logo Flovia 2"></a>
+          <div class="collapse navbar-collapse d-lg-flex justify-content-between"
+            id="navbarNav">
+            <a class="navbar-brand d-none d-lg-block ps-5 ms-5"
+              href="{{ path('app_home') }}">
+              <img src="./asset/img/logopictoicone/logoflovia.svg"
+                alt="logo Flovia" />
+            </a>
 
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link nav_cartes"
+                  href="{{ path('app_cartes') }}"
+                  id="navlink">
+                  CARTES
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_episodes"
+                  href="{{ path('app_episodes') }}?id=1"
+                  id="navlink">
+                  ÉPISODES
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_actu"
+                  href="{{ path('app_actualites') }}"
+                  id="navlink">
+                  ACTUALITÉS
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_apropos"
+                  href="{{ path('app_about') }}"
+                  id="navlink">
+                  A PROPOS
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navbar-brand d-lg-none"
+                  href="{{ path('app_profil') }}">
+                  PROFIL
+                </a>
+              </li>
+            </ul>
+            <div>
+              <a class="navbar-brand d-none d-lg-block pe-5 me-5"
+                href="{{ path('app_profil') }}">
+                <img src="./asset/img/logopictoicone/iconeprofilvide.svg"
+                  alt="Picto Profil" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    {% endblock %}
 
-					<div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarNav">
+    {% block body %}
 
-						<a class="navbar-brand d-none d-lg-block ps-5 ms-5" href="{{path ('app_home')}}"><img src="./asset/img/logopictoicone/logoflovia.svg" alt="logo Flovia"></a>
+    {% endblock %}
 
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link nav_cartes" href="{{path ('app_cartes')}}">CARTES</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link nav_episodes" href="{{path ('app_episodes')}}?id=1">ÉPISODES</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link nav_actu" href="{{path ('app_actualites')}}">ACTUALITÉS</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link nav_apropos" href="{{path ('app_about')}}">A PROPOS</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link navbar-brand d-lg-none" href="{{path ('app_profil')}}">PROFIL</a>
-							</li>
-						</ul>
-						<div>
-							<a class="navbar-brand d-none d-lg-block pe-5 me-5" href="{{path ('app_profil')}}"><img src="./asset/img/logopictoicone/iconeprofilvide.svg" alt="Picto Profil"></a>
-						</div>
+    {% block footer %}
+      <!-- footer -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <section class="col-lg-4">
+              <h3>
+                NOUS CONTACTER
+              </h3>
+              <div class="d-flex">
+                <img src="./asset/img/logopictoicone/logoflovia.svg"
+                  alt="Logo FLOVIA" />
+                <p id="blog">
+                  Aller lire notre
+                  <a href="https://flovia.alwaysdata.net"
+                    target="_blank"
+                    id="link">
+                    BLOG
+                  </a>
+                </p>
+              </div>
+              <p>
+                <a href="https://goo.gl/maps/QBNiRTAXdfsT1pcy5"
+                  target="_blank"
+                  id="link">
+                  6 bis rue du chaudron - 75010 Paris
+                </a>
+              </p>
 
-					</div>
-				</div>
-			</nav>
+              <div class="liensContact">
+                <a href="mailto:flovia.deviadux@gmail.com"
+                  target="_blank"
+                  id="link">
+                  Nous écrire
+                </a>
+                <a href="#" id="link">CGU</a>
+              </div>
 
-		{% endblock %}
+              <div class="d-flex RS">
+                <a target="_blank"
+                  href="https://www.facebook.com/flovia.deviadux/">
+                  <img src="./asset/img/logopictoicone/IconFB.svg"
+                    alt="logo Facebook"
+                    class="pictologo" />
+                </a>
+                <a target="_blank"
+                  href="https://www.twitter.com/flovia.deviadux/">
+                  <img src="./asset/img/logopictoicone/IconTwitter.svg"
+                    alt="logo Twitter"
+                    class="pictologo" />
+                </a>
+                <a target="_blank"
+                  href="https://www.instagram.com/flovia.deviadux/">
+                  <img src="./asset/img/logopictoicone/IconInsta.svg"
+                    alt="logo Instagram"
+                    class="pictologo" />
+                </a>
+              </div>
+            </section>
 
-		{% block body %}{% endblock %}
+            <section class="col-lg-4">
+              <h3>
+                NOS RESSOURCES
+              </h3>
+              <p>
+                Infos en temps réel:
+                <a href="https://www.vigicrues.gouv.fr/"
+                  target="_blank"
+                  id="link">
+                  vigicrues.gouv.fr
+                </a>
+              </p>
+              <p>
+                Infos sur le risque en France:
+                <a href="https://georisques.gouv.fr/" target="_blank" id="link">
+                  georisques.gouv.fr
+                </a>
+              </p>
+              <p>
+                Evaluation de la vulnérabilité:
+                <a href="https://errial.georisques.gouv.fr/#/"
+                  target="_blank"
+                  id="link">
+                  errial.georisques.gouv.fr
+                </a>
+              </p>
+            </section>
 
-		{% block footer %}
-			<!-- footer  -->
-			<footer>
-				<div class="container">
-					<div class="row">
-						<section class="col-lg-4">
-							<h3>NOUS CONTACTER</h3>
-							<div class="d-flex">
-								<img src="./asset/img/logopictoicone/logoflovia.svg" alt="Logo FLOVIA">
-								<p id="blog">Aller lire notre
-									<a href="#">BLOG</a>
-								</p>
-							</div>
-							<p>
-								<a href="https://goo.gl/maps/QBNiRTAXdfsT1pcy5" target="_blank">6 bis rue du chaudron - 75010 Paris</a>
-							</p>
+            <section id="newsletter" class="col-lg-4">
+              <h3>
+                NOTRE NEWSLETTER
+              </h3>
+              <form action="#">
+                <p>
+                  Inscrivez-vous à notre newsletter et recevez chaque mois les
+                  actualités dans votre boîte mail
+                </p>
+                <input type="text" name="username" placeholder="Nom" />
+                <input type="email" name="usermail" placeholder="Email" />
+                <input type="submit" value="S'inscrire" />
+              </form>
+            </section>
+          </div>
 
-							<div class="liensContact">
-									<a href="mailto:flovia_deviadux@gmail.com" target="_blank"> Nous écrire</a>
-								<a href="#">CGU</a>
-							</div>
-
-							<div class="d-flex RS">
-								<img src="./asset/img/logopictoicone/IconFB.svg" alt="logo Facebook">
-								<img src="./asset/img/logopictoicone/IconTwitter.svg" alt="logo Twitter">
-								<img src="./asset/img/logopictoicone/IconInsta.svg" alt="logo Instagram">
-							</div>
-
-						</section>
-
-						<section class="col-lg-4">
-							<h3>NOS RESSOURCES</h3>
-							<p>Infos en temps réel:
-								<a href="https://www.vigicrues.gouv.fr/" target="_blank">vigicrues.gouv.fr</a>
-							</p>
-							<p>Infos sur le risque en France:
-								<a href="https://georisques.gouv.fr/" target="_blank">georisques.gouv.fr</a>
-							</p>
-							<p>Evaluation de la vulnérabilité:
-								<a href="https://errial.georisques.gouv.fr/#/" target="_blank">errial.georisques.gouv.fr</a>
-							</p>
-						</section>
-
-						<section id="newsletter" class="col-lg-4">
-							<h3>NOTRE NEWSLETTER</h3>
-							<form action="#">
-								<p>Inscrivez-vous à notre newsletter et recevez chaque mois les actualités dans votre boîte mail</p>
-								<input type="text" name="username" placeholder="Nom">
-								<input type="email" name="usermail" placeholder="Email">
-								<input type="submit" value="S'inscrire">
-							</form>
-						</section>
-					</div>
-
-					<div class="copyright">
-						<p>Site conçu par Deviadux © 2022 -
-							<a href="#">Mentions légales</a>
-						</p>
-					</div>
-
-				</div>
-			</footer>
-		{% endblock %}
-
-	</body>
+          <div class="copyright">
+            <p>
+              Site conçu par Deviadux © 2022 -
+              <a href="#">Mentions légales</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    {% endblock %}
+  </body>
 </html>
 {% block javascripts %}
-	{{ encore_entry_script_tags('app') }}
+  {{ encore_entry_script_tags('app') }}
+  <script src="./asset/js/navbar.js"></script>
 {% endblock %}
-
