@@ -46,7 +46,7 @@
 			</div>
 		</section>
 
-		<section id="slider" >
+		<section id="avap" >
 			<div class="container">
 				<div class="row">
 					<div id="showSlider">
@@ -60,18 +60,17 @@
 						<div class="container"> 
 							<div class="slider slider--image2">
 								<div class="slider__before">
-									<img src="./asset/img/img/avap/seine_0{{id}}_av.jpg" alt="Image de la Seine avant">
+									<img src="./asset/img/img/avap/seine_{{code}}_av.jpg" alt="Image de la Seine avant">
 								</div>
 								<div class="slider__separator">
 								</div>
 								<div class="slider__after">
-									<img onDrag="return false" src="./asset/img/img/avap/seine_0{{id}}_ap.jpg" alt="Image de la Seine après">
+									<img onDrag="return false" src="./asset/img/img/avap/seine_{{code}}_ap.jpg" alt="Image de la Seine après">
 								</div>
 								<input class="slider__range" type="range" min="0" max="100" value="50"/>
 							</div>
 						</div>
 					</div>
-					
 					<section class="miniature">
 						<div class="row"> 
 							<div id="hide" class="col-12">
@@ -79,14 +78,14 @@
 								</div>
 							<div class="containerblocs">	
 								<div  class="blocs">
-									<a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercuarsenal.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=2 "><img src="./asset/img/img/apercucite.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=3 "><img src="./asset/img/img/appercubalancoire.jpg" id="showBtn"alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=4"><img src="./asset/img/img/apercupeniche.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=5"><img src="./asset/img/img/apercuquaibirhakeim.jpg" alt=""></a>
-									<a href="{{path ('app_episodes')}}?id=6"><img src="./asset/img/img/apercusolferino.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=7"><img src="./asset/img/img/apercutoboggan.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=8"><img src="./asset/img/img/apercutournelle.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=1&open=true#avap"><img src="./asset/img/img/apercubalancoire.jpg" alt="" href="#"></a>
+									<a  href="{{path ('app_episodes')}}?code=2&open=true#avap"><img src="./asset/img/img/apercucite.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=3&open=true#avap"><img src="./asset/img/img/apercuarsenal.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=4&open=true#avap"><img src="./asset/img/img/apercupeniche.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=5&open=true#avap"><img src="./asset/img/img/apercuquaibirhakeim.jpg" alt=""></a>
+									<a href="{{path ('app_episodes')}}?code=6&open=true#avap"><img src="./asset/img/img/apercusolferino.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=7&open=true#avap"><img src="./asset/img/img/apercutoboggan.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=8&open=true#avap"><img src="./asset/img/img/apercutournelle.jpg" alt="" href="#"></a>
 								</div>
 							</div>
 						</div>
@@ -144,7 +143,6 @@
 </main>
 {% endblock %}
 {% block javascripts %}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script src="./asset/js/episodes.js"></script>
 {% endblock %}
 
