@@ -26,6 +26,9 @@ const sliderValue = document.querySelector("span");
 // Récupère la balise input du curseur
 const inputSlider = document.querySelector("input");
 
+// Déclare une élévation par défaut au chargement de la page
+let elevation = 0;
+
 // Lance le code ci-dessous si il y a une interaction en cours avec le curseur
 inputSlider.oninput = (() => {
 
@@ -245,7 +248,7 @@ function launchMap() {
                 // API Open Elevation hebergé par le serveur de Benoît:
                 // http://51.210.126.117/api/v1/lookup
 
-                const rawResponse = await fetch('https://api.open-elevation.com/api/v1/lookup', {
+                const rawResponse = await fetch('http://51.210.126.117/api/v1/lookup', {
                     method: 'POST',
                     signal: signal,
                     headers: {
