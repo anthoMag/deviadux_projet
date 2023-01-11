@@ -40,7 +40,7 @@
 					</div>
 					<div id="imageBtn" class="col-4">
 						<img src="./asset/img/img/apercuinvalides.jpg" alt="apercu avant/après crue invalides 2016">
-						{# <button>CLIQUEZ ICI</button> #}
+						<button id="showBtn">CLIQUEZ ICI</button> 
 					</div>
 				</div>
 			</div>
@@ -49,36 +49,46 @@
 		<section id="slider" >
 			<div class="container">
 				<div class="row">
-					<div class="col-12 visualiser">
-						<!-- <h2>Dans la même série</h2> -->
-						<!-- texte h1 à changer lorsqu'on actionne un apercu en: -->
-						<h2>
-						Visualiser avant / après
-						</h2>
-					</div>
-						<div class="container"> <div class="slider slider--image2">
-							<div class="slider__before">
-								<img src="./asset/img/img/avap/seine_0{{id}}_av.jpg" alt="Image de la Seine avant">
+					<div id="showSlider">
+						<div class="col-12 visualiser">
+							<!-- <h2>Dans la même série</h2> -->
+							<!-- texte h1 à changer lorsqu'on actionne un apercu en: -->
+							<h2>
+							Visualiser avant / après
+							</h2>
+						</div>
+						<div class="container"> 
+							<div class="slider slider--image2">
+								<div class="slider__before">
+									<img src="./asset/img/img/avap/seine_0{{id}}_av.jpg" alt="Image de la Seine avant">
+								</div>
+								<div class="slider__separator">
+								</div>
+								<div class="slider__after">
+									<img onDrag="return false" src="./asset/img/img/avap/seine_0{{id}}_ap.jpg" alt="Image de la Seine après">
+								</div>
+								<input class="slider__range" type="range" min="0" max="100" value="50"/>
 							</div>
-							<div class="slider__separator"></div>
-							<div class="slider__after">
-								<img onDrag="return false" src="./asset/img/img/avap/seine_0{{id}}_ap.jpg" alt="Image de la Seine après">
-							</div>
-							<input class="slider__range" type="range" min="0" max="100" value="50"/>
 						</div>
 					</div>
+					
 					<section class="miniature">
 						<div class="row"> 
+							<div id="hide" class="col-12">
+								<h2>Dans la même série</h2>
+								</div>
+							<div class="containerblocs">	
 								<div  class="blocs">
 									<a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercuarsenal.jpg" alt="" href="#"></a>
 									<a href="{{path ('app_episodes')}}?id=2 "><img src="./asset/img/img/apercucite.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=3 "><img src="./asset/img/img/appercubalancoire.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?id=3 "><img src="./asset/img/img/appercubalancoire.jpg" id="showBtn"alt="" href="#"></a>
 									<a href="{{path ('app_episodes')}}?id=4"><img src="./asset/img/img/apercupeniche.jpg" alt="" href="#"></a>
 									<a href="{{path ('app_episodes')}}?id=5"><img src="./asset/img/img/apercuquaibirhakeim.jpg" alt=""></a>
 									<a href="{{path ('app_episodes')}}?id=6"><img src="./asset/img/img/apercusolferino.jpg" alt="" href="#"></a>
 									<a href="{{path ('app_episodes')}}?id=7"><img src="./asset/img/img/apercutoboggan.jpg" alt="" href="#"></a>
 									<a href="{{path ('app_episodes')}}?id=8"><img src="./asset/img/img/apercutournelle.jpg" alt="" href="#"></a>
 								</div>
+							</div>
 						</div>
 					</section>
 					<section id="mapsFrance">

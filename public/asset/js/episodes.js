@@ -1,3 +1,15 @@
+/* Afficher/cacher le slider */
+let sBtn= document.querySelector('#showBtn');
+let div = document.querySelector('#showSlider');
+let h2Hide = document.querySelector('#hide');
+
+sBtn.addEventListener('click', () => {
+    div.style.display = 'block'
+    h2Hide.style.display = 'none';
+    /* objectJavascript.style["]; */
+  });
+
+
 //On Sélectionne les sliders
 let sliders = document.querySelectorAll('.slider');
 
