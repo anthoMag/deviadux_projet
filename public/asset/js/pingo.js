@@ -55,12 +55,17 @@ function launchMap(){
         iconAnchor:   [15, 15], 
         shadowAnchor: [4, 62],  
     });
- let count= 0;
- let index = 0;
+     
+     let index = 0;
+     let count = 0;
     // Affichage des marqueurs sur la map, avec les longitudes et latitudes provenant de la base de données ainsi que le texte et img.
     tabData.forEach((v, k) => {
+        let linkString = "";
+        if([v[10]] != "#"){
+        linkString = 'target="_blank"';
+        } 
         window['marker' + k]  = L.marker([v[5], v[6]], {icon: floviaIcon}).addTo(map);
-        window['marker' + k].bindPopup("<h1>"+v[0]+" ("+v[2]+")</h1><h3>"+v[3]+"</h3><h2>"+v[1]+" Mètres</h2><h3>"+v[4]+"</h3> <a id=\"imgRsk\" href=\"\" target=\"_blank\"><img  id='imgPop'  src='../asset/img/IMG_PINGO/"+v[7]+"'/> </a><button type='button' id='rskBtn' data-code="+count+" onclick='change("+k+")'>Risques</button>");
+        window['marker' + k].bindPopup("<h1>"+v[0]+" ("+v[2]+")</h1><h3>"+v[3]+"</h3><h2>"+v[1]+" Mètres</h2><h3>"+v[4]+"</h3> <a id=\"imgRsk\" href=\"\" "+linkString+"><img  id='imgPop'  src='../asset/img/IMG_PINGO/"+v[7]+"'/> </a><button type='button' id='rskBtn' data-code="+count+" onclick='change("+k+")'>Risques</button>");
         count++;
         //Zoom quand on clique sur le marqueur.
         window['marker' + k].on('click', function(){
@@ -68,6 +73,8 @@ function launchMap(){
         });
     });
 }
+
+let modePoly = false;
 
 function change(key){
     
@@ -77,9 +84,10 @@ function change(key){
 //On envoie un tableau de tableau à leaflet pour afficher les polygones
 let ltlg = JSON.parse(tabData[index][8]);
 
-
+let imgSwicth1 = tabData[index][7];
 let imgSwicth2 = tabData[index][9];
 let link = tabData[index][10];
+
 
 
 //On Récupère l'image
@@ -90,18 +98,31 @@ let imgR = document.getElementById('imgRsk');
 //Affichage des photos d'nnondations et switch 
 let rButton = document.getElementById('rskBtn');
 
+console.log(link);
 
-img.src ='../asset/img/IMG_PINGO/'+imgSwicth2;
-imgR.href=  link;
-/* map.removeLayer(poly) ; */
-poly= L.polygon(ltlg, {color:  'rgba(56, 210, 173, 0.47)' }).addTo(map); 
-    
-    //affichage de la zone de risque maximum de crue d'Angers.
-    
-    //Switch photo anduze quand on clique sur le boutton"risques" sur les zones innondable répertoriés par l'état.
+if(link == "#"){
+    imgR.setAttribute("target", "_self");
+   imgR.href = "#";
+}else{
+    imgR.setAttribute("target", "_blank");
+    imgR.href=  link;
 }
+
+/* map.removeLayer(poly) ; */
+if(modePoly){
+    map.removeLayer(poly) ;
+    img.src ='../asset/img/IMG_PINGO/'+imgSwicth1;
+    modePoly = false;
+    imgR.href = "#";
+}else{
+    modePoly = true;
+    poly= L.polygon(ltlg, {color:  'rgba(56, 210, 173, 0.47)' }).addTo(map); 
+    img.src ='../asset/img/IMG_PINGO/'+imgSwicth2;
+}
+    
 map.on('click', removePoly);
 
+}
 
 function removePoly(){
 

@@ -2,9 +2,18 @@
 let sBtn= document.querySelector('#showBtn');
 let div = document.querySelector('#showSlider');
 let h2Hide = document.querySelector('#hide');
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const open = urlParams.get('open');
+console.log(open);
+if (open == "true"){
+   div.style.display = 'block';
+   console.log(div);
+}
+
 
 sBtn.addEventListener('click', () => {
-    div.style.display = 'block'
+    div.style.display = 'block';
     h2Hide.style.display = 'none';
     /* objectJavascript.style["]; */
   });
