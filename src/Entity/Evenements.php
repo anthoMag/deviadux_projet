@@ -37,8 +37,17 @@ class Evenements
     #[ORM\Column(nullable: true)]
     private ?float $coordonnee_y = null;
 
+    #[ORM\Column(length: 1000, nullable: true)]
+    private ?string $polygones = null;
+
     #[ORM\ManyToOne(inversedBy: 'evenements')]
     private ?Departements $dep = null;
+
+    #[ORM\Column(length: 50)]
+    private ?string $image_2 = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $link = null;
 
 
 
@@ -143,6 +152,18 @@ class Evenements
         return $this;
     }
 
+    public function getPolygones(): ?string
+    {
+        return $this->polygones;
+    }
+
+    public function setPolygones(?string $polygones): self
+    {
+        $this->polygones = $polygones;
+
+        return $this;
+    }
+
     public function getDep(): ?departements
     {
         return $this->dep;
@@ -151,6 +172,30 @@ class Evenements
     public function setDep(?departements $dep): self
     {
         $this->dep = $dep;
+
+        return $this;
+    }
+
+    public function getImage2(): ?string
+    {
+        return $this->image_2;
+    }
+
+    public function setImage2(string $image_2): self
+    {
+        $this->image_2 = $image_2;
+
+        return $this;
+    }
+
+    public function getLink(): ?string
+    {
+        return $this->link;
+    }
+
+    public function setLink(string $link): self
+    {
+        $this->link = $link;
 
         return $this;
     }

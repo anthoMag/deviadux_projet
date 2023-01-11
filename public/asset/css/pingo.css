@@ -34,7 +34,6 @@
     }
   }
 
-
   .leaflet-control-attribution {
     display: none;
   }
@@ -59,12 +58,13 @@
   .leaflet-popup-content {
     margin: 0px;
     padding: 2px 20px 11px 20px;
-    color: black;
+    color: #F9FBFF;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 500;
     text-align: center;
     max-width: 300px;
     max-height: 350px;
+    background:  #01131B;
   }
 
   .leaflet-popup-content h1 {
@@ -88,7 +88,9 @@
   }
 
   .leaflet-popup-content img {
-    width: 100%;
+    width: 250px;
+    height: 150px;
+    
   }
 
   .leaflet-popup-content h1, h2, h3 {
@@ -119,19 +121,25 @@
     font-size: 25px;
     color: #01131B;
     background-color: #F9FBFF;
-    padding: 10px;
+     padding: 10px; 
     text-decoration: none;
     position: absolute;
     bottom: 33px;
     right: 100px;
   }
 
-  a:hover {
-    color: #38D2AD;
+.btncarte a:hover {
+  color:#F9FBFF;
+  background-color: #01131B;  
+border: 1px solid #F9FBFF;
   }
 
   .leaflet-container a.leaflet-popup-close-button {
-    color: black;
+    color: white;
     font-size: 1.5rem;
     margin-left: -10px;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+  padding: 1.8rem 2rem;
   }

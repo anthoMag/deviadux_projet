@@ -1,41 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	{{controller_name}}
+  {{ controller_name }}
 {% endblock %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" href="./asset/css/profil.css">
+  <link rel="stylesheet" href="./asset/css/profil.css" />
 {% endblock %}
 
 {% block body %}
-
-	<main>
-		<section id="connexion">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col">
-						<h1>CONNEXION</h1>
-						<form action="#">
-							<div>
-								<input type="email" name="usermail" placeholder="Email">
-							</div>
-							<!-- JOJO je te laisse vérifier le input pour renseigner le mot de passe ^^ Merci  -->
-							<div>
-								<input type="text" name="password" placeholder="Mot de passe">
-							</div>
-							<div>
-								<input type="submit" value="Se connecter">
-							</div>
-							<div>
-								<a href="#">Créer un compte</a>
-							</div>
-
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-	</main>
-
+	<!-- Rond bg -->
+	<div class="round"></div>
+	<!-- Fin Rond bg -->
+  <main>
+    <section id="connexion">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h1>
+              CONNEXION
+            </h1>
+            <form action="#">
+              <div>
+                <input type="email" name="usermail" placeholder="Email" required="" />
+              </div>
+              <div>
+                <input type="text" name="password" placeholder="Mot de passe" required="" maxlength="10"/>
+              </div>
+              <div>
+                <input type="submit" value="Se connecter" />
+              </div>
+              <div>
+                <a href="#" id="navlink">Créer un compte</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 {% endblock %}
