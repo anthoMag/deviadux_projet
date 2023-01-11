@@ -1,0 +1,45 @@
+#margtop {
+    height: 96px;
+    background-color: #01131B;
+  }
+
+.container {
+    margin-top: 50px;
+}
+
+.list {
+    margin: 50px 30px;
+    display: flex;
+}
+
+.list .info {
+    width: 100%;
+    margin: 0 20px; 
+}
+
+h2 {
+    margin-bottom: 80px;
+}
+
+.butn {
+    color: #01131b;
+    background-color: #f9fbff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #f9fbff;
+    display: inline-block;
+    position: absolute;
+    top: -37px;
+    right: -20px;
+  }
+  
+.butn:hover {
+    color: #f9fbff;
+    background-color: #01131B;
+    border: 1px solid #F9FBFF; 
+  }
+
+.info div:nth-child(2) {
+    position: relative; 
+  }

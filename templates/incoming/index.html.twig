@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ controller_name }}
+{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="./asset/css/incoming.css" />
+{% endblock %}
+
+{% block body %}
+
+<main>
+
+    <div id="margtop"></div>
+
+    <div class="container">
+        <h2>En cours de développement</h2>
+
+        <div class="list">
+            <div>
+                <img src="./asset/img/incoming/chartjs.jpg" width="200px" alt="Miniature du ChartJs">
+            </div>
+
+            <div class="info">
+                <div>
+                    <h3>ChartJs</h3>
+
+                    <p>Développement d'un graphique en ChartJs pour une future version, qui remplacera le SVG en page d'accueil.</p>
+                </div>
+                <div>
+                    <a class="butn" href="{{path ('app_chartjs')}}" target="_blank">VOIR</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="list">
+            <div>
+                <img src="./asset/img/incoming/paralax.jpg" width="200px" alt="Miniature du ChartJs">
+            </div>
+
+            <div class="info">
+                <div>
+                    <h3>Parallaxe</h3>
+
+                    <p>Développement d'une solution visuelle qui animerait les sections de la page 'à propos' et 'actualités', en s'inspirant de cet exemple.</p>
+                </div>
+                <div>
+                    <a class="butn" href="{{path ('app_parallaxe')}}" target="_blank">VOIR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}

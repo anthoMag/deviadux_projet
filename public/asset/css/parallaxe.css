@@ -18,10 +18,6 @@ body {
 }
 
 
-
-
-
-
 /*SECTION PARTS SIZING*/
 h1 {
   font-size: 250%;
@@ -114,47 +110,47 @@ p {
 
 /*SECTION IMAGES*/
 #title {
-  background-image: url("asset/img1Paris.jpg");
+  background-image: url("../img/parallaxe/img1Paris.jpg");
   background-attachment: fixed;  
 }
 #section1{
-  background-image: url("asset/img2Paris.jpg");
+  background-image: url("../img/parallaxe/img2Paris.jpg");
   transform: translateZ(-1px) scale(2);
   z-index:-1;
 }
 #section2 {
-  background-image: url("asset/img3Paris.jpg");
+  background-image: url("../img/parallaxe/img3Paris.jpg");
   background-attachment: fixed;
 }
 #section3{
-  background-image: url("asset/img4Paris.jpg");
+  background-image: url("../img/parallaxe/img4Paris.jpg");
   transform: translateZ(-1px) scale(2);
   z-index:-1
 }
 
 #section4{
-  background-image: url("asset/img4Paris.jpg");
+  background-image: url("../img/parallaxe/img4Paris.jpg");
   background-attachment: fixed;
 }
 
 #section5{
-  background-image: url("asset/img5Paris.jpg");
+  background-image: url("../img/parallaxe/img5Paris.jpg");
   transform: translateZ(-1px) scale(2);
   z-index:-1
 }
 
 #section6{
-  background-image: url("asset/img6Paris.jpg");
+  background-image: url("../img/parallaxe/img6Paris.jpg");
   background-attachment: fixed;
 }
 #section7{
-  background-image: url("asset/img7Paris.jpg");
+  background-image: url("../img/parallaxe/img7Paris.jpg");
   transform: translateZ(-1px) scale(2);
   z-index:-1;
 }
 
 #section8{
-  background-image: url("asset/img8Paris.png");
+  background-image: url("../img/parallaxe/img8Paris.png");
  width: 100rem;
   
 }

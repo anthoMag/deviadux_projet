@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block stylesheets %}
-  <link rel="stylesheet" href="./asset/css/Apropos.css" />
+  <link rel="stylesheet" href="./asset/css/apropos.css" />
 {% endblock %}
 
 {% block body %}
@@ -75,6 +75,24 @@
         </div>
       </div>
     </article>
+
+    <div class="container incoming">
+      <div class="row">
+        <div class="col">
+          <h2>
+            en développement
+          </h2>
+        </div>
+      </div>
+
+      <p>
+        Cliquez sur 'À VENIR' pour voir touts les fonctionnalités en cours de développement.
+      </p>
+
+      <div class="but">
+        <a id="butn" href="{{path ('app_incoming')}}">À VENIR</a>
+      </div>
+    </div>
 
     <!-- section à compléter -->
     <article id="references">
