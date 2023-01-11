@@ -46,7 +46,7 @@
 			</div>
 		</section>
 
-		<section id="slider" >
+		<section id="test" >
 			<div class="container">
 				<div class="row">
 					<div class="col-12 visualiser">
@@ -58,11 +58,11 @@
 					</div>
 						<div class="container"> <div class="slider slider--image2">
 							<div class="slider__before">
-								<img src="./asset/img/img/avap/seine_0{{id}}_av.jpg" alt="Image de la Seine avant">
+								<img src="./asset/img/img/avap/seine_{{code}}_av.jpg" alt="Image de la Seine avant">
 							</div>
 							<div class="slider__separator"></div>
 							<div class="slider__after">
-								<img onDrag="return false" src="./asset/img/img/avap/seine_0{{id}}_ap.jpg" alt="Image de la Seine après">
+								<img onDrag="return false" src="./asset/img/img/avap/seine_{{code}}_ap.jpg" alt="Image de la Seine après">
 							</div>
 							<input class="slider__range" type="range" min="0" max="100" value="50"/>
 						</div>
@@ -70,14 +70,14 @@
 					<section class="miniature">
 						<div class="row"> 
 								<div  class="blocs">
-									<a href="{{path ('app_episodes')}}?id=1"><img src="./asset/img/img/apercuarsenal.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=2 "><img src="./asset/img/img/apercucite.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=3 "><img src="./asset/img/img/appercubalancoire.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=4"><img src="./asset/img/img/apercupeniche.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=5"><img src="./asset/img/img/apercuquaibirhakeim.jpg" alt=""></a>
-									<a href="{{path ('app_episodes')}}?id=6"><img src="./asset/img/img/apercusolferino.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=7"><img src="./asset/img/img/apercutoboggan.jpg" alt="" href="#"></a>
-									<a href="{{path ('app_episodes')}}?id=8"><img src="./asset/img/img/apercutournelle.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=1#test"><img src="./asset/img/img/apercubalancoire.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=2#test"><img src="./asset/img/img/apercucite.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=3#test"><img src="./asset/img/img/apercuarsenal.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=4#test"><img src="./asset/img/img/apercupeniche.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=5#test"><img src="./asset/img/img/apercuquaibirhakeim.jpg" alt=""></a>
+									<a href="{{path ('app_episodes')}}?code=6#test"><img src="./asset/img/img/apercusolferino.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=7#test"><img src="./asset/img/img/apercutoboggan.jpg" alt="" href="#"></a>
+									<a href="{{path ('app_episodes')}}?code=8#test"><img src="./asset/img/img/apercutournelle.jpg" alt="" href="#"></a>
 								</div>
 						</div>
 					</section>
