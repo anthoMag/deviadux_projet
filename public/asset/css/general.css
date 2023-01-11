@@ -108,10 +108,12 @@ ul {
 
 .icon {
   padding: 0rem 0rem 0.4rem 0rem;
+  cursor: pointer;
 }
 
 .icon2 {
   padding: 0rem 0rem 0.4rem 0rem;
+  cursor: pointer;
 }
 
 .enregistrerIcon {
