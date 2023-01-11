@@ -19,18 +19,18 @@
   height: 400px;
 }
 
-/* #imageBtn button {
+ #imageBtn button {
   position: absolute;
-  right: 24%;
+  right: 34%;
   border: none;
   padding: 0.5rem 2rem;
   top: 84%;
-} */
+} 
 
-/* #imageBtn button:hover {
+ #imageBtn button:hover {
   background-color: #01131B;
   color: #F9FBFF;
-} */
+} 
 
 #textealaune {
   padding-right: 7rem;

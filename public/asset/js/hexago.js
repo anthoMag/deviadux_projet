@@ -12,7 +12,7 @@ mappy.style.height = htmlHeight - 200 + 'px';
 
 
 
-/////// RANGE ////////
+/////// RANGE  K////////
 
 // Récupère la balise h2 qui affiche l'altitude de l'océan
 let meter = document.getElementById('metre');
@@ -53,6 +53,7 @@ inputSlider.oninput = (() => {
     reg = 0.26 * num;
     exp = Math.exp(num);
     result = ((reg + exp) - 1);
+    //formate le nombre  obtenue en notation à point-fixe.
     elevation = result.toFixed(2);
 
     // Permet de mettre à jour l'affichage de la hauteur de l'océan
