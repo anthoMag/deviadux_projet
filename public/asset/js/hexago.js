@@ -83,7 +83,7 @@ function launchMap() {
         attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         className: 'map-tiles',
         minZoom: 5,
-        maxZoom: 15
+        maxZoom: 14
 
         // Affiche la map
     }).addTo(map);
