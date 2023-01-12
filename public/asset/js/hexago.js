@@ -38,15 +38,6 @@ inputSlider.oninput = (() => {
     // Permet de calculer l'année choisie
     year = 2000 + parseInt(value * 5);
 
-    // Permet de mettre à jour l'année choisie au dessus du curseur
-    sliderValue.textContent = year;
-
-    // Permet de déplacer l'année au dessus du curseur
-    sliderValue.style.left = value + "%";
-
-    // Permet d'afficher l'année au dessus du curseur
-    sliderValue.classList.add("show");
-
     // Algorithme pour calculer la hauteur de l'océan en fonction de l'année
     // Algorithme créé à partir des recherches effectuées sur internet
     num = (year - 2000) * 0.0055;
@@ -61,8 +52,6 @@ inputSlider.oninput = (() => {
     // Permet de mettre à jour l'affichage de l'année choisie
     old.innerHTML = year;
 })
-
-
 
 /////// CARTE ///////
 
