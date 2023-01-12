@@ -13,6 +13,7 @@ body {
 
 a {
   color: #f9fbff;
+  text-decoration: none;
 }
 
  a:hover {
@@ -20,32 +21,6 @@ a {
   font-weight: bold;
 } 
 
-#link{
-color: #f9fbff;
-font-size: 20px;
-text-decoration: none;
-position: relative;
-}
-
-#link:after{
-  bottom: -4px;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 0;
-  position: absolute;
-  color: #f9fbff;
-  background-color: #01131b;
-  opacity: 0.6;
-  transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
-  width: 0;
-}
-
-#link:hover:after{
-  width: 100%;
-  opacity: 0.9;
-  color: #38d2ad;
-}
 
 /* **************** Typographie ********* */
 /* Syncopate */
@@ -151,32 +126,7 @@ ul {
   background-color: #01131b;
   /* border-bottom: 1px solid #F9FBFF; */
 }
-/* 
-#navlink{
-  color: #f9fbff;
-  font-size: 16px;
-  position: relative;
-  } */
-  
- /*  #navlink:after{
-    bottom: -1px;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 0;
-    position: absolute;
-    color: #38d2ad;
-    background: #38d2ad;
-    opacity: 0.6;
-    transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
-    width: 0;
-    background-clip:content-box;
-  }
-  
-  #navlink:hover:after{
-    width: 100%;
-    opacity: 0.9;
-  } */
+
 /***************** FOOTER ****************/
 
 footer {

@@ -148,13 +148,13 @@ main h2{
   
   .round2 {
     height: 600px;
-    width: 850px;
+    width: 700px;
     background:linear-gradient(110.11deg, rgba(56, 210, 173, 0.47) -20.83%, #006d7d 25.71%, #142B33 63.59%);
     position: absolute;
     filter: blur(40px);
     z-index: -1;
-    bottom: -2700px;
-    right: 1000px;
+    bottom: -3000px;
+    right: 1200px;
     border-radius: 50%;
   }
 
@@ -162,4 +162,112 @@ main h2{
     width: 400px;
     height: 250px;
 }
+
+
+#Modal1 .modal-content { 
+    color: #F9FBFF;
+    background-color: #01131B;
+    border: solid 1px #F9FBFF;
+    border-radius: 0px;
+    padding-bottom: 20px;
+  }
+  
+  #Modal1 .modal-header {
+    border: none;
+    align-items: start;
+    padding: 2rem 3rem 0rem 1.5rem;
+  }
+  
+  #Modal1 .modal-body {
+    border: none;
+    text-align: center;
+    justify-content: space-between;
+  }
+  
+  #Modal1 h1 {
+    padding-bottom: 10px;
+  }
+  
+  #Modal1 p {
+    padding-top: 10px;
+  }
+  
+  
+  #Modal1 a {
+    border: 1px solid transparent;
+    background-color: #F9FBFF;
+    color: #01131B;
+    border-radius: 10px;
+    font-size: small;
+    width: 7rem;
+    margin: 10px 0;
+    border-radius: 0px;
+  }
+  
+  #Modal1 .modal-footer {
+    border: none;
+  }
+  
+  
+  #Modal1 a:hover {
+    border: 1px solid #F9FBFF;
+    background-color: #01131B;
+    color: #F9FBFF;
+    border-radius: 0px;
+  }
+  
+  /* Modale 2 Enregistrer */
+  
+  #Modal2 .modal-content { 
+    color: #F9FBFF;
+    background-color: #01131B;
+    border: solid 1px #F9FBFF;
+    border-radius: 0px;
+  }
+  
+  
+  #Modal2 .modal-header {
+    border: none;
+    align-items: start;
+    padding: 2rem 3rem 0rem 1.5rem;
+    height: 80px;
+  }
+  
+  
+  #Modal2 .modal-header button:active {
+    border: solid 1px transparent;
+  }
+  
+  
+  #Modal2 .modal-body {
+    border: none;
+    text-align: center;
+    font-size: 42px;
+    height: 100px;
+  }
+  
+  
+  #Modal2 .modal-footer {
+    border: none;
+    justify-content: center;
+    padding-bottom: 3.5rem;
+  }
+  
+  
+  #Modal2 .modal-footer a {
+    border-radius: 0px;
+    border: 1px solid transparent;
+    background-color: #F9FBFF;
+    color: #01131B;
+    text-transform: uppercase;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+  }
+  
+  #Modal2 a:hover {
+    border: 1px solid #F9FBFF;
+    background-color: #01131B;
+    color: #F9FBFF;
+    border-radius: 0px;
+  }
+  
 
