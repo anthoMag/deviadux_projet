@@ -20,10 +20,12 @@ sliders.forEach(function (slider) {
 
     let isDragging = false;
 
+    //Quand la pression du clique est enclanché on déplace le curseur
     sliderSeparator.addEventListener('mousedown', function () {
         isDragging = true;
     });
 
+    //Quand on relâche la pression on arrête de bouger le curseur
     document.addEventListener('mouseup', function () {
         isDragging = false;
     });

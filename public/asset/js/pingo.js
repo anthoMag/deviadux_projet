@@ -43,7 +43,7 @@ function launchMap() {
         attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         className: 'map-tiles',
         minZoom: 6,
-        maxZoom: 12,
+        maxZoom: 13,
     }).addTo(map);
 
     //Icone sur la map------------------------------------------------------------------------------------------------
@@ -52,7 +52,7 @@ function launchMap() {
         shadowUrl: '',
         iconSize: [43, 43],
         shadowSize: [50, 64],
-        iconAnchor: [15, 15],
+        iconAnchor: [13, 13],
         shadowAnchor: [4, 62],
     });
 
