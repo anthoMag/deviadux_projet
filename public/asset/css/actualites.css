@@ -183,6 +183,10 @@ main h2{
     text-align: center;
     justify-content: space-between;
   }
+
+  .twitter{
+    flex: none;
+  }
   
   #Modal1 h1 {
     padding-bottom: 10px;
