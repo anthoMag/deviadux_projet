@@ -8,11 +8,11 @@ let mappy = document.getElementById('map');
 logo = document.querySelector('.logo');
 
 // Modifie la hauteur de la div qui contient la carte
-mappy.style.height = htmlHeight - 200 + 'px'; 
+mappy.style.height = htmlHeight - 200 + 'px';
 
 
 
-/////// RANGE ////////
+/////// CURSEUR-SLIDER ////////
 
 // Récupère la balise h2 qui affiche l'altitude de l'océan
 let meter = document.getElementById('metre');
@@ -166,7 +166,7 @@ function launchMap() {
         // Récupère la différence entre les 2 coordonnées
         let x3 = x1 - x2;
         let y3 = y1 - y2;
- 
+
         // Calcule la distance entre 2 points de la grille
         let x4 = x3 / divX;
         let y4 = y3 / divY;
@@ -316,7 +316,7 @@ function launchMap() {
                     logo.classList.add('display_block');
                 }
 
-            // catch permet d'exécuter le code ci-dessous (si il n'y a pas de réponse, ou s'il y a intérruption volontaire de la réponse)
+                // catch permet d'exécuter le code ci-dessous (si il n'y a pas de réponse, ou s'il y a intérruption volontaire de la réponse)
             } catch (error) {
 
                 // Redéfini le compteur à 0 pour relancer les requêtes depuis le premier tableau de coordonnées

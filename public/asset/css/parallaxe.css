@@ -1,7 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Oswald");
 
-
-
 /*SETUP*/
 html {
   height: 100%;
@@ -16,7 +14,6 @@ body {
   font-family: Oswald;
   perspective: 1px;
 }
-
 
 /*SECTION PARTS SIZING*/
 h1 {

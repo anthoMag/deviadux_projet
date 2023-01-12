@@ -155,19 +155,7 @@ new Chart(document.getElementById("bar-chart"), {
         },
       },
     ],
-   
-      // x: {
-      //   display: false,
-      //   ticks: {
-      //     color: "red",
-      //   },
-      // },
-      // y: {
-      //   display: false,
-      //   ticks: {
-      //     color: "green",
-      //   },
-      // },
+  
     },
   },
 
@@ -183,31 +171,3 @@ new Chart(document.getElementById("bar-chart"), {
   },
 });
 
-// animations: {
-//     borderColor: {
-//       type: 'color',
-//       duration: 1000,
-//       from: 'green',
-//       to: 'red',
-//       loop: true,
-//     }
-//   },
-
-// animation: {
-//   borderWidth: {
-//     duration: 2000,
-//     from: 20,
-//     to: 10,
-//     loop: true,
-//   }
-// },
-
-// animations: {
-//   tension: {
-//     // duration: 2000,
-//     easing: 'linear',
-//     from: 1,
-//     to: 0,
-//     loop: true
-//   }
-// },
