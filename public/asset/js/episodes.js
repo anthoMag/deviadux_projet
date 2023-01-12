@@ -7,6 +7,7 @@ sliders.forEach(function (slider) {
     let sliderBefore = slider.querySelector('.slider__before');
     let sliderSeparator = slider.querySelector('.slider__separator');
 
+
     function updapteSliderPosition() {
 
         sliderBefore.style = `width:${sliderRange.value}%`;
@@ -27,7 +28,7 @@ sliders.forEach(function (slider) {
         isDragging = false;
     });
 
-    // Si on est en clique on peux glisser le slider
+    // Si on est en clique sur le curseur on peux glisser le slider
     document.addEventListener('mousemove', function (e) {
         if (isDragging) {
             let sliderRect = slider.getBoundingClientRect()

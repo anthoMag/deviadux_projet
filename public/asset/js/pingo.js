@@ -46,7 +46,7 @@ function launchMap() {
         maxZoom: 12,
     }).addTo(map);
 
-    //Icone sur la map
+    //Icone sur la map------------------------------------------------------------------------------------------------
     var floviaIcon = L.icon({
         iconUrl: './asset/img/IMG_PINGO/logoO.svg',
         shadowUrl: '',
@@ -60,6 +60,7 @@ function launchMap() {
     let count = 0;
     // Affichage des marqueurs sur la map, avec les longitudes et latitudes provenant de la base de données ainsi que le texte et img.
     tabData.forEach((v, k) => {
+        //Stringify le liens
         let linkString = "";
         if ([v[10]] != "#") {
             linkString = 'target="_blank"';
@@ -67,7 +68,6 @@ function launchMap() {
         window['marker' + k] = L.marker([v[5], v[6]], { icon: floviaIcon }).addTo(map);
         window['marker' + k].bindPopup("<h1>" + v[0] + " (" + v[2] + ")</h1><h3>" + v[3] + "</h3><h2>" + v[1] + " Mètres</h2><h3>" + v[4] + "</h3> <a id=\"imgRsk\" href=\"\" " + linkString + "><img  id='imgPop'  src='../asset/img/IMG_PINGO/" + v[7] + "'/> </a><button type='button' id='rskBtn' data-code=" + count + " onclick='change(" + k + ")'>Risques</button>");
         count++;
-
         //Zoom quand on clique sur le marqueur.
         window['marker' + k].on('click', function () {
              map.setView([v[5],v[6]], 10); 
@@ -93,6 +93,7 @@ function change(key) {
     let img = document.getElementById('imgPop');
     let imgR = document.getElementById('imgRsk');
 
+    //Si l'image a un liens  , on peut cliquer dessus pour acceder aux sites
     if (link == "#") {
         imgR.setAttribute("target", "_self");
         imgR.href = "#";
@@ -101,6 +102,7 @@ function change(key) {
         imgR.href = link;
     }
 
+    // Conditions ppour que l'image de risque et polygones s'affiche
     if (modePoly) {
         map.removeLayer(poly);
         img.src = '../asset/img/IMG_PINGO/' + imgSwicth1;
@@ -112,9 +114,12 @@ function change(key) {
         img.src = '../asset/img/IMG_PINGO/' + imgSwicth2;
 
     }
+    //Si on clique ailleurs sur la map le polygone se retire
     map.on('click', removePoly);
 }
 
+
+// fonction pour enlever le polygone
 function removePoly() {
 
     map.removeLayer(poly);
