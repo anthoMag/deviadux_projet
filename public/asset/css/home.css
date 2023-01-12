@@ -279,6 +279,9 @@ main b {
   color: #F9FBFF;
   border-radius: 0px;
 }
+.twitter{
+  flex: none;
+}
 
 /* Modale 2 Enregistrer */
 
