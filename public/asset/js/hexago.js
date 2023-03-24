@@ -237,7 +237,7 @@ function launchMap() {
                 // API Open Elevation hebergé par le serveur de Benoît:
                 // http://51.210.126.117/api/v1/lookup
 
-                const rawResponse = await fetch('http://51.210.126.117/api/v1/lookup', {
+                const rawResponse = await fetch('https://api.open-elevation.com/api/v1/lookup', {
                     method: 'POST',
                     signal: signal,
                     headers: {
